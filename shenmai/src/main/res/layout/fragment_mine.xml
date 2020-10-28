@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color">
+
+    <include
+        android:id="@+id/mine_top"
+        layout="@layout/top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mine_top"
+        android:background="@color/bg_main_color_two"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_main_color_two"
+            android:orientation="vertical">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_account"
+                    style="@style/mine_rl">
+
+                    <TextView
+                        style="@style/mine_text"
+                        android:text="账号信息" />
+
+                    <include
+                        android:id="@+id/iv_right"
+                        layout="@layout/mine_right_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_my_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/iv_right"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/main_text_color_nomal"
+                        android:maxWidth="62dp"
+                        android:singleLine="true"
+                        android:ellipsize="end"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_withdraw"
+                    style="@style/mine_rl">
+
+                    <TextView
+                        style="@style/mine_text"
+                        android:text="提现设置" />
+
+                    <include
+                        android:id="@+id/iv_right"
+                        layout="@layout/mine_right_icon" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rl_shop"
+                    style="@style/mine_rl">
+
+                    <TextView
+                        style="@style/mine_text"
+                        android:text="店铺信息" />
+
+                    <include
+                        android:id="@+id/iv_right"
+                        layout="@layout/mine_right_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_is_auth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/iv_right"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/bg_mine_auth"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="2dp"
+                        android:text="未认证"
+                        android:textColor="@android:color/white" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_my_order"
+                    style="@style/mine_rl">
+
+                    <TextView
+                        style="@style/mine_text"
+                        android:text="我的订单" />
+
+                    <include
+                        android:id="@+id/iv_right"
+                        layout="@layout/mine_right_icon" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_my_address"
+                    style="@style/mine_rl">
+
+                    <TextView
+                        style="@style/mine_text"
+                        android:text="我的收货地址" />
+
+                    <include
+                        android:id="@+id/iv_right"
+                        layout="@layout/mine_right_icon" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_my_collect"
+                    style="@style/mine_rl">
+
+                    <TextView
+                        style="@style/mine_text"
+                        android:text="我的收藏" />
+
+                    <include
+                        android:id="@+id/iv_right"
+                        layout="@layout/mine_right_icon" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_help"
+                    style="@style/mine_rl">
+
+                    <TextView
+                        style="@style/mine_text"
+                        android:text="神买帮助" />
+
+                    <include
+                        android:id="@+id/iv_right"
+                        layout="@layout/mine_right_icon" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_message"
+                    style="@style/mine_rl">
+
+                    <TextView
+                        android:id="@+id/tv_message"
+                        style="@style/mine_text"
+                        android:text="消息中心" />
+
+                    <TextView
+                        android:id="@+id/tv_mass_num"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/tv_message"
+                        android:background="@mipmap/mine_mass_num"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <include
+                        android:id="@+id/iv_right"
+                        layout="@layout/mine_right_icon" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_about_us"
+                    style="@style/mine_rl">
+
+                    <TextView
+                        style="@style/mine_text"
+                        android:text="关于我们" />
+
+                    <include
+                        android:id="@+id/iv_right"
+                        layout="@layout/mine_right_icon" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_grade_us"
+                    style="@style/mine_rl">
+
+                    <TextView
+                        style="@style/mine_text"
+                        android:text="检查更新" />
+
+                    <include
+                        android:id="@+id/iv_right"
+                        layout="@layout/mine_right_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_mine_appversion"
+                        android:layout_toLeftOf="@id/iv_right"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/main_text_color_nomal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

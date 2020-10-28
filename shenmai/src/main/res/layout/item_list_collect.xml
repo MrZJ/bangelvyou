@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/img_item_list_collect_goodimg"
+        android:padding="10dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:scaleType="centerInside"/>
+
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_toRightOf="@id/img_item_list_collect_goodimg"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_item_list_collect_goodname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/GoodsName"
+            android:text="名字"
+            android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/tv_item_list_collect_goodtype"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/GoodsType"
+            android:text="型号"
+            android:singleLine="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_item_list_collect_gooddes"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/GoodsType"
+            android:text="描述"
+            android:singleLine="true"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_item_list_collect_goodweiprice"
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/GoodsPrice"
+                android:text="价格:"
+                android:singleLine="true"
+                android:layout_alignParentBottom="true"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_item_list_collect_goodweiprice"
+                android:id="@+id/tv_item_list_collect_goodprice"
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/GoodsPrice"
+                android:text="微价:"
+                android:singleLine="true"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_below="@id/tv_item_list_collect_goodweiprice"
+                android:id="@+id/tv_item_list_collect_goodreback"
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/GoodsPrice"
+                android:text="佣金:"
+                android:singleLine="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

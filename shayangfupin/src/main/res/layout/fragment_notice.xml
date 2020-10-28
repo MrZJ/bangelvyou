@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include
+        android:id="@+id/notice_top"
+        layout="@layout/top_bar" />
+
+    <com.shayangfupin.system.wibget.PagerSlidingTabStrip
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/notice_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        android:layout_below="@id/notice_top"
+        app:pstsDividerColor="@android:color/transparent"
+        app:pstsTabPaddingLeftRight="12dp"
+        app:pstsScaleZoomMax="0"
+        app:pstsIndicatorColor="@color/notice_tab_item_color"
+        app:pstsIndicatorHeight="3dp"
+        app:pstsShouldExpand="false"
+        app:pstsTextSelectedColor="@color/notice_tab_item_color"
+        app:pstsUnderlineColor="@color/divider_color"
+        app:pstsUnderlineHeight="1dp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/notice_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notice_tabs"
+        android:background="@color/bg_main_color_two"/>
+
+</RelativeLayout>
+
+

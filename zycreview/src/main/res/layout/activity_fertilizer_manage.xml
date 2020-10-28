@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zycreview.system.ui.activity.FertilizerManageActivity"
+    android:background="@color/bg_main_color_two"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_bar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/register_left_right_margin"
+        android:layout_marginTop="@dimen/register_top_margin"
+        android:text="提示红色边框为必填项"
+        android:textColor="#ff0000"
+        android:textSize="@dimen/register_text_size" />
+
+    <include
+        android:id="@+id/et_fertilizer_name"
+        layout="@layout/register_edit_text" />
+
+    <include
+        android:id="@+id/et_fertilizer_weight"
+        layout="@layout/register_edit_text" />
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_fertilizer_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/register_left_right_margin"
+        android:layout_marginRight="@dimen/register_left_right_margin"
+        android:background="@drawable/bg_register_edittext"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="5dp"
+        android:text="施肥时间"
+        android:textColor="#666666"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_fertilizer_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/register_left_right_margin"
+        android:layout_marginRight="@dimen/register_left_right_margin"
+        android:layout_marginTop="@dimen/register_top_margin"
+        android:background="@drawable/bg_register_edittext"
+        android:drawableRight="@mipmap/down_icon"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="5dp"
+        android:text="作业人"
+        android:textColor="#000000" />
+
+    <!--<include
+        android:id="@+id/et_fertilizer_person"
+        layout="@layout/register_edit_text_gray" />-->
+
+    <include
+        android:id="@+id/et_fertilizer_mobile"
+        layout="@layout/register_edit_text_gray" />
+
+    <Button
+        android:id="@+id/bt_commit"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="@dimen/register_top_margin"
+        android:layout_marginLeft="@dimen/register_left_right_margin"
+        android:layout_marginRight="@dimen/register_left_right_margin"
+        android:layout_marginTop="@dimen/register_top_margin"
+        android:background="@drawable/bg_button"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="提交"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/register_text_size" />
+</LinearLayout>

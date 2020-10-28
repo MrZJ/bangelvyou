@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zycreview.system">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+
+    <application
+        android:name=".UIApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar">
+        <activity
+            android:name=".ui.activity.WelcomeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Activity"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.MainActivity" />
+        <activity android:name=".ui.activity.ScanActivity" />
+        <activity android:name=".ui.activity.RegisterUserActivity" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.activity.PlantManageActivity" />
+        <activity android:name=".ui.activity.PlantTaskAddActivity" />
+        <activity android:name=".ui.activity.InspectManagerActivity" />
+        <activity android:name=".ui.activity.InstockManagerActivity" />
+        <activity android:name=".ui.activity.OutstockManagerActivity" />
+        <activity android:name=".ui.activity.FertilizerManageActivity" />
+        <activity android:name=".ui.activity.PesticideManageActivity" />
+        <activity android:name=".ui.activity.HarvestManageActivity" />
+        <activity android:name=".ui.activity.PlantTaskActivity" />
+        <activity
+            android:name=".ui.activity.RevisePasswordActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.activity.DotSearchResultActivity" />
+        <activity android:name=".ui.activity.SearchNoticeAndPolicyActivity" />
+        <activity android:name=".ui.activity.NoticeAndPolicyActivity" />
+        <activity android:name=".ui.activity.PolicySearchResultActivity" />
+        <activity android:name=".ui.activity.NoticeSearchResultActivity" />
+        <activity android:name=".ui.activity.ScanResultActivity" />
+        <activity android:name=".ui.activity.MedicinalInstockActivity" />
+        <activity android:name=".ui.activity.InstockRecordActivity" />
+        <activity android:name=".ui.activity.InstockDetailActivity" />
+        <activity android:name=".ui.activity.BaseOrDepotSelectActivity" />
+        <activity android:name=".ui.activity.SubPackageActivity" />
+        <activity android:name=".ui.activity.SubPackageDetailActivity" />
+        <activity android:name=".ui.activity.StockCheckActivity" />
+        <activity android:name=".ui.activity.StockCheckDetailActivity" />
+        <activity android:name=".ui.activity.TradedManageActivity" />
+        <activity android:name=".ui.activity.TradedDetailOrChangeStateActivity" />
+        <activity android:name=".ui.activity.TradedDrugsActivity" />
+        <activity android:name=".ui.activity.TradingManageActivity" />
+        <activity android:name=".ui.activity.PlantDetailActivity" />
+        <activity android:name=".ui.activity.FertilizerOrPesticideActivity" />
+        <activity android:name=".ui.activity.TradingAddActivity" />
+        <activity android:name=".ui.activity.CheckListActivity" />
+        <activity android:name=".ui.activity.CheckManageActivity" />
+        <activity android:name=".ui.activity.CheckDetailActivity" />
+        <activity android:name=".ui.activity.PushActivity" />
+        <activity android:name=".ui.activity.MineWebActivity" />
+        <activity android:name=".ui.activity.BccScanActivity"/>
+
+        <!-- 友盟统计 -->
+        <!--
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57e8d97667e58ebba00031f0" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng" />
+        -->
+
+
+        <!-- 友盟appkey start -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57e8d97667e58ebba00031f0" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="e4ab8a0389fee55f0aff395efbd77343" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="youmeng" />
+        <!-- 友盟appkey end -->
+
+
+        <!-- 蒲公英自动更新 start -->
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="e3ffbdedad5e2d864a3880f95b94099f" />
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:orientation="vertical"
+                android:background="@color/bg_main_color_two">
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="入库批次号:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right|center_vertical"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="药材名称:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right|center_vertical|center_vertical"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="药材编码:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right|center_vertical"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="药材总量:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right|center_vertical"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="生长方式:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right|center_vertical"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="计量单位:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right|center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_stock_check_code"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left|center_vertical"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_stock_check_name"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left|center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tv_stock_check_num"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left|center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tv_stock_check_weight"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left|center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tv_stock_check_grow"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left|center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tv_stock_check_unit"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left|center_vertical"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

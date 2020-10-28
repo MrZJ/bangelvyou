@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_main_color_two">
+
+    <com.stx.xhb.xbanner.XBanner xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/home_banner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:AutoPlayTime="3000"
+        app:pointNormal="@mipmap/shape_normal"
+        app:pointSelect="@mipmap/shape_selected"
+        app:pointsContainerBackground="#aaaaaa"
+        app:pointsPosition="RIGHT"
+        app:tipTextColor="#FFFFFF"
+        app:tipTextSize="12sp" />
+
+    <com.fuping.system.wibget.MyGridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home_banner"
+        android:background="@color/white"
+        android:horizontalSpacing="2dp"
+        android:listSelector="@color/white"
+        android:numColumns="4"
+        android:verticalSpacing="2dp"></com.fuping.system.wibget.MyGridView>
+
+    <View
+        android:id="@+id/lin_home_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/gridview"
+        android:layout_marginBottom="10dp"
+        android:background="@color/divider_color" />
+
+</RelativeLayout>

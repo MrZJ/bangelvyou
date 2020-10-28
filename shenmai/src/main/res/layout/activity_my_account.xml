@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color_two"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/bg_main_color"
+        android:orientation="vertical">
+
+        <com.shenmai.system.widget.CircleImageView
+            android:id="@+id/img_user_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/bg_main_color"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_my_name_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="李四"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:textSize="14sp"
+            android:textColor="#333333"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/rl_name"
+        style="@style/mine_rl">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/mine_text"
+            android:text="昵称" />
+
+        <include
+            android:id="@+id/iv_right"
+            layout="@layout/mine_right_icon" />
+
+        <TextView
+            android:id="@+id/tv_my_name_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/iv_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/main_text_color_nomal"
+            android:lines="1"
+            android:text="李四"
+            android:layout_toRightOf="@id/tv_name"
+            android:layout_marginLeft="20dp"
+            android:gravity="right"
+            android:ellipsize="end"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/rel_my_account_phone"
+        style="@style/mine_rl">
+
+        <TextView
+            style="@style/mine_text"
+            android:text="手机" />
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_my_accout_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/main_text_color_nomal"
+            android:lines="1"
+            android:text="手机未绑定"
+            android:layout_marginLeft="20dp"
+            android:gravity="right"
+            android:ellipsize="end"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color" />
+
+    <RelativeLayout
+        android:id="@+id/rl_mod_pwd"
+        style="@style/mine_rl">
+
+        <TextView
+            style="@style/mine_text"
+            android:text="修改密码" />
+
+        <include
+            android:id="@+id/iv_right"
+            layout="@layout/mine_right_icon" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_back_login"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_button"
+        android:text="退出登录"
+        android:textColor="#FFF9FF"
+        android:textSize="14sp" />
+
+</LinearLayout>

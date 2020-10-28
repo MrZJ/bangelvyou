@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main_color">
+
+    <include layout="@layout/top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include android:id="@+id/tv_pd_name"
+                layout="@layout/text_view_style"/>
+
+            <include android:id="@+id/tv_p_name"
+                layout="@layout/text_view_style"/>
+
+            <include android:id="@+id/tv_entp_name"
+                layout="@layout/text_view_style"/>
+
+            <include android:id="@+id/tv_prod_date"
+                layout="@layout/text_view_style"/>
+
+            <include android:id="@+id/tv_batch_num"
+                layout="@layout/text_view_style"/>
+
+            <include android:id="@+id/tv_pack_code"
+                layout="@layout/text_view_style"/>
+
+            <include android:id="@+id/tv_pack_num"
+                layout="@layout/text_view_style"/>
+
+            <include android:id="@+id/tv_list"
+                layout="@layout/text_view_style"/>
+
+            <com.objectreview.system.wibget.MyListView
+                android:id="@+id/lv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_main_color"
+                android:divider="@color/bg_main_color_two"
+                android:dividerHeight="1dp"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:listSelector="@android:color/transparent"
+                android:layout_margin="1dp"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginRight="@dimen/register_left_right_margin"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

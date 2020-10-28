@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="right"
+    android:id="@+id/pop_layout"
+    android:background="@color/btn_loginout_color">
+
+    <Button
+        android:layout_marginTop="2dp"
+        android:id="@+id/btn_photo_more_photograph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="拍照"
+        android:background="@android:color/white"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"/>
+    <Button
+        android:layout_marginTop="3dp"
+        android:id="@+id/btn_photo_more_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="相册"
+        android:background="@android:color/white"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"/>
+    <Button
+        android:layout_marginTop="5dp"
+        android:id="@+id/btn_photo_more_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:background="@android:color/white"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"/>
+
+</LinearLayout>

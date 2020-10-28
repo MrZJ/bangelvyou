@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_main_color"
+    android:padding="10dp">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="药材名称"
+        style="@style/ItemTextBlack"
+        android:singleLine="true"
+        android:id="@+id/tv_item_traded_drugs_name"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="采收重量:"
+        style="@style/ItemTextGray"
+        android:singleLine="true"
+        android:id="@+id/tv_item_traded_drugs_weight"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="药材单价:"
+        style="@style/ItemTextGray"
+        android:singleLine="true"
+        android:id="@+id/tv_item_traded_drugs_price"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="交易时间:"
+        style="@style/ItemTextGray"
+        android:singleLine="true"
+        android:id="@+id/tv_item_traded_drugs_date"/>
+</LinearLayout>

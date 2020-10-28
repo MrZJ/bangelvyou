@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color">
+
+    <include
+        android:id="@+id/mine_top"
+        layout="@layout/top_bar" />
+
+    <RelativeLayout
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/mine_top"
+        android:layout_margin="25dp"
+        android:background="@drawable/coners_5_white_bg"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/work_status_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_tv"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/photo_sd"
+            android:layout_width="@dimen/photot_size"
+            android:layout_height="@dimen/photot_size"
+            android:layout_alignParentRight="true"
+            fresco:placeholderImage="@mipmap/default_photo_pic"
+            fresco:roundAsCircle="true" />
+
+        <RelativeLayout
+            android:id="@+id/work_palce_rl"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/work_status_tv"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:id="@+id/work_palce_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="@dimen/arrow_right"
+                android:layout_height="@dimen/arrow_right"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/arrow_right" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_layout"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="18dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divide_line_hight"
+            android:layout_marginLeft="55dp"
+            android:background="@color/divider_line_color" />
+
+        <RelativeLayout
+            android:id="@+id/use_judge_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_tab_hight"
+            android:paddingRight="25dp">
+
+            <ImageView
+                android:layout_width="@dimen/home_tab_photo_size"
+                android:layout_height="@dimen/home_tab_photo_size"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/use_describ_pic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="55dp"
+                android:text="使用说明"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="@dimen/arrow_right"
+                android:layout_height="@dimen/arrow_right"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/arrow_right" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divide_line_hight"
+            android:layout_marginLeft="55dp"
+            android:background="@color/divider_line_color" />
+
+        <RelativeLayout
+            android:id="@+id/about_app_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_tab_hight"
+            android:paddingRight="25dp">
+
+            <ImageView
+                android:layout_width="@dimen/home_tab_photo_size"
+                android:layout_height="@dimen/home_tab_photo_size"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/about_pic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="55dp"
+                android:text="关于粮油质检"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="@dimen/arrow_right"
+                android:layout_height="@dimen/arrow_right"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/arrow_right" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divide_line_hight"
+            android:layout_marginLeft="55dp"
+            android:background="@color/divider_line_color" />
+
+        <RelativeLayout
+            android:id="@+id/check_update_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_tab_hight"
+            android:paddingRight="25dp">
+
+            <ImageView
+                android:layout_width="@dimen/home_tab_photo_size"
+                android:layout_height="@dimen/home_tab_photo_size"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/check_update_pic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="55dp"
+                android:text="检查更新"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="@dimen/arrow_right"
+                android:layout_height="@dimen/arrow_right"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/arrow_right" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divide_line_hight"
+            android:layout_marginLeft="55dp"
+            android:background="@color/divider_line_color" />
+
+        <RelativeLayout
+            android:id="@+id/login_out_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_tab_hight"
+            android:paddingRight="25dp">
+
+            <ImageView
+                android:layout_width="@dimen/home_tab_photo_size"
+                android:layout_height="@dimen/home_tab_photo_size"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/loginout_pic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="55dp"
+                android:text="注销"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="@dimen/arrow_right"
+                android:layout_height="@dimen/arrow_right"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/arrow_right" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divide_line_hight"
+            android:layout_marginLeft="55dp"
+            android:background="@color/divider_line_color" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

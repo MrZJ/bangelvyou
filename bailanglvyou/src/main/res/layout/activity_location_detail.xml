@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color">
+
+    <include
+        android:id="@+id/location_detail_top"
+        layout="@layout/top_bar" />
+
+    <LinearLayout
+        android:id="@+id/lin_comment"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="#F2F2F2">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/written_comment"/>
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="写点评"
+                android:textColor="#666666"
+                android:textSize="@dimen/lacation_detail_text_1"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@id/location_detail_top"
+        android:layout_above="@id/lin_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_location_detail_goodspic"
+                android:layout_width="match_parent"
+                android:layout_height="191dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/rel_location_detail_pager"
+                android:layout_width="match_parent"
+                android:layout_height="191dp" >
+
+                <com.basulvyou.system.wibget.AutoScrollViewPager
+                    android:id="@+id/viewpager_location_detail_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/line_location_detail_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="14dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="18dp">
+
+                <TextView
+                    android:id="@+id/tv_location_detail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/lacation_detail_text_1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/local"/>
+
+                    <TextView
+                        android:id="@+id/tv_location_detail_dis"
+                        android:layout_marginLeft="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/lacation_detail_text_5"
+                        android:textColor="#999999"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_location_detail_des"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp"
+                android:textSize="@dimen/lacation_detail_text_1"
+                android:textColor="#666666" />
+
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"/>
+
+            <!--套餐信息开始 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_marginTop="9dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color"/>
+
+                <TextView
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="套餐信息"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/lacation_detail_text_1"/>
+
+                <View
+                    android:layout_marginTop="11dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@color/divider_color"/>
+
+                <LinearLayout
+                    android:id="@+id/list_attrs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical"/>
+
+                <View
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color"/>
+
+            </LinearLayout>
+            <!--套餐信息结束 -->
+
+
+            <View
+                android:layout_marginTop="9dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"/>
+
+            <!--攻略开始 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="13dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/guide_pic"/>
+
+                    <TextView
+                        android:id="@+id/tv_location_detail_guide_type"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="体验攻略"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/lacation_detail_text_1"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_location_guide_des"
+                    android:layout_marginTop="9dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:maxLines="5"
+                    android:textColor="#666666"
+                    android:lineSpacingExtra="5dp"
+                    android:textSize="@dimen/lacation_detail_text_1"
+                    android:ellipsize="end"/>
+
+                <RelativeLayout
+                    android:id="@+id/rel_location_lookmore_guide_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/img_location_lookmore_guide_des"
+                        android:layout_marginTop="5dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/look_more" />
+                </RelativeLayout>
+
+                <!--地图-->
+                <RelativeLayout
+                    android:id="@+id/rel_location_detail_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="9dp">
+
+                    <ImageView
+                        android:id="@+id/img_map"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_nav"
+                        android:layout_width="100dp"
+                        android:layout_height="43dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/white">
+
+                        <ImageView
+                            android:id="@+id/img_nav"
+                            android:layout_width="11dp"
+                            android:layout_height="14dp"
+                            android:background="@mipmap/nav"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            android:id="@+id/tv_nav1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="导航"
+                            android:textSize="@dimen/lacation_detail_text_3"
+                            android:textColor="@color/location_text_color"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginLeft="25dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_nav"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/lacation_detail_text_6"
+                            android:textColor="@color/location_tag_nomal"
+                            android:layout_below="@+id/tv_nav1"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginLeft="11dp"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <!--攻略时间开始-->
+                <LinearLayout
+                    android:id="@+id/lin_guide_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_guide_time_title"
+                            android:layout_marginLeft="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="时间"
+                            android:textColor="#FFB933"
+                            android:textSize="@dimen/lacation_detail_text_1"/>
+
+                        <ImageView
+                            android:layout_marginRight="20dp"
+                            android:id="@+id/img_guide_time_more"
+                            android:layout_alignTop="@id/tv_guide_time_title"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="6dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/guide_attr_lookmore"/>
+
+                        <TextView
+                            android:id="@+id/tv_guide_time"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/tv_guide_time_title"
+                            android:layout_toRightOf="@id/tv_guide_time_title"
+                            android:layout_toLeftOf="@id/img_guide_time_more"
+                            android:maxLines="1"
+                            android:textColor="#666666"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/lacation_detail_text_1"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider_color"/>
+                </LinearLayout>
+                <!--攻略时间结束-->
+
+                <!--攻略地址开始-->
+                <RelativeLayout
+                    android:id="@+id/rel_guide_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_guide_address_title"
+                        android:layout_marginLeft="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="地址"
+                        android:textColor="#FFB933"
+                        android:textSize="@dimen/lacation_detail_text_1"/>
+
+                    <ImageView
+                        android:layout_marginRight="20dp"
+                        android:id="@+id/img_guide_address_more"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/tv_guide_address_title"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/guide_attr_lookmore"/>
+
+                    <TextView
+                        android:id="@+id/tv_guide_address"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/tv_guide_address_title"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/img_guide_address_more"
+                        android:layout_toRightOf="@id/tv_guide_address_title"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/lacation_detail_text_1"
+                        android:ellipsize="end"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color"/>
+                <!--攻略地址结束-->
+
+                <!--攻略交通开始-->
+                <RelativeLayout
+                    android:id="@+id/rel_guide_traffic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_guide_traffic_title"
+                        android:layout_marginLeft="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="交通"
+                        android:textColor="#FFB933"
+                        android:textSize="@dimen/lacation_detail_text_1"/>
+
+                    <ImageView
+                        android:layout_marginRight="20dp"
+                        android:id="@+id/img_guide_traffic_more"
+                        android:layout_alignTop="@id/tv_guide_traffic_title"
+                        android:layout_marginTop="6dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/guide_attr_lookmore"/>
+
+                    <TextView
+                        android:id="@+id/tv_guide_traffic"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/tv_guide_traffic_title"
+                        android:layout_toRightOf="@id/tv_guide_traffic_title"
+                        android:layout_toLeftOf="@id/img_guide_traffic_more"
+                        android:layout_marginRight="5dp"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/lacation_detail_text_1"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color"/>
+                <!--攻略交通结束-->
+
+                <!--攻略预定开始-->
+                <RelativeLayout
+                    android:id="@+id/rl_guide_enroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_guide_enroll_title"
+                        android:layout_marginLeft="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="预订"
+                        android:textColor="#FFB933"
+                        android:textSize="@dimen/lacation_detail_text_1"/>
+
+                    <Button
+                        android:layout_marginRight="20dp"
+                        android:id="@+id/btn_guide_enroll"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/bg_btn_yellow"
+                        android:text="预 订"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/lacation_detail_text_3"/>
+
+                    <TextView
+                        android:id="@+id/tv_guide_enroll"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv_guide_enroll_title"
+                        android:layout_toLeftOf="@id/btn_guide_enroll"
+                        android:layout_marginRight="5dp"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/lacation_detail_text_1"
+                        android:visibility="invisible"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/enroll_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color"
+                    android:visibility="gone"/>
+                <!--攻略预定结束-->
+
+                <!--攻略电话开始-->
+                <RelativeLayout
+                    android:id="@+id/rel_guide_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_guide_call"
+                        android:layout_marginLeft="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="电话"
+                        android:textColor="#FFB933"
+                        android:textSize="@dimen/lacation_detail_text_1"/>
+
+                    <ImageView
+                        android:layout_marginRight="20dp"
+                        android:id="@+id/img_guide_call"
+                        android:layout_marginTop="6dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignRight="@+id/tv_guide_call"
+                        android:layout_alignBottom="@+id/tv_guide_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/car_call"/>
+
+                    <TextView
+                        android:id="@+id/tv_guide_call_num"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/tv_guide_call"
+                        android:layout_toRightOf="@id/tv_guide_call"
+                        android:layout_toLeftOf="@id/img_guide_call"
+                        android:layout_marginRight="5dp"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/lacation_detail_text_1"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color"/>
+                <!--攻略电话结束-->
+            </LinearLayout>
+            <!--攻略结束 -->
+
+            <!--点评开始 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_marginTop="9dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color"/>
+
+                <TextView
+                    android:id="@+id/tv_attraction_comment"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="来自158位游客的点评"
+                    android:textSize="@dimen/lacation_detail_text_0"
+                    android:textColor="#333333"/>
+
+                <View
+                    android:layout_marginTop="11dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@color/divider_color"/>
+
+                <LinearLayout
+                    android:id="@+id/list_attraction_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical"/>
+
+                <Button
+                    android:id="@+id/btn_attraction_lookmorec"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_detail_more_comment"
+                    android:text="查看全部158位用户评价"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="@dimen/lacation_detail_text_3"
+                    android:textColor="#4CB4F4"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+                <View
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color"/>
+
+            </LinearLayout>
+            <!--点评结束 -->
+
+            <!--附近景点开始-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
+
+                <View
+                    android:layout_marginTop="9dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color"/>
+
+                <RelativeLayout
+                    android:id="@+id/rel_location_detail_nearby"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp">
+                    <TextView
+                        android:id="@+id/tv_attraction_nearby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="附近景点"
+                        android:textSize="@dimen/lacation_detail_text_1"
+                        android:textColor="#333333"/>
+                    <TextView
+                        android:layout_alignBottom="@id/tv_attraction_nearby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="查看更多"
+                        android:textSize="@dimen/lacation_detail_text_5"
+                        android:textColor="#666666"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginTop="11dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@color/divider_color"/>
+
+                <GridView
+                    android:id="@+id/gridview_attraction_nearby"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="10dp"
+                    android:numColumns="4"
+                    android:horizontalSpacing="2dp"
+                    android:scrollbars="none"
+                    android:cacheColorHint="@android:color/transparent">
+
+                </GridView>
+
+                <View
+                    android:layout_marginTop="19dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color"/>
+
+            </LinearLayout>
+            <!--附近景点结束-->
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

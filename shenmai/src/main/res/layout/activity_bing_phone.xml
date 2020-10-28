@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/top_bar" />
+
+    <EditText
+        android:id="@+id/edt_bing_userphone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/bg_edittext"
+        android:hint="请输入手机号"
+        android:numeric="integer"
+        android:drawableLeft="@mipmap/phone"
+        android:drawablePadding="5dp"
+        android:textColor="#999999"
+        android:textColorHint="#999999"
+        android:maxLength="11"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edt_bing_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/bg_edittext"
+            android:drawableLeft="@mipmap/messgae_code"
+            android:drawablePadding="5dp"
+            android:hint="输入短信验证码"
+            android:numeric="integer"
+            android:singleLine="true"
+            android:textColorHint="#999999"
+            android:textSize="12sp"
+            android:textColor="#999999"/>
+
+        <Button
+            android:id="@+id/btn_bing_getcode"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button"
+            android:layout_marginLeft="5dp"
+            android:text="获取验证码"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_bing_phone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_button"
+        android:text="保存"
+        android:textColor="#FFF9FF"
+        android:textSize="14sp" />
+
+</LinearLayout>

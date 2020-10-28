@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main_color">
+
+    <include
+        android:id="@+id/history_top"
+        layout="@layout/top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/SearchResultText_12"
+                    android:text="热门搜索"/>
+
+                <com.basulvyou.system.wibget.FlowTagLayout
+                    android:id="@+id/hot_word"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </com.basulvyou.system.wibget.FlowTagLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E4E4E4"/>
+
+            <View
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E4E4E4"/>
+
+            <LinearLayout
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginTop="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/SearchResultText_12"
+                        android:text="历史记录"/>
+
+                    <TextView
+                        android:id="@+id/tv_search_history_clear_his"
+                        android:layout_marginTop="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/SearchResultText_12"
+                        android:text="清空历史记录"/>
+                </RelativeLayout>
+
+                <com.basulvyou.system.wibget.FlowTagLayout
+                    android:id="@+id/his_word"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </com.basulvyou.system.wibget.FlowTagLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E4E4E4"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

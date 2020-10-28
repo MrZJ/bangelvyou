@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color">
+
+    <include
+        android:id="@+id/share_comment_top"
+        layout="@layout/top_bar"/>
+
+    <LinearLayout
+        android:id="@+id/rel_edit_comment"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#999999"
+        android:padding="4dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_comment"
+            android:layout_width="0dp"
+            android:layout_weight="0.85"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_edittext"
+            android:hint="说点什么"
+            android:textSize="14sp"
+            android:maxLength="100"/>
+        <TextView
+            android:layout_marginLeft="2dp"
+            android:id="@+id/btn_send_comment"
+            android:text="发送"
+            android:textColor="@android:color/white"
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:background="@color/top_bar_color" />
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/share_comment_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:listSelector="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp"
+        android:scrollbars="none"
+        android:layout_below="@id/share_comment_top"
+        android:layout_above="@id/rel_edit_comment"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrDrawableStart="@mipmap/icon_refresh_start"
+        ptr:ptrDrawable="@mipmap/icon_refresh"
+        ptr:ptrHeaderSubTextColor="@color/btn_green"
+        ptr:ptrHeaderTextColor="@color/btn_green"
+        ptr:ptrMode="both"
+        ptr:ptrScrollingWhileRefreshingEnabled="false"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"/>
+
+</RelativeLayout>

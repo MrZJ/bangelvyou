@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.handmark.pulltorefresh.library.PullToRefreshListView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_carpooling_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:cacheColorHint="@android:color/transparent"
+    android:listSelector="@android:color/transparent"
+    android:divider="@color/bg_main_color_two"
+    android:dividerHeight="5dp"
+    android:scrollbars="none"
+    android:layout_below="@id/my_carpooling_top"
+    ptr:ptrAnimationStyle="rotate"
+    ptr:ptrDrawableStart="@mipmap/icon_refresh_start"
+    ptr:ptrDrawableEnd="@mipmap/icon_refresh"
+    ptr:ptrHeaderSubTextColor="@color/btn_green"
+    ptr:ptrHeaderTextColor="@color/btn_green"
+    ptr:ptrMode="both"
+    ptr:ptrScrollingWhileRefreshingEnabled="false"
+    />

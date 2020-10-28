@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dash="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@drawable/bg_item_special">
+
+    <TextView
+        android:id="@+id/tv_coupon_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="￥"
+        android:textSize="33sp"
+        android:textColor="#FE5340"/>
+
+    <TextView
+        android:id="@+id/tv_coupon_quota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_coupon_sign"
+        android:layout_centerVertical="true"
+        android:text="100.00"
+        android:textSize="33sp"
+        android:textColor="#FE5340"/>
+
+    <ImageView
+        android:id="@+id/view_coupon_line"
+        android:layout_toRightOf="@id/tv_coupon_quota"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="1dp"
+        android:layout_centerVertical="true"
+        android:layout_height="match_parent"
+        android:background="@mipmap/grayline" />
+    <!--<com.yishangshuma.bangelvyou.wibget.DashedLine-->
+        <!--android:id="@+id/view_coupon_line"-->
+        <!--android:layout_toRightOf="@id/tv_coupon_quota"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:layout_width="1dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--dash:lineColor="@color/title_text_color"-->
+        <!--dash:lineOrientation="vertical"/>-->
+
+    <LinearLayout
+        android:layout_toRightOf="@id/view_coupon_line"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_coupon_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="双十一特惠"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:id="@+id/tv_coupon_limit"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单满30元使用"
+            android:textSize="10sp"
+            android:textColor="#666666"/>
+
+        <TextView
+            android:id="@+id/tv_coupon_rule"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nike自营店使用"
+            android:textSize="10sp"
+            android:singleLine="true"
+            android:textColor="#666666"/>
+
+        <TextView
+            android:id="@+id/tv_coupon_date"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016-01-10至2016-02-24"
+            android:textSize="10sp"
+            android:textColor="#666666"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

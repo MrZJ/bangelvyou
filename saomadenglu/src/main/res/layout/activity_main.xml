@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color">
+
+    <include
+        android:id="@+id/mian_top"
+        layout="@layout/top_bar" />
+
+    <ScrollView
+        android:layout_below="@+id/mian_top"
+        android:id="@+id/rl_after_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main_color_two"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_main_color_two"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rel_user_unlogin"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/top_bar_color">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_user_icon"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@mipmap/mine_toux"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp" />
+
+                <TextView
+                    android:id="@+id/tv_user_login"
+                    style="@style/UserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/img_user_icon"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="用户名" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_nomal_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rel_out_scan"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@android:color/white"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/img_out_scan"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@mipmap/mine_project"/>
+
+                    <TextView
+                        style="@style/mine_list_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/img_out_scan"
+                        android:text="产品码出厂扫描"
+                        android:textColor="#333333" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rel_makein"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@android:color/white">
+
+                    <ImageView
+                        android:id="@+id/img_makein"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@mipmap/mine_package"/>
+
+                    <TextView
+                        style="@style/mine_list_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/img_makein"
+                        android:text="包装码出厂扫描"
+                        android:textColor="#333333" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rel_out_rem"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@android:color/white">
+
+                    <ImageView
+                        android:id="@+id/img_out_rem"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@mipmap/mine_mark"/>
+
+                    <TextView
+                        style="@style/mine_list_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/img_out_rem"
+                        android:text="产品出厂扫描记录"
+                        android:textColor="#333333" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/divider_color" />
+
+            </LinearLayout>
+
+            <!--角色用户-->
+            <LinearLayout
+                android:id="@+id/lin_rule_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rel_code_scan"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@android:color/white">
+
+                    <ImageView
+                        android:id="@+id/img_cpcode_scan"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@mipmap/mine_scan"/>
+
+                    <TextView
+                        style="@style/mine_list_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/img_cpcode_scan"
+                        android:text="扫一扫"
+                        android:textColor="#333333" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/divider_color" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_marginTop="60dp"
+                android:id="@+id/btn_login_out"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_button"
+                android:text="退出登录"
+                android:textColor="#FFF9FF"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

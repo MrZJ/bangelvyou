@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color_two"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/top_bar" />
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/rel_outstock_check"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/img_outstock_check"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@mipmap/outstock_manage" />
+
+        <TextView
+            style="@style/mine_list_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/img_outstock_check"
+            android:text="库存查询"
+            android:textColor="#333333" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/mine_right" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/rel_outstock_make"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/img_outstock_make"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@mipmap/outstock_record" />
+
+        <TextView
+            style="@style/mine_list_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/img_outstock_make"
+            android:text="交易单管理"
+            android:textColor="#333333" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/mine_right" />
+
+    </RelativeLayout>
+
+</LinearLayout>

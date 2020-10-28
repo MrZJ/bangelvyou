@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shenmai.system">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application
+        android:name=".UIApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar">
+        <activity
+            android:name=".ui.activity.WelcomeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Activity"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx6f32a487055176a1" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:launchMode="singleTask"/>
+        <activity android:name=".ui.activity.GuideActivity" />
+        <activity android:name=".ui.activity.RegisterActivity" />
+        <activity android:name=".ui.activity.MyAccountActivity" />
+        <activity android:name=".ui.activity.TouxiangActivity" />
+        <activity android:name=".ui.activity.ManagerAddressActivity" />
+        <activity android:name=".ui.activity.EditAddressActivity" />
+        <activity android:name=".ui.activity.SelectAddressActivity" />
+        <activity android:name=".ui.activity.PushActivity" />
+        <activity android:name=".ui.activity.CollectActivity" />
+        <activity android:name=".ui.activity.SearchActivity" />
+        <activity android:name=".ui.activity.NoticeActivity" />
+        <activity android:name=".ui.activity.GoodsDetailActivity" />
+        <activity android:name=".ui.activity.RetrPasswordActivity" />
+        <activity android:name=".ui.activity.GetTestCodeActivity" />
+        <activity android:name=".ui.activity.OrderWebActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx6f32a487055176a1" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.MineWebActivity" />
+        <activity android:name=".ui.activity.ShopWebActivity" />
+        <activity android:name=".ui.activity.UpdatePasswordActivity" />
+        <activity android:name=".ui.activity.PayActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx6f32a487055176a1" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.AdvWebActivity" />
+        <activity android:name=".ui.activity.BankSetActivity" />
+        <activity android:name=".ui.activity.ProtWebActivity" />
+        <activity android:name=".ui.activity.BankInfoActivity" />
+        <activity android:name=".ui.activity.BingPhoneActivity"/>
+        <activity android:name=".ui.activity.ShopSeeWebActivity"/>
+
+        <!-- 微信支付回调 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <!-- 友盟授权activity start -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1104949338" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault" />
+        <!-- 友盟授权activity end -->
+
+
+        <!-- 友盟appkey end -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="563c122d67e58eab8b0007ff" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="ec38fa68cfbf1d9c3e43b001387b1130" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="youmeng" />
+        <!-- 友盟appkey start -->
+
+
+        <!-- 百度自动更新 start -->
+        <meta-data
+            android:name="BDAPPID"
+            android:value="7218094" />
+        <meta-data
+            android:name="BDAPPKEY"
+            android:value="lvMz337xAZ3qy4XqQuGHE2emV1R7xIK8" />
+
+        <activity
+            android:name="com.baidu.autoupdatesdk.ConfirmDialoigActivity"
+            android:exported="false"
+            android:screenOrientation="sensor"
+            android:theme="@style/bdp_update_dialog_style_fullscreen" />
+
+        <receiver
+            android:name="com.baidu.autoupdatesdk.receiver.BDBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.baidu.autoupdatesdk.ACTION_NEW_UPDATE" />
+                <action android:name="com.baidu.autoupdatesdk.ACTION_DOWNLOAD_COMPLETE" />
+                <action android:name="com.baidu.autoupdatesdk.ACTION_NEW_AS" />
+                <action android:name="com.baidu.autoupdatesdk.ACTION_AS_DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+        <!-- 百度自动更新SDK end -->
+
+
+    </application>
+
+</manifest>

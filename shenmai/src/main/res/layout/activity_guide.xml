@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.stx.xhb.xbanner.XBanner
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/viewpage_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:pointsPosition="CENTER"
+        app:isAutoPlay="false"
+        app:pointNormal="@mipmap/guide_nomarl"
+        app:pointSelect="@mipmap/guide_selected" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="75dp"
+        android:layout_marginLeft="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:text="登录"
+        android:background="@drawable/bg_button_guide"
+        android:visibility="visible"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="75dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_button_guide"
+        android:visibility="visible"
+        android:text="注册"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+</RelativeLayout>

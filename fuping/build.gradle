@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOL_VERSION
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+            // Or, if you prefer, you can continue to check for errors in release builds,
+            // but continue the build even when errors are found:
+            abortOnError false
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.fuping.system"
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode 1
+        versionName "1.0"
+    }
+    signingConfigs {
+        config {
+            keyAlias 'shishoushangbao'
+            keyPassword 'shishoushangbao'
+            storeFile file('shishoushangbao.jks')
+            storePassword 'shishoushangbao'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            res.srcDirs = ['src/main/res', 'src/main/res/anim']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:appcompat-v7:${SUPORT_VERSION}"
+    compile files('libs/okhttp-2.5.0.jar')
+    compile files('libs/fastjson-1.1.33.jar')
+    compile files('libs/pgyer_sdk_2.4.2.jar')
+    compile files('libs/volley.jar')
+    compile files('libs/universal-image-loader-1.9.0-snapshot-with-sources.jar')
+    compile files('libs/xUtils-3.1.22.jar')
+    compile project(':Android-PullToRefresh')
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'cn.bingoogolapple:bga-qrcodecore:1.1.3@aar'
+    compile 'cn.bingoogolapple:bga-zxing:1.1.3@aar'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile "com.android.support:support-v4:${SUPORT_VERSION}"
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.xhb:xbanner:1.2.2'
+}

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color_two"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/top_bar" />
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        style="@style/mine_rl">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/mine_text"
+            android:text="开户人:" />
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_bank_info_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/main_text_color_nomal"
+            android:lines="1"
+            android:layout_toRightOf="@id/tv_name"
+            android:layout_marginLeft="20dp"
+            android:gravity="right"
+            android:ellipsize="end"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color" />
+
+    <RelativeLayout
+        style="@style/mine_rl">
+
+        <TextView
+            style="@style/mine_text"
+            android:text="开户银行:" />
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_bank_info_bankname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/main_text_color_nomal"
+            android:lines="1"
+            android:layout_marginLeft="20dp"
+            android:gravity="right"
+            android:ellipsize="end"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color" />
+
+    <RelativeLayout
+        style="@style/mine_rl">
+
+        <TextView
+            style="@style/mine_text"
+            android:text="卡号:" />
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_bank_info_banknum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/main_text_color_nomal"
+            android:lines="1"
+            android:layout_marginLeft="20dp"
+            android:gravity="right"
+            android:ellipsize="end"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_bank_info_add"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_button"
+        android:text="添加或修改"
+        android:textColor="#FFF9FF"
+        android:textSize="14sp" />
+
+</LinearLayout>

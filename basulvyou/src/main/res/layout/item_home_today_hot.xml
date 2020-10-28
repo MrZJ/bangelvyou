@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants">
+
+    <View
+        android:id="@+id/divider_today_hot"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color" />
+
+    <LinearLayout
+        android:id="@+id/ll_today_hot"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="13dp"
+            android:background="@mipmap/home_list_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:text="本期热门"
+            android:textColor="@color/title_text_color"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/item_home_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/divider_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp">
+
+        <com.basulvyou.system.wibget.CircleImageView
+            android:id="@+id/img_today_hot_user_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="2dp"></com.basulvyou.system.wibget.CircleImageView>
+
+        <TextView
+            android:id="@+id/tv_today_hot_name"
+            style="@style/homeitem_11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/img_today_hot_user_icon"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_today_hot_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_today_hot_name"
+            android:layout_below="@id/tv_today_hot_name"
+            android:layout_marginBottom="2dp"
+            android:singleLine="true"
+            android:textColor="#666666"
+            android:textSize="13sp" />
+
+        <!--<LinearLayout
+            android:id="@+id/ll_img"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignLeft="@id/tv_today_hot_name"
+            android:layout_below="@id/tv_today_hot_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">-->
+
+            <com.basulvyou.system.wibget.MyGridView
+                android:layout_width="match_parent"
+                android:id="@+id/item_gv_img"
+                android:numColumns="3"
+                android:listSelector="@null"
+                android:gravity="center"
+                android:horizontalSpacing="3dp"
+                android:verticalSpacing="3dp"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_today_hot_name"
+                android:layout_below="@id/tv_today_hot_content"/>
+
+
+            <!--<com.basulvyou.system.wibget.RoundedImage.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/img_today_hot"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="4dp" />
+
+            <com.basulvyou.system.wibget.RoundedImage.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/img_today_hot2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="4dp" />
+
+            <com.basulvyou.system.wibget.RoundedImage.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/img_today_hot3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="4dp" />-->
+        <!--</LinearLayout>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/item_gv_img"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/item_gv_img"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_today_hot_ads"
+                style="@style/homeitem_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dp"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_today_hot_date"
+                style="@style/homeitem_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tv_today_hot_ads"
+                android:layout_marginRight="5dp"
+                android:singleLine="true" />
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/lin_item_home_today_viewcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_below="@id/tv_today_hot_ads">
+
+                <TextView
+                    android:id="@+id/tv_today_hot_viewnum"
+                    style="@style/homeitem_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_today_hot_commnum"
+                    style="@style/homeitem_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

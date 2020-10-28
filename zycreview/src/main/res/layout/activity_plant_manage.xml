@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color_two"
+    android:orientation="vertical"
+    tools:context="com.zycreview.system.ui.activity.PlantManageActivity">
+
+    <include
+        android:id="@+id/plant_top_bar"
+        layout="@layout/top_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:color/white"
+        android:layout_marginTop="15dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="15dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/plant_task" />
+
+        <TextView
+            android:id="@+id/tv_plant_task"
+            style="@style/text_manage"
+            android:drawableRight="@mipmap/mine_right"
+            android:text="种植任务" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:color/white"
+        android:layout_marginTop="15dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="15dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/plant_record" />
+
+        <TextView
+            android:id="@+id/tv_plant_history"
+            style="@style/text_manage"
+            android:drawableRight="@mipmap/mine_right"
+            android:text="种植历史" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_main_color"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+
+    <ImageView
+        android:layout_weight="0.4"
+        android:id="@+id/iv_product_icon"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:scaleType="centerInside" />
+
+    <LinearLayout
+        android:layout_weight="0.6"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv_product_name_title"
+            style="@style/ItemTextBlack"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:singleLine="true"
+            android:gravity="left"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv_entp_name"
+            style="@style/ItemTextGray"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:singleLine="true"
+            android:gravity="left"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv_item_pack_code"
+            style="@style/ItemTextGray"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:singleLine="true"
+            android:gravity="left"/>
+
+    </LinearLayout>
+
+</LinearLayout>

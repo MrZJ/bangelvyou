@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">神买追溯</string>
+    <string name="file_provider">com.pgyersdk.provider</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

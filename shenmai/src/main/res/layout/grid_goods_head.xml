@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/img_grid_head_column_img"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rel_grid_goods_head_1"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/bg_main_color"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/tv_grids_head_goodname1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/GoodsName"
+                android:text="名字"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/tv_grids_head_goodname1"
+                android:id="@+id/tv_grid_head_goodtype1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/GoodsType"
+                android:text="描述"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_marginTop="6dp"
+                android:layout_below="@id/tv_grid_head_goodtype1"
+                android:id="@+id/tv_grid_head_goodprice1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/GoodsType"
+                android:text="价格:"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_marginTop="6dp"
+                android:layout_below="@id/tv_grid_head_goodprice1"
+                android:id="@+id/tv_grid_head_goodreback1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/GoodsType"
+                android:text="佣金:"
+                android:singleLine="true"/>
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tv_grid_head_goodreback1"
+                android:id="@+id/img_grid_head_addshop1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/add_to_shop"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/tv_grid_head_goodreback1"
+                android:layout_toRightOf="@id/img_grid_head_addshop1"
+                android:id="@+id/tv_grid_head_goodstate1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/GoodsState"
+                android:text="有货"
+                android:singleLine="true"/>
+
+            <ImageView
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/tv_grid_head_goodstate1"
+                android:layout_centerInParent="true"
+                android:id="@+id/img_grid_head_goodimg1"
+                android:layout_width="130dp"
+                android:layout_height="130dp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="1dp">
+
+            <RelativeLayout
+                android:id="@+id/rel_grid_goods_head_2"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/bg_main_color"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/tv_grids_head_goodname2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/GoodsName"
+                    android:text="名字"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/tv_grids_head_goodname2"
+                    android:id="@+id/tv_grid_head_goodtype2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/GoodsType"
+                    android:text="型号"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/tv_grid_head_goodtype2"
+                    android:id="@+id/tv_grid_head_goodprice2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/GoodsType"
+                    android:text="价格:"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/tv_grid_head_goodprice2"
+                    android:id="@+id/tv_grid_head_goodreback2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/GoodsType"
+                    android:text="佣金:"
+                    android:singleLine="true"
+                    android:layout_marginRight="75dp"
+                    android:ellipsize="end"/>
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/tv_grid_head_goodreback2"
+                    android:id="@+id/img_grid_head_addshop2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/add_to_shop"
+                    android:layout_marginRight="5dp"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/tv_grid_head_goodreback2"
+                    android:layout_toRightOf="@id/img_grid_head_addshop2"
+                    android:id="@+id/tv_grid_head_goodstate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/GoodsState"
+                    android:text="有货"
+                    android:singleLine="true"/>
+
+                <ImageView
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@id/tv_grid_head_goodprice2"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/img_grid_head_goodimg2"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_grid_goods_head_3"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_weight="0.5"
+                android:layout_height="0dp"
+                android:background="@color/bg_main_color"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/tv_grids_head_goodname3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/GoodsName"
+                    android:text="名字"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/tv_grids_head_goodname3"
+                    android:id="@+id/tv_grid_head_goodtype3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/GoodsType"
+                    android:text="型号"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/tv_grid_head_goodtype3"
+                    android:id="@+id/tv_grid_head_goodprice3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/GoodsType"
+                    android:text="价格:"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/tv_grid_head_goodprice3"
+                    android:id="@+id/tv_grid_head_goodreback3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/GoodsType"
+                    android:text="佣金:"
+                    android:singleLine="true"
+                    android:layout_marginRight="75dp"
+                    android:ellipsize="end"/>
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/tv_grid_head_goodreback3"
+                    android:id="@+id/img_grid_head_addshop3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/add_to_shop"
+                    android:layout_marginRight="5dp"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/tv_grid_head_goodreback3"
+                    android:layout_toRightOf="@id/img_grid_head_addshop3"
+                    android:id="@+id/tv_grid_head_goodstate3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/GoodsState"
+                    android:text="有货"
+                    android:singleLine="true"/>
+
+                <ImageView
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@id/tv_grid_head_goodprice3"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/img_grid_head_goodimg3"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

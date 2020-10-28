@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_main_color"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_item_stock_check_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ItemTextBlack"
+        android:singleLine="true"
+        android:text="药材名称"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/tv_item_stock_check_totalweight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ItemTextBlack"
+        android:singleLine="true"
+        android:text="药材总量:"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/tv_item_stock_check_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ItemTextBlack"
+        android:singleLine="true"
+        android:text="在库量:"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/tv_item_stock_check_outweight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ItemTextBlack"
+        android:singleLine="true"
+        android:text="出库量:"/>
+
+</LinearLayout>

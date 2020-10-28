@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/travel_detail_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/travel_detail"
+            android:textColor="@color/text_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/delet_travel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:text="删除"
+            android:textColor="@color/text_blue"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/travel_place_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/leave_tab_hight"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:id="@+id/travel_place_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/leave_margin"
+            android:text="出差地点"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/travel_place_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/travel_place_tip"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:hint="如：北京、杭州、富裕、八宿（必填）"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/start_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/leave_tab_hight"
+        android:background="@color/white">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/leave_margin"
+            android:text="预计开始时间"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/start_time_arrow"
+            android:layout_width="@dimen/arrow_right"
+            android:layout_height="@dimen/arrow_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_right" />
+
+        <TextView
+            android:id="@+id/start_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/start_time_arrow"
+            android:singleLine="true"
+            android:text="请选择（必填）"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/end_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/leave_tab_hight"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/leave_margin"
+            android:text="预计结束时间"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/end_time_arrow"
+            android:layout_width="@dimen/arrow_right"
+            android:layout_height="@dimen/arrow_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_right" />
+
+        <TextView
+            android:id="@+id/end_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/end_time_arrow"
+            android:singleLine="true"
+            android:text="请选择（必填）"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/time_lengh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/leave_tab_hight"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:id="@+id/time_lengh_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/leave_margin"
+            android:text="时长（天）"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/time_lengh_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/time_lengh_tip"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:hint="请输入（必填）"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/leave_tab_hight"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:id="@+id/paterner_tip_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/leave_margin"
+            android:text="同行人"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/paterner_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/paterner_tip_tv"
+            android:layout_alignBottom="@+id/paterner_tip_tv"
+            android:layout_marginLeft="@dimen/leave_margin"
+            android:layout_toEndOf="@+id/paterner_tip_tv"
+            android:layout_toRightOf="@+id/paterner_tip_tv"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:hint="请输入"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/start_go_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/leave_tab_hight"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:id="@+id/leave_time_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/leave_margin"
+            android:text="出发时间    "
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/leave_time_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/leave_time_tv"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:hint="请输入（必填）"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/leave_tab_hight"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:id="@+id/get_money_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/leave_margin"
+            android:text="暂支差旅费"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/get_money_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/get_money_tv"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:hint="请输入"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/company_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/leave_tab_hight"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:id="@+id/chager_man_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/leave_margin"
+            android:text="单位负责人"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/chager_man_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/chager_man_tv"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:hint="请输入（必填）"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/department_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/leave_tab_hight"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:id="@+id/monitor_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/leave_margin"
+            android:text="部门负责人"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/monitor_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/monitor_tv"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:hint="请输入"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</LinearLayout>

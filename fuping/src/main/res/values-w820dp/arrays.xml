@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="notice">
+        <item>通知公告</item>
+        <item>工作动态</item>
+        <item>政策文件</item>
+        <item>就业信息</item>
+        <item>经验交流</item>
+        <item>精神传达</item>
+        <item>扶贫风采</item>
+        <item>资源共享</item>
+    </string-array>
+
+</resources>

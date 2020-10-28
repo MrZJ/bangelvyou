@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">中药材追溯</string>
+    <string name="netError">网络请求失败</string>
+    <string name="Error_404">未找到网络请求地址...</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_plant_manage">PlantManageActivity</string>
+    <string name="title_activity_plant_task_add">PlantTaskAddActivity</string>
+    <string name="title_activity_inspect_manager">InspectManagerActivity</string>
+    <string name="title_activity_fertilizer_manage">FertilizerManageActivity</string>
+    <string name="title_activity_pesticide_manage">PesticideManageActivity</string>
+    <string name="title_activity_harvest_manage">HarvestManageActivity</string>
+</resources>

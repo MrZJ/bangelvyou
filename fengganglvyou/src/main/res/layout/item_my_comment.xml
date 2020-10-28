@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dash="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main_color"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/item_my_comment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名称"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:textColor="#333333"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+        <RatingBar
+            android:id="@+id/item_my_comment_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/commentRatingBar"
+            android:isIndicator="true"
+            android:rating="5"/>
+
+        <TextView
+            android:id="@+id/item_my_comment_date"
+            android:layout_alignBottom="@id/item_my_comment_rating"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016-02-17"
+            android:textColor="#666666"
+            android:textSize="9sp"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/item_my_comment_content"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="#666666"
+        android:textSize="12sp"
+        android:text="九华山，位于安徽省青阳境内。是安徽省四大名山之一（黄山、九华山、齐云山、天柱山、），是上古学仙修道圣地之一九华山，位于安徽省青阳境内。是安徽省四大名山之一（黄山、九华山、齐云山、天柱山、），是上古学仙修道圣地之一"/>
+
+
+    <com.basulvyou.system.wibget.DashedLine
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        dash:lineColor= "@color/dash_line_color" />
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sl_item_plant_task"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:clickable="true"
+    android:paddingBottom="1dp"
+    app:ios="false"
+    app:leftSwipe="true"
+    app:swipeEnable="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ll_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main_color"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_plant_task"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            style="@style/ItemTextBlack"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tv_plant_time"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            style="@style/ItemTextBlack"
+            android:singleLine="true"
+            />
+
+        <ViewStub
+            android:id="@+id/vs_item_add_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout="@layout/add_button" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_delete"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_red_dark"
+        android:text="删除"
+        android:textColor="@android:color/white" />
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

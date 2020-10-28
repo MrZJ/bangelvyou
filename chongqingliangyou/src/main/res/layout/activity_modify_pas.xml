@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main_color">
+
+    <include
+        android:id="@+id/login_top"
+        layout="@layout/top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_setPassword_oldPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_edittext"
+                android:paddingLeft="5dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="27dp"
+                android:layout_marginTop="27dp"
+                android:hint="请输入原始密码"
+                android:textColorHint="#999999"
+                android:textSize="12sp"
+                android:textColor="#999999"/>
+
+            <EditText
+                android:id="@+id/edit_setPassword_newPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_edittext"
+                android:inputType="textPassword"
+                android:paddingLeft="5dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="27dp"
+                android:layout_marginTop="11dp"
+                android:hint="请输入新密码"
+                android:textColorHint="#999999"
+                android:textSize="12sp"
+                android:textColor="#999999"/>
+
+
+            <Button
+                android:id="@+id/btn_setPassword_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/top_bar_color"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="27dp"
+                android:layout_marginTop="29dp"
+                android:text="确认修改"
+                android:textSize="14sp"
+                android:textColor="#FFF9FF"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

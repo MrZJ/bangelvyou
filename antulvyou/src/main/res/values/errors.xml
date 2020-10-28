@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="netError">网络请求失败</string>
+    <string name="Error_404">未找到网络请求地址...</string>
+</resources>

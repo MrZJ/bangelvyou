@@ -1,0 +1,337 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_main_color_two">
+
+    <RelativeLayout
+        android:id="@+id/rl_home_pager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="gone">
+
+        <com.basulvyou.system.wibget.AutoScrollViewPager
+            android:id="@+id/home_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:id="@+id/rel_home_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_home_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_home_weather_img"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_below="@id/tv_home_location"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/tv_home_wendu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看天气详情>>"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/home_pager_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dip"
+                android:gravity="center"
+                android:orientation="horizontal"></LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/home_adv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@mipmap/banner" />
+
+    <LinearLayout
+        android:id="@+id/lin_home_btn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/home_adv"
+        android:background="@color/bg_main_color"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/home_item_1"
+                layout="@layout/home_button_item"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <!--<View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/divider_color"/>-->
+
+            <include
+                android:id="@+id/home_item_2"
+                layout="@layout/home_button_item"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <!--<View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/divider_color"/>-->
+
+            <include
+                android:id="@+id/home_item_3"
+                layout="@layout/home_button_item"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/home_item_4"
+                layout="@layout/home_button_item"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <!--<View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/divider_color"/>-->
+
+            <include
+                android:id="@+id/home_item_5"
+                layout="@layout/home_button_item"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <!--<View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/divider_color"/>-->
+
+            <include
+                android:id="@+id/home_item_6"
+                layout="@layout/home_button_item"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lin_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/lin_home_btn"
+        android:background="@color/divider_color" />
+
+    <LinearLayout
+        android:id="@+id/lin_home_btn_1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/lin_line"
+        android:background="@color/bg_main_color"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/home_item_7"
+                layout="@layout/home_button_item_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/divider_color" />
+
+            <include
+                android:id="@+id/home_item_8"
+                layout="@layout/home_button_item_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/divider_color" />
+
+            <include
+                android:id="@+id/home_item_9"
+                layout="@layout/home_button_item_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/home_item_10"
+                layout="@layout/home_button_item_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/divider_color" />
+
+            <include
+                android:id="@+id/home_item_11"
+                layout="@layout/home_button_item_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/divider_color" />
+
+            <include
+                android:id="@+id/home_item_12"
+                layout="@layout/home_button_item_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/lin_home_btn_1"
+        android:layout_marginTop="10dp"
+        android:background="@color/divider_color" />
+
+    <com.basulvyou.system.wibget.MyListView
+        android:id="@+id/home_top_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divide_line"
+        android:divider="#00000000"
+        android:dividerHeight="0dip"
+        android:listSelector="@android:color/transparent" />
+
+    <LinearLayout
+        android:id="@+id/title_layout_fx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home_top_lv"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/title_name_fx"
+            style="@style/homeitem_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="热门话题" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+    </LinearLayout>
+</RelativeLayout>

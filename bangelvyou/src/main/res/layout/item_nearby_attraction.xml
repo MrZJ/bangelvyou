@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/bg_main_color">
+
+    <RelativeLayout
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:background="@drawable/search_result_img_stroke">
+
+        <ImageView
+            android:id="@+id/item_nearby_attraction_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="1dp"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/item_nearby_attraction_dis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1Km"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="3dp"
+            android:textColor="@android:color/white"
+            android:textSize="7sp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:background="@drawable/bg_nearby_dis"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_nearby_attraction_name"
+        android:layout_marginTop="9dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="风景名称"
+        android:textSize="9sp"
+        android:textColor="#666666"/>
+
+</LinearLayout>

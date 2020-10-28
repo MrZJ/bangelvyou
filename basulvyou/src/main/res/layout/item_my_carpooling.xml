@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_item_carpooling_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4月2日 14:52"
+            android:textColor="#666666"/>
+
+        <TextView
+            android:id="@+id/tv_item_carpooling_status"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已关闭"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:drawableLeft="@mipmap/car_start"
+            android:drawablePadding="5dp"
+            android:id="@+id/tv_item_carpooling_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="四川成都大广场"
+            android:textColor="#666666"
+            android:singleLine="true"/>
+
+        <TextView
+            android:drawableLeft="@mipmap/car_end"
+            android:drawablePadding="5dp"
+            android:id="@+id/tv_item_carpooling_end"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/tv_item_carpooling_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="成都东站"
+            android:textColor="#666666"
+            android:singleLine="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/alarm_right"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"/>
+
+</LinearLayout>

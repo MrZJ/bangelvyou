@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <View
+        android:id="@+id/divider_today_hot"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"/>
+
+    <LinearLayout
+        android:id="@+id/ll_today_hot"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical">
+        
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="13dp"
+            android:background="@mipmap/home_list_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="本期热门"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/title_text_color"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <com.yishangshuma.bangelvyou.wibget.RoundedImage.RoundedImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_today_hot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:riv_corner_radius="4dp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_today_hot_love"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:minWidth="48dp"
+            android:orientation="horizontal"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/bg_home_love">
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="12dp"
+                android:background="@mipmap/home_love"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/tv_today_hot_num"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="135"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="2dp"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_today_hot_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="13dp"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
+</LinearLayout>

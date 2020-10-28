@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">扫码登录</string>
+    <string name="netError">网络请求失败</string>
+    <string name="Error_404">未找到网络请求地址...</string>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/bg_main_color_two"
+    android:gravity="center_vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <TextView
+        android:id="@+id/tv_list_goods_head_sale"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/GoodsOrderN"
+        android:text="销量优先" />
+
+    <TextView
+        android:id="@+id/tv_list_goods_head_hot"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/GoodsOrderN"
+        android:text="人气优先" />
+
+    <TextView
+        android:id="@+id/tv_list_goods_head_reback"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/GoodsOrderN"
+        android:text="价格优先" />
+
+</LinearLayout>

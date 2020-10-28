@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color">
+
+    <include
+        layout="@layout/top_bar"
+        android:id="@+id/send_carpooling_top" />
+
+    <LinearLayout
+        android:id="@+id/lin_send_carpooling_chose"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lin_send_carpooling_owner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <com.basulvyou.system.wibget.CircleImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@mipmap/owner_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我是车主"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:textColor="#333333"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我有出车计划"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/location_text_color"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_send_carpooling_passenger"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <com.basulvyou.system.wibget.CircleImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@mipmap/passenger_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我是乘客"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:textColor="#333333"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我有用车计划"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/location_text_color"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_send_carpooling_close"
+        android:layout_below="@id/lin_send_carpooling_chose"
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/close_carpooling"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

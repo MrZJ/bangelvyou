@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="location">
+        <item>景点</item>
+        <item>美食</item>
+        <item>酒店</item>
+        <item>特产</item>
+        <item>藏家乐</item>
+        <item>文化</item>
+        <item>资讯</item>
+    </string-array>
+    <string-array name="nearby">
+        <item>全部</item>
+        <item>景点</item>
+        <item>住宿</item>
+        <item>美食</item>
+    </string-array>
+
+    <string-array name="carpooling">
+        <item>拼车信息</item>
+        <item>待确认</item>
+        <item>被抢订单</item>
+        <item>已抢订单</item>
+    </string-array>
+
+    <string-array name="logistic">
+        <item>待抢订单</item>
+    </string-array>
+
+    <string-array name="rescue">
+        <item>报警救援</item>
+        <item>厕所信息</item>
+        <item>加油站</item>
+    </string-array>
+
+    <string-array name="my_carpool">
+        <item>预定订单</item>
+        <item>发布订单</item>
+    </string-array>
+
+</resources>

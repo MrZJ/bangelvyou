@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOL_VERSION
+    signingConfigs {
+        config {
+            keyAlias 'tonghualvyou'
+            keyPassword 'tonghualvyou'
+            storeFile file('tonghualvyou.jks')
+            storePassword 'tonghualvyou'
+        }
+    }
+    defaultConfig {
+        applicationId "com.yishangshuma.tonghualvyou"
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode 6
+        versionName "1.6"
+        signingConfig signingConfigs.config
+    }
+    lintOptions {
+        disable "ResourceType"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            res.srcDirs = ['src/main/res', 'src/main/res/anim']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':Android-PullToRefresh')
+    compile files('libs/umeng-analytics-v5.5.3.jar')
+    compile files('libs/okhttp-2.5.0.jar')
+    compile files('libs/fastjson-1.1.33.jar')
+    compile files('libs/universal-image-loader-1.9.0-snapshot-with-sources.jar')
+    compile files('libs/MobCommons.jar')
+    compile files('libs/BDAutoUpdateSDK_20150605_V1.2.0.jar')
+    compile files('libs/need_lib.jar')
+    compile files('libs/com.umeng.message.lib_v2.3.0.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/patchupdate.jar')
+    compile files('libs/photoview-library-1.2.2.jar')
+    compile files('libs/xUtils-3.1.22.jar')
+    compile files('libs/pgyer_sdk_2.4.2.jar')
+    compile "com.android.support:appcompat-v7:${SUPORT_VERSION}"
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile "com.android.support:recyclerview-v7:${SUPORT_VERSION}"
+    compile "com.android.support:support-v4:${SUPORT_VERSION}"
+}

@@ -1,0 +1,109 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color_two"
+    android:scrollbars="none"
+    android:fadeScrollbars="false"
+    android:fadingEdge="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rel_shop_usericon"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@color/top_bar_color">
+
+            <com.shenmai.system.widget.CircleImageView
+                android:id="@+id/img_shop_usericon"
+                android:layout_centerInParent="true"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/img_shop_usericon"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:id="@+id/ll_shop_frozen_money">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已冻结佣金"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"/>
+                    <TextView
+                        android:id="@+id/tv_shop_frozen_money"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_shop_withdraw_money"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="可提现佣金"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"/>
+                    <TextView
+                        android:id="@+id/tv_shop_withdraw_money"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/white"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.shenmai.system.widget.MyGridView
+            android:layout_marginTop="15dp"
+            android:id="@+id/grid_shop_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="1dp"
+            android:listSelector="@null"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:verticalSpacing="1dp"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_shop_gostore"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/bg_button"
+            android:text="我要分销"
+            android:textSize="20sp"
+            android:textColor="@color/bg_main_color"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

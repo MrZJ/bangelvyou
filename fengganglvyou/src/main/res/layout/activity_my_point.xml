@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include
+        android:id="@+id/my_point_top"
+        layout="@layout/top_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/my_point_title"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@id/my_point_top"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/tv_my_point_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="当前积分:"
+            android:textSize="14sp"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:id="@+id/tv_my_point_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="积分明细"
+            android:textColor="#FC6A01" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/my_point_line"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/my_point_title"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"/>
+
+    <ScrollView
+        android:layout_below="@id/my_point_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="积分说明:"
+                android:textSize="10sp"
+                android:textColor="#333333"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="10sp"
+                android:text="@string/point_spec_title" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="10sp"
+                android:text="@string/point_spec" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="10sp"
+                android:text="@string/point_get_title" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="10sp"
+                android:text="@string/point_get" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="10sp"
+                android:text="@string/point_use_title" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="10sp"
+                android:text="@string/point_use" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="10sp"
+                android:text="@string/point_other_title" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="10sp"
+                android:text="@string/point_other" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

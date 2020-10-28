@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+
+    signingConfigs {
+        config {
+            keyAlias 'shenmaizhuisu'
+            keyPassword 'shenmaizhuisu'
+            storeFile file('shenmaizhuisu.jks')
+            storePassword 'shenmaizhuisu'
+        }
+    }
+    defaultConfig {
+        applicationId "com.shenmaireview.system"
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //友盟统计
+    //联网框架
+    //json解析
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'cn.bingoogolapple:bga-qrcodecore:1.1.3@aar'
+    compile 'cn.bingoogolapple:bga-zxing:1.1.3@aar'
+    compile 'cn.bingoogolapple:bga-zbar:1.1.3@aar'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.8@aar'
+    compile 'com.lzy.net:okgo:2.0.0'
+    compile 'com.alibaba:fastjson:1.2.29'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.8.4'
+    compile 'com.android.support:recyclerview-v7:25.2.0'
+    compile 'com.android.support:support-v4:25.2.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.github.hss01248:NotifyUtil:1.0.0'
+    compile files('libs/pgyer_sdk_2.5.6.jar')
+}

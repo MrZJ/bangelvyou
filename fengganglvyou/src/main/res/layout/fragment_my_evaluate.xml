@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/evaluate_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/my_evaluate_header" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/evaluate_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/evaluate_bg"
+            android:dividerHeight="10dp"
+            android:scrollbars="none"
+            ptr:ptrAnimationStyle="rotate"
+            ptr:ptrDrawableEnd="@mipmap/icon_refresh"
+            ptr:ptrDrawableStart="@mipmap/icon_refresh_start"
+            ptr:ptrHeaderSubTextColor="@color/btn_green"
+            ptr:ptrHeaderTextColor="@color/btn_green"
+            ptr:ptrMode="both"
+            ptr:ptrScrollingWhileRefreshingEnabled="false" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

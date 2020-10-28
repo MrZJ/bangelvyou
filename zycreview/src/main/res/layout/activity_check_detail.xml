@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lin_check_detail_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="检验名称:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right|center_vertical" />
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="加工方法:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right|center_vertical"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="执行标准:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right|center_vertical"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="检验报告:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right|center_vertical"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="贮藏条件:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right|center_vertical"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="检验日期:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right|center_vertical"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="检验人员:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right|center_vertical"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lin_check_detail_text"
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/medicinal_name"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left|center_vertical"/>
+
+                <TextView
+                    android:id="@+id/method_name"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left|center_vertical"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/executive_standard"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left|center_vertical"/>
+
+                <TextView
+                    android:id="@+id/check_detail"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left|center_vertical"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/holding_conditions"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left|center_vertical"/>
+
+                <TextView
+                    android:id="@+id/check_time"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left|center_vertical" />
+
+                <TextView
+                    android:id="@+id/check_person"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left|center_vertical" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">重庆粮油检测</string>
+    <string name="netError">网络请求失败</string>
+    <string name="Error_404">未找到网络请求地址...</string>
+    <string name="search_hint">输入任务关键字</string>
+    <!-- 注册协议说明文字 -->
+    <string name="register_text">绑定手机不收取任何费用,一部手机只能
+        			绑定一个账号,若需修改或解除已绑定的手机,请联系客服</string>
+</resources>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color">
+
+    <include
+        android:id="@+id/reserve_top"
+        layout="@layout/top_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:orientation="vertical"
+        android:id="@+id/lin_reserve"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"/>
+
+        <Button
+            android:id="@+id/btn_reserve_lookcombo"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="立即预定"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:paddingTop="12dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:background="@drawable/bg_reserve"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@id/reserve_top"
+        android:layout_above="@id/lin_reserve"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:descendantFocusability="blocksDescendants">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_reserve_goodspic"
+                android:layout_width="match_parent"
+                android:layout_height="191dp"
+                android:background="@mipmap/detail_pic"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:layout_marginTop="14dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="18dp"
+                android:id="@+id/tv_reserve_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="班戈县风景区"
+                android:textColor="#333333"
+                android:textSize="14sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="11dp">
+
+                <TextView
+                    android:id="@+id/tv_reserve_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥110"
+                    android:textSize="12sp"
+                    android:textColor="#FFB933" />
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/tv_reserve_old_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥110"
+                    android:textSize="10sp"
+                    android:textColor="#666666" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"/>
+
+            <RelativeLayout
+                android:id="@+id/rel_reserve_lookcombo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp">
+
+                <TextView
+                    android:layout_marginLeft="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="套餐选择"
+                    android:textSize="12sp"
+                    android:textColor="#333333"/>
+
+                <ImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="17dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/mine_right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"/>
+
+            <View
+                android:layout_marginTop="9dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"/>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal">
+                
+                <RelativeLayout
+                    android:id="@+id/rel_reserve_combo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:text="套餐内容"
+                        android:textColor="#333333"
+                        android:textSize="17sp"/>
+
+                    <View
+                        android:id="@+id/view_reserve_combo_select"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#4CB4FB"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divider_color"/>
+
+                <RelativeLayout
+                    android:id="@+id/rel_reserve_know"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:text="消费需知"
+                        android:textColor="#333333"
+                        android:textSize="17sp"/>
+
+                    <View
+                        android:id="@+id/view_reserve_know_select"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#4CB4FB"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"/>
+            <WebView
+                android:id="@+id/webview_reserve"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+            </WebView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

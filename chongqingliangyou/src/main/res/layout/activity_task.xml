@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color" >
+
+    <include
+        android:id="@+id/task_list_top"
+        layout="@layout/top_bar" />
+
+    <LinearLayout
+        android:id="@+id/line_task_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/task_list_top"
+        android:background="#BEBEBE">
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/edt_task_search"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:background="@drawable/bg_search"
+            android:drawableLeft="@mipmap/top_ss"
+            android:drawablePadding="5dp"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:hint="@string/search_hint"
+            android:textColorHint="#666666"
+            android:textSize="15sp"
+            android:textColor="#333333" />
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:layout_marginTop="5dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/list_task"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:listSelector="@android:color/transparent"
+        android:background="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrDrawableStart="@mipmap/icon_refresh"
+        ptr:ptrDrawableEnd="@mipmap/icon_refresh"
+        ptr:ptrHeaderSubTextColor="@color/btn_green"
+        ptr:ptrHeaderTextColor="@color/btn_green"
+        ptr:ptrMode="both"
+        ptr:ptrScrollingWhileRefreshingEnabled="false"
+        android:layout_below="@id/line_task_search"/>
+
+</RelativeLayout>

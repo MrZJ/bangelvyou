@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color">
+
+    <include
+        android:id="@+id/order_list_top"
+        layout="@layout/top_bar" />
+
+    <com.yishangshuma.bangelvyou.wibget.PagerSlidingTabStrip
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tab_order_list_ordertype"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#666666"
+        android:textSize="16sp"
+        android:layout_below="@id/order_list_top"
+        app:pstsDividerColor="@color/divider_color"
+        app:pstsTabPaddingLeftRight="9dp"
+        app:pstsScaleZoomMax="0"
+        app:pstsIndicatorColor="@color/location_text_color"
+        app:pstsIndicatorHeight="3dp"
+        app:pstsShouldExpand="true"
+        app:pstsTextSelectedColor="@color/location_text_color"
+        app:pstsUnderlineColor="@color/divider_color"
+        app:pstsUnderlineHeight="1dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpage_order_list_showlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tab_order_list_ordertype" />
+
+</RelativeLayout>

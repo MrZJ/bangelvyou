@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:dash="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:background="#FFFFFF">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"/>
+
+    <TextView
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当地"
+        style="@style/SearchResultText_12"/>
+
+    <LinearLayout
+        android:id="@+id/lin_search_result_location1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:background="@drawable/search_result_img_stroke">
+
+            <ImageView
+                android:id="@+id/result_location_img1"
+                android:layout_width="82dp"
+                android:layout_height="57dp"
+                android:scaleType="fitXY"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/result_location_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="雪域明珠"
+                    android:singleLine="true"
+                    style="@style/SearchResultText_12"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/local"/>
+
+                    <TextView
+                        android:id="@+id/result_location_dis1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1.5KM"
+                        style="@style/SearchResultText_10"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/result_location_des1"
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="我看见过层波迭浪的大海，玩赏过水光潋滟的西湖，却从没看见过漓江这样的水。漓江的水真静啊，静得让你感觉不到它在流动；漓江的水真清啊，清得可以看见江底的沙石；漓江的水真绿啊，"
+                android:maxLines="2"
+                android:textSize="10sp"
+                android:textColor="#666666" />
+
+            <RelativeLayout
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/result_location_date1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016-01-27"
+                    style="@style/SearchResultText_10"/>
+
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/eye" />
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:id="@+id/result_location_view1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="300"
+                        style="@style/SearchResultText_10" />
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_marginLeft="11dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/heart" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_marginLeft="2dp"
+                        android:id="@+id/result_location_save1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="300"
+                        style="@style/SearchResultText_10" />
+
+                    <ImageView
+                        android:layout_marginLeft="11dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/chart" />
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:id="@+id/result_location_com1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="300"
+                        style="@style/SearchResultText_10" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.yishangshuma.bangelvyou.wibget.DashedLine
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        dash:lineColor= "@color/dash_line_color" />
+
+    <LinearLayout
+        android:id="@+id/lin_search_result_location2"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:background="@drawable/search_result_img_stroke">
+
+            <ImageView
+                android:id="@+id/result_location_img2"
+                android:layout_width="82dp"
+                android:layout_height="57dp"
+                android:scaleType="fitXY"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/result_location_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="雪域明珠"
+                    android:singleLine="true"
+                    style="@style/SearchResultText_12"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/local"/>
+
+                    <TextView
+                        android:id="@+id/result_location_dis2"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1.5KM"
+                        style="@style/SearchResultText_10"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/result_location_des2"
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="我看见过层波迭浪的大海，玩赏过水光潋滟的西湖，却从没看见过漓江这样的水。漓江的水真静啊，静得让你感觉不到它在流动；漓江的水真清啊，清得可以看见江底的沙石；漓江的水真绿啊，"
+                android:maxLines="2"
+                android:textSize="10sp"
+                android:textColor="#666666" />
+
+            <RelativeLayout
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/result_location_date2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016-01-27"
+                    style="@style/SearchResultText_10"/>
+
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/eye" />
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:id="@+id/result_location_view2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="300"
+                        style="@style/SearchResultText_10" />
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_marginLeft="11dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/heart" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_marginLeft="2dp"
+                        android:id="@+id/result_location_save2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="300"
+                        style="@style/SearchResultText_10" />
+
+                    <ImageView
+                        android:layout_marginLeft="11dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/chart" />
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:id="@+id/result_location_com2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="300"
+                        style="@style/SearchResultText_10" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.yishangshuma.bangelvyou.wibget.DashedLine
+        android:id="@+id/dashline_search_result_location"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        dash:lineColor= "@color/dash_line_color" />
+
+    <RelativeLayout
+        android:id="@+id/result_location_more"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ss"/>
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看更多当地信息"
+                android:textSize="12sp"
+                android:textColor="#6BBEFC"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/right"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"/>
+
+</LinearLayout>

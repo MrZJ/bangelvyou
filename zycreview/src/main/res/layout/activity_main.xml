@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:layout_alignParentBottom="true">
+
+        <include
+            android:id="@+id/tab_notice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            layout="@layout/tab_item_view"/>
+
+        <include
+            android:id="@+id/tab_policy"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            layout="@layout/tab_item_view"/>
+
+        <include
+            android:id="@+id/tab_scan"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            layout="@layout/tab_item_view"/>
+
+        <include
+            android:id="@+id/tab_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            layout="@layout/tab_item_view"/>
+
+        <include
+            android:id="@+id/tab_mine"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            layout="@layout/tab_item_view"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_above="@id/bottom"
+        android:background="#c7c7c7"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <FrameLayout
+        android:id="@+id/tabcontent"
+        android:layout_above="@id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

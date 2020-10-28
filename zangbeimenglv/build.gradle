@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion BUILD_TOOL_VERSION
+    useLibrary 'org.apache.http.legacy'
+    dexOptions {
+        incremental = true;
+        preDexLibraries = false
+        javaMaxHeapSize "2g"
+    }
+//    splits {
+//        abi {
+//            enable true
+//        }
+//    }
+    signingConfigs {
+        config {
+            keyAlias 'bangelvyou.keystore'
+            keyPassword 'bangelvyou'
+            storeFile file('bangelvyou.keystore')
+            storePassword 'bangelvyou'
+        }
+    }
+    defaultConfig {
+        applicationId "com.yishangshuma.bangelvyou"
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode 8
+        versionName "1.8"
+        ndk {
+            abiFilters"armeabi"
+        }
+    }
+    lintOptions {
+        disable "ResourceType"
+        disable 'MissingTranslation'
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            res.srcDirs = ['src/main/res', 'src/main/res/anim']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':Android-PullToRefresh')
+    compile files('libs/umeng-analytics-v5.5.3.jar')
+    compile files('libs/okhttp-2.5.0.jar')
+    compile files('libs/fastjson-1.1.33.jar')
+    compile files('libs/universal-image-loader-1.9.0-snapshot-with-sources.jar')
+    compile files('libs/MobCommons.jar')
+    compile files('libs/BDAutoUpdateSDK_20150605_V1.2.0.jar')
+    compile files('libs/need_lib.jar')
+    compile files('libs/com.umeng.message.lib_v2.3.0.jar')
+    compile files('libs/libammsdk.jar')
+    //    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/patchupdate.jar')
+    compile files('libs/photoview-library-1.2.2.jar')
+    compile files('libs/xUtils-3.1.22.jar')
+    compile files('libs/pgyer_sdk_2.4.2.jar')
+    compile "com.android.support:appcompat-v7:25.3.1"
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile "com.android.support:recyclerview-v7:25.3.1"
+    compile "com.android.support:support-v4:25.3.1"
+    compile files('libs/baidumapapi_search_v4_3_1.jar')
+    compile files('libs/locSDK_6.13.jar')
+    compile files('libs/baidumapapi_base_v4_3_1.jar')
+    compile files('libs/baidumapapi_cloud_v4_3_1.jar')
+    compile files('libs/baidumapapi_map_v4_3_1.jar')
+    compile files('libs/baidumapapi_radar_v4_3_1.jar')
+    compile files('libs/baidumapapi_util_v4_3_1.jar')
+    compile files('libs/Msc.jar')
+    compile project(':jcvideoplayer-lib')
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color_two">
+
+    <include
+        layout="@layout/top_bar"
+        android:id="@+id/shop_see_top" />
+
+    <LinearLayout
+        android:layout_below="@id/shop_see_top"
+        android:id="@+id/shop_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"/>
+
+    <!--<ImageView
+        android:id="@+id/img_shop_web_back"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@mipmap/bg_top_goback" />
+
+    <ImageView
+        android:id="@+id/img_shop_web_share"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@mipmap/top_share" />-->
+
+    <include
+        layout="@layout/net_error"
+        android:id="@+id/rel_net_error" />
+
+</RelativeLayout>

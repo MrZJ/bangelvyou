@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color">
+
+    <include
+        android:id="@+id/send_logistic_info_top"
+        layout="@layout/top_bar" />
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_send_logistic_info_send"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="22dp"
+        android:text="发布信息"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:background="@mipmap/send_info_bg"/>
+
+    <ScrollView
+        android:layout_below="@id/send_logistic_info_top"
+        android:layout_above="@id/btn_send_logistic_info_send"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--出发地-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dash_line_color"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_send_logistic_info_startads"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/car_start"/>
+
+                <RelativeLayout
+                    android:layout_centerVertical="true"
+                    android:id="@+id/rel_send_logistic_info_getstartads"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:id="@+id/img_send_logistic_info_getstartads"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:background="@mipmap/get_local"
+                        android:padding="10dp"/>
+
+                    <ProgressBar
+                        android:id="@+id/pro_send_logistic_info_getstartads"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <EditText
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_send_logistic_info_startads"
+                    android:layout_toLeftOf="@id/rel_send_logistic_info_getstartads"
+                    android:id="@+id/edt_send_logistic_info_startads"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="请填写出发地"
+                    android:background="@android:color/transparent"
+                    android:textSize="15sp"
+                    android:maxLength="50"/>
+
+
+            </RelativeLayout>
+            <!--出发地-->
+
+            <!--目的地-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dash_line_color"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/car_end"/>
+
+                <EditText
+                    android:id="@+id/edt_send_logistic_info_endads"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="请填写目的地"
+                    android:background="@android:color/transparent"
+                    android:textSize="15sp"
+                    android:maxLength="50"/>
+            </LinearLayout>
+            <!--目的地-->
+
+            <!--联系方式-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dash_line_color"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/car_tel"/>
+
+                <EditText
+                    android:id="@+id/edt_send_logistic_info_tel"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="请填您的联系方式"
+                    android:numeric="integer"
+                    android:maxLength="11"
+                    android:background="@android:color/transparent"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+            <!--联系方式-->
+
+            <!--座位-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dash_line_color"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/car_prices"/>
+
+                <EditText
+                    android:id="@+id/edt_send_logistic_info_price"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="请填您的预算费用"
+                    android:numeric="integer"
+                    android:background="@android:color/transparent"
+                    android:textSize="15sp"
+                    android:maxLength="20"/>
+            </LinearLayout>
+            <!--座位-->
+
+            <!--价格-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dash_line_color"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/wuliu_liuyan"/>
+
+                <EditText
+                    android:id="@+id/edt_send_logistic_info_suggest"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="货物的简单介绍"
+                    android:background="@android:color/transparent"
+                    android:textSize="15sp"
+                    android:maxLength="100"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dash_line_color"/>
+            <!--价格-->
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="其他信息"
+                android:textColor="#333333"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/edt_send_logistic_info_other"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请填您一些其他具体的信息,方便更好的联系您"
+                android:background="@android:color/transparent"
+                android:textSize="15sp"
+                android:maxLength="400"/>
+
+            <GridView
+                android:layout_marginTop="15dp"
+                android:id="@+id/gri_send_logistic_info_img"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:horizontalSpacing="3dp"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:verticalSpacing="5dp"
+                android:visibility="visible">
+            </GridView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

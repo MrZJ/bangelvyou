@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:background="@color/bg_main_color">
+
+    <ImageView
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/img_item_notice_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/notice" />
+
+    <TextView
+        android:id="@+id/tv_item_notice_title"
+        android:layout_marginLeft="9dp"
+        android:layout_alignTop="@id/img_item_notice_pic"
+        android:layout_toRightOf="@id/img_item_notice_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="标题"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:singleLine="true"/>
+
+    <TextView
+        android:id="@+id/tv_item_notice_content"
+        android:layout_marginTop="2dp"
+        android:layout_below="@id/tv_item_notice_title"
+        android:layout_alignLeft="@id/tv_item_notice_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="内容"
+        android:textColor="#666666"
+        android:textSize="12sp"
+        android:maxLines="2"/>
+
+    <TextView
+        android:id="@+id/tv_item_notice_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2016-03-22"
+        android:textColor="#666666"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:textSize="10sp"/>
+
+    <View
+        android:background="@color/divider_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sl_item"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:clickable="true"
+    android:paddingBottom="1dp"
+    app:ios="false"
+    app:leftSwipe="true"
+    app:swipeEnable="true">
+
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:background="@color/bg_main_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            style="@style/ItemTextBlack"/>
+
+        <TextView
+            android:id="@+id/tv_weight"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            style="@style/ItemTextBlack"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            style="@style/ItemTextBlack"/>
+
+        <TextView
+            android:id="@+id/tv_person"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            style="@style/ItemTextBlack"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_delete"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_red_dark"
+        android:text="删除"
+        android:textColor="@android:color/white" />
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

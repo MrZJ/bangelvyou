@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    //app主色
+    <color name="bg_main_color">#FCFCFC</color>
+    <color name="bg_main_color_two">#F0F0F0</color>
+    <color name="divider_color">#E4E4E4</color>
+    <color name="top_bar_color">#007FE9</color>
+    //底部按钮颜色
+    <color name="main_color">#007FE9</color>
+    <color name="gray">#FFF0F0F0</color>
+    <color name="light_gray">#000000</color>
+
+    <color name="colorPrimaryDarkTrans">#CCf57257</color>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="location">
+        <item>景点攻略</item>
+        <item>酒店住宿</item>
+        <item>餐饮美食</item>
+        <item>线下体验</item>
+        <item>当地新闻</item>
+        <item>非物质文化遗产</item>
+    </string-array>
+</resources>

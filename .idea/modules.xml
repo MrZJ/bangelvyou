@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Android-PullToRefresh/Android-PullToRefresh.iml" filepath="$PROJECT_DIR$/Android-PullToRefresh/Android-PullToRefresh.iml" group="bangelvyou/Android-PullToRefresh" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PushFuyishenghuoSDK/PushFuyishenghuoSDK.iml" filepath="$PROJECT_DIR$/.idea/modules/PushFuyishenghuoSDK/PushFuyishenghuoSDK.iml" group="bangelvyou/PushFuyishenghuoSDK" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/anhuiliangyoukaoqing/anhuiliangyoukaoqing.iml" filepath="$PROJECT_DIR$/.idea/modules/anhuiliangyoukaoqing/anhuiliangyoukaoqing.iml" group="bangelvyou/anhuiliangyoukaoqing" />
+      <module fileurl="file://$PROJECT_DIR$/bangelvyou.iml" filepath="$PROJECT_DIR$/bangelvyou.iml" group="bangelvyou" />
+    </modules>
+  </component>
+</project>

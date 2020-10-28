@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/top_bar_color"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@mipmap/bg_top_goback"
+            android:visibility="visible" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/zangyu_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/translate_selector"
+                android:button="@null"
+                android:checked="true"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="藏译汉 "
+                android:textColor="@color/translate_text_color"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/hanyu_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/translate_selector2"
+                android:button="@null"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="汉译藏"
+                android:textColor="@color/translate_text_color"
+                android:textSize="12sp" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/input_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|top"
+                android:hint="翻译内容不能超过500字"
+                android:lineSpacingMultiplier="1.5"
+                android:maxLength="500"
+                android:minHeight="150dp" />
+
+            <TextView
+                android:id="@+id/translate_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_bg"
+                android:padding="5dp"
+                android:text="翻译"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/output_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|top"
+                android:lineSpacingMultiplier="1.5"
+                android:minHeight="150dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="tips:如果翻译内容未能成功显示，则是该手机不支持藏语字体，请下载支持的字体库"
+                android:textColor="@color/evaluate_text_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

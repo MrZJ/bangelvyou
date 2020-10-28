@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_main_color"
+    android:padding="10dp"
+    android:id="@+id/liner_item_tarded">
+
+    <TextView
+        android:id="@+id/tv_item_traded_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ItemTextBlack"
+        android:singleLine="true"
+        android:text="采购企业名称"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/tv_item_traded_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ItemTextBlack"
+        android:singleLine="true"
+        android:text="交易金额"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/tv_item_traded_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ItemTextBlack"
+        android:singleLine="true"
+        android:text="交易状态"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/tv_item_traded_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ItemTextBlack"
+        android:singleLine="true"
+        android:text="交易时间"/>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:id="@+id/linear_traded_bottom"
+        android:visibility="gone">
+
+        <Button
+            android:textColor="#ffffff"
+            android:textSize="@dimen/register_text_size"
+            android:padding="5dp"
+            android:background="@drawable/bg_button"
+            android:gravity="center"
+            android:text="详情"
+            android:id="@+id/btn_check_detail"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3" />
+
+        <Button
+            android:textColor="#ffffff"
+            android:textSize="@dimen/register_text_size"
+            android:background="@drawable/bg_button"
+            android:gravity="center"
+            android:text="药材列表"
+            android:id="@+id/btn_traded_durgs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="5dp"/>
+
+        <Button
+            android:textColor="#ffffff"
+            android:textSize="@dimen/register_text_size"
+            android:background="@drawable/bg_button"
+            android:gravity="center"
+            android:text="修改"
+            android:id="@+id/btn_traded_update"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:padding="5dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

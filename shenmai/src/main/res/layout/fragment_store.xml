@@ -1,0 +1,87 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/store_top"
+        layout="@layout/top_bar" />
+
+    <com.shenmai.system.widget.ScrollableLayout
+        android:id="@+id/scroll_lable"
+        android:layout_below="@id/store_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_main_color_two">
+
+        <com.stx.xhb.xbanner.XBanner
+            android:layout_below="@id/store_top"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/store_banner"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:pointsPosition="CENTER"
+            app:AutoPlayTime="3000"
+            app:pointNormal="@mipmap/shape_normal"
+            app:pointSelect="@mipmap/shape_selected" />
+
+        <com.shenmai.system.widget.PagerSlidingTabStrip
+            android:layout_below="@id/store_banner"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/store_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            app:pstsDividerColor="@android:color/transparent"
+            app:pstsTabPaddingLeftRight="12dp"
+            app:pstsScaleZoomMax="0"
+            app:pstsIndicatorColor="@color/main_text_color_select"
+            app:pstsIndicatorHeight="3dp"
+            app:pstsShouldExpand="false"
+            app:pstsTextSelectedColor="@color/main_text_color_select"
+            app:pstsUnderlineColor="@color/divider_color"
+            app:pstsUnderlineHeight="1dp"
+            android:background="@color/bg_main_color"/>
+
+        <android.support.v4.view.ViewPager
+            android:layout_below="@id/store_tabs"
+            android:id="@+id/store_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_main_color_two"/>
+
+    </com.shenmai.system.widget.ScrollableLayout>
+
+    <!--<ImageView
+        android:id="@+id/img_float_menu"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@mipmap/float_menu"/>
+
+    <ImageView
+        android:id="@+id/img_float_cart"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="55dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@mipmap/float_cart"/>
+
+    <ImageView
+        android:id="@+id/img_float_search"
+        android:layout_above="@id/img_float_menu"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@mipmap/float_search"/>-->
+
+</RelativeLayout>

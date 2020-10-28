@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:background="@color/bg_main_color_two"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="交易批次号:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="采购方企业代码:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="交易总金额:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="交易人员:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="交易状态:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="交易时间:" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_traded_detail_or_state_tradcode"
+                    style="@style/ItemTextGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_traded_detail_or_state_entrcode"
+                    style="@style/ItemTextGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_traded_detail_or_state_price"
+                    style="@style/ItemTextGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/edt_traded_detail_or_state_trader"
+                    style="@style/ItemTextGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_traded_detail_or_state_tradstate"
+                        style="@style/ItemTextGray"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:gravity="left|center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true" />
+
+                    <com.zhy.view.flowlayout.TagFlowLayout
+                        android:id="@+id/flowlayout_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone"
+                        zhy:max_select="1" />
+
+                    <TextView
+                        android:id="@+id/order_state"
+                        style="@style/ItemTextGray"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="true" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_traded_detail_or_state_date"
+                    style="@style/ItemTextGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

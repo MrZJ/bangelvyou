@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/photo_sd"
+        android:layout_width="@dimen/add_photot_size"
+        android:layout_height="@dimen/photot_size"
+        android:layout_marginLeft="10dp"
+        android:visibility="visible"
+        fresco:placeholderImage="@mipmap/default_photo_pic" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/photo_sd"
+        android:layout_toRightOf="@+id/photo_sd"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的请假单"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/type_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="审批人："
+            android:textColor="@color/text_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/start_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加时间：2017-08-21 16:30"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/end_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="审核时间：2017-08-22 16:30"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/approve_status_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="审批通过"
+            android:textColor="@color/text_green"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:text="前天"
+        android:textColor="@color/text_gray"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</RelativeLayout>

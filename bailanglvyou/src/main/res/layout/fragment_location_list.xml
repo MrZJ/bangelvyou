@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/location_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main_color"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrDrawableEnd="@mipmap/icon_refresh"
+        ptr:ptrDrawableStart="@mipmap/icon_refresh_start"
+        ptr:ptrHeaderSubTextColor="@color/btn_green"
+        ptr:ptrHeaderTextColor="@color/btn_green"
+        ptr:ptrMode="both"
+        ptr:ptrScrollingWhileRefreshingEnabled="false" />
+
+    <TextView
+        android:id="@+id/empty_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="没有更多了"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+</FrameLayout>

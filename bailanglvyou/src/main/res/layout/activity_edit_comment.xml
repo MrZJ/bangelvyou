@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F5F7"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/edit_comment_top"
+        layout="@layout/top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/edit_comment_top"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/divider_color" />
+
+
+            <RatingBar
+                android:id="@+id/rating_editcomment_totallevel"
+                style="@style/commentRedRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="27dp"
+                android:stepSize="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"
+                android:text="点击星型评分"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="27dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="风光环境"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <RatingBar
+                    android:id="@+id/rating_editcomment_viewlevel"
+                    style="@style/heartRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:stepSize="1" />
+
+                <TextView
+                    android:id="@+id/tv_editcomment_viewdes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="非常好"
+                    android:textColor="#999999"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当地特色"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <RatingBar
+                    android:id="@+id/rating_editcomment_loclevel"
+                    style="@style/heartRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:stepSize="1" />
+
+                <TextView
+                    android:id="@+id/tv_editcomment_locdes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="非常好"
+                    android:textColor="#999999"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="公共服务"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <RatingBar
+                    android:id="@+id/rating_editcomment_serlevel"
+                    style="@style/heartRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:stepSize="1" />
+
+                <TextView
+                    android:id="@+id/tv_editcomment_serdes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="非常好"
+                    android:textColor="#999999"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="22dp"
+                android:background="@color/divider_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="11dp"
+                android:background="#E3E3E3">
+
+                <EditText
+                    android:id="@+id/ed_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="#E3E3E3"
+                    android:gravity="top"
+                    android:hint="填写你的评论"
+                    android:maxLength="1000"
+                    android:textColor="#B5B5B5"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tv_comment_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="你太棒了!还可以在写1000个字哦!"
+                    android:textColor="#B5B5B5"
+                    android:textSize="11sp" />
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="9dp"
+                android:background="@color/divider_color" />
+
+            <GridView
+                android:id="@+id/noScrollgridview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:horizontalSpacing="3dp"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:verticalSpacing="5dp"
+                android:visibility="gone"></GridView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

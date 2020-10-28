@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color_two">
+
+    <include
+        android:id="@+id/mine_web_top"
+        layout="@layout/top_bar"/>
+
+    <LinearLayout
+        android:layout_below="@id/mine_web_top"
+        android:id="@+id/mine_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"/>
+
+    <include
+        layout="@layout/net_error"
+        android:id="@+id/rel_net_error" />
+
+</RelativeLayout>

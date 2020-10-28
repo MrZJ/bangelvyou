@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:background="@color/bg_main_color_two"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="种植任务名称:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="种植物名称:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="种植基地:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="种植面积:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="种子来源:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="种子重量:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="种植负责人:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="负责人电话:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="种植周期:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="种植时间:" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_head_plant_task_name"
+                    style="@style/text_plant_detail" />
+
+                <TextView
+                    android:id="@+id/tv_head_plant_name"
+                    style="@style/text_plant_detail" />
+
+                <TextView
+                    android:id="@+id/tv_head_plant_base"
+                    style="@style/text_plant_detail" />
+
+                <TextView
+                    android:id="@+id/tv_head_plant_area"
+                    style="@style/text_plant_detail" />
+
+                <TextView
+                    android:id="@+id/tv_head_plant_source"
+                    style="@style/text_plant_detail" />
+
+                <TextView
+                    android:id="@+id/tv_head_plant_weight"
+                    style="@style/text_plant_detail" />
+
+                <TextView
+                    android:id="@+id/tv_head_plant_principal"
+                    style="@style/text_plant_detail" />
+
+                <TextView
+                    android:id="@+id/tv_head_plant_principal_phone"
+                    style="@style/text_plant_detail" />
+
+                <TextView
+                    android:id="@+id/tv_head_plant_week"
+                    style="@style/text_plant_detail" />
+
+                <TextView
+                    android:id="@+id/tv_head_plant_time"
+                    style="@style/text_plant_detail" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_height="35dp"
+            android:textColor="#666666"
+            android:background="@drawable/bg_instock_detail_textview"
+            android:layout_marginTop="5dp"
+            android:text="药材产出信息:"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"/>
+
+</LinearLayout>

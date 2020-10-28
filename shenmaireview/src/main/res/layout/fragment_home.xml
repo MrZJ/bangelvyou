@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color_two"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/top_bar"/>
+
+    <!--<com.shenmaireview.system.widget.PagerSlidingTabStrip
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        app:pstsDividerColor="@android:color/transparent"
+        app:pstsTabPaddingLeftRight="10dp"
+        app:pstsScaleZoomMax="0"
+        app:pstsIndicatorColor="@color/main_color"
+        app:pstsIndicatorHeight="3dp"
+        app:pstsShouldExpand="true"
+        app:pstsTextSelectedColor="@color/main_color"
+        app:pstsUnderlineColor="@color/divider_color"
+        app:pstsUnderlineHeight="1dp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/rel_xwzx"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:background="@mipmap/rszs" />
+
+            <TextView
+                style="@style/notice_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/img1"
+                android:text="新闻资讯"
+                android:textColor="#333333" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/go_right" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/rel_zxgg"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:background="@mipmap/ddyc" />
+
+            <TextView
+                style="@style/notice_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/img2"
+                android:text="在线公告"
+                android:textColor="#333333" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/go_right" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/rel_cpzs"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:background="@mipmap/ycbk" />
+
+            <TextView
+                style="@style/notice_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/img4"
+                android:text="产品知识"
+                android:textColor="#333333" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/go_right" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/rel_jcbg"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:background="@mipmap/checkreport" />
+
+            <TextView
+                style="@style/notice_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/img5"
+                android:text="检测报告"
+                android:textColor="#333333" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/go_right" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/rel_rzjg"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:background="@mipmap/org" />
+
+            <TextView
+                style="@style/notice_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/img6"
+                android:text="认证机构"
+                android:textColor="#333333" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/go_right" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+    </LinearLayout>
+
+</LinearLayout>

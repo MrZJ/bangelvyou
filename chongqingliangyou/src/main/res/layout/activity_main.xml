@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main_color">
+
+    <include
+        layout="@layout/top_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/bg_main_color"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/user_icon"/>
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/black"
+                android:id="@+id/tv_main_username"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/bg_main_color"
+            android:id="@+id/rel_main_stress"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/stress_task"/>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="重点待办任务"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/bg_main_color"
+            android:id="@+id/rel_main_daily"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/daily_task"/>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="日常待办任务"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/bg_main_color"
+            android:id="@+id/rel_main_finished"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/finish_task"/>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="已完成任务"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/bg_main_color"
+            android:id="@+id/rel_main_set"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/set"/>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="设置"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/bg_main_color"
+            android:id="@+id/rel_main_about"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/about"/>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="关于"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+    </LinearLayout>
+
+</LinearLayout>

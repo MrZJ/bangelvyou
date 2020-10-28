@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color">
+
+    <include
+        android:id="@+id/location_lis_top"
+        layout="@layout/top_bar" />
+
+    <RelativeLayout
+        android:id="@+id/btn_location_select"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/location_lis_top">
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/location_list"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <com.yishangshuma.bangelvyou.wibget.PagerSlidingTabStrip
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/location_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        android:layout_toLeftOf="@id/btn_location_select"
+        android:layout_below="@id/location_lis_top"
+        app:pstsDividerColor="@android:color/transparent"
+        app:pstsTabPaddingLeftRight="13dp"
+        app:pstsScaleZoomMax="0"
+        app:pstsIndicatorColor="@color/location_text_color"
+        app:pstsIndicatorHeight="3dp"
+        app:pstsShouldExpand="false"
+        app:pstsTextSelectedColor="@color/location_text_color"
+        app:pstsUnderlineColor="@color/divider_color"
+        app:pstsUnderlineHeight="1dp"/>
+
+    <View
+        android:id="@+id/location_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/location_tabs"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/location_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/location_line"/>
+
+</RelativeLayout>

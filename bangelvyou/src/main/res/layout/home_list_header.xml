@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_home_pager"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:visibility="gone">
+
+        <com.yishangshuma.bangelvyou.wibget.AutoScrollViewPager
+            android:id="@+id/home_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/home_pager_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/home_adv"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@mipmap/banner"/>
+
+    <LinearLayout
+        android:id="@+id/lin_home_btn"
+        android:layout_below="@id/home_adv"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="20dp"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/home_item_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            layout="@layout/home_button_item"/>
+
+        <include
+            android:id="@+id/home_item_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            layout="@layout/home_button_item"/>
+
+        <include
+            android:id="@+id/home_item_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            layout="@layout/home_button_item"/>
+
+        <include
+            android:id="@+id/home_item_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            layout="@layout/home_button_item"/>"
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/home_btn_line"
+        android:layout_below="@id/lin_home_btn"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"/>
+
+    <RelativeLayout
+        android:id="@+id/rel_home_weather"
+        android:layout_below="@id/home_btn_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/tv_home_weather_detail"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="详情>>"
+            android:textColor="#5DBAFB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_home_weather_show"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/tv_home_weather_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="#666666"
+            android:drawableLeft="@mipmap/weather_notice"
+            android:drawablePadding="5dp"
+            android:ellipsize="marquee"/>
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/tv_home_weather_show"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

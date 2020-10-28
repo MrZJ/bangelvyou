@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dash="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_main_color"
+    android:padding="5dp">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/img_item_detail_attr_pic"/>
+
+    <TextView
+        android:layout_marginRight="5dp"
+        android:id="@+id/tv_item_detail_attr_pri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="100"
+        android:layout_centerVertical="true"
+        android:textColor="#EE3B3B"
+        android:textSize="@dimen/lacation_detail_text_1"/>
+
+    <TextView
+        android:id="@+id/tv_item_detail_attr_name"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/img_item_detail_attr_pic"
+        android:layout_toLeftOf="@id/tv_item_detail_attr_pri"
+        android:text="套餐名称"
+        android:layout_centerVertical="true"
+        android:singleLine="true"
+        android:textColor="#666666"
+        android:textSize="@dimen/lacation_detail_text_1"/>
+
+    <com.basulvyou.system.wibget.DashedLine
+        android:layout_below="@id/img_item_detail_attr_pic"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        dash:lineColor= "@color/dash_line_color" />
+
+</RelativeLayout>

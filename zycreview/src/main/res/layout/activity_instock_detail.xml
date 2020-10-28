@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:background="@color/bg_main_color_two"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_instock_detail_base_title"
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="选择基地:"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_instock_detail_depot_title"
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="选择仓库:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="入库人员:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="药品名称:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="药品类型:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="药材生长方式:" />
+
+                <TextView
+                    android:id="@+id/tv_instock_detail_weight_title"
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="采收重量:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="入库重量:" />
+
+                <TextView
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="单位:" />
+
+                <TextView
+                    android:id="@+id/tv_instock_detail_date_title"
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="入库时间:" />
+
+                <TextView
+                    android:id="@+id/tv_instock_detail_state_title"
+                    style="@style/ItemTextGrayWithLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="是否检验:" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_instock_detail_base"
+                    style="@style/ItemTextGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="点击选择基地"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_instock_detail_depot"
+                    style="@style/ItemTextGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="点击选择仓库" />
+
+                <TextView
+                    android:id="@+id/edt_instock_detail_user"
+                    style="@style/ItemTextGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="点击选择入库人员" />
+
+                <TextView
+                    android:id="@+id/tv_instock_detail_name"
+                    style="@style/ItemTextGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_instock_detail_type"
+                    style="@style/ItemTextGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_instock_detail_grow"
+                    style="@style/ItemTextGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_instock_detail_weight"
+                    style="@style/ItemTextGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/edt_instock_detail_weight"
+                    style="@style/ItemTextGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:maxLength="12"
+                    android:numeric="decimal"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_instock_detail_unit"
+                    style="@style/ItemTextGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_instock_detail_date"
+                    style="@style/ItemTextGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_instock_detail_state"
+                    style="@style/ItemTextGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_main_color"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/date_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="请选择时间"
+        android:textColor="#333333"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d0d0d1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.shishoureport.system.wibget.datepicker.WheelView
+            android:id="@+id/year"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.shishoureport.system.wibget.datepicker.WheelView
+            android:id="@+id/month"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.shishoureport.system.wibget.datepicker.WheelView
+            android:id="@+id/day"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.shishoureport.system.wibget.datepicker.WheelView
+            android:id="@+id/hour"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.shishoureport.system.wibget.datepicker.WheelView
+            android:id="@+id/min"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d0d0d1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/date_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:text="取消"
+            android:textColor="#585858"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#F1F1F1" />
+
+        <Button
+            android:id="@+id/date_sure"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:text="确定"
+            android:textColor="#585858"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

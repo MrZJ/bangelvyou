@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="notice">
+        <item>扶贫资讯</item>
+        <item>案例分析</item>
+        <item>政策解读</item>
+        <item>贫困户公示</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color_two">
+
+    <include
+        android:id="@+id/carpooling_lis_top"
+        layout="@layout/top_bar" />
+
+    <RelativeLayout
+        android:id="@+id/btn_carpooling_select"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/carpooling_lis_top"
+        android:background="@color/bg_main_color">
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/location_list"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <com.basulvyou.system.wibget.PagerSlidingTabStrip
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/carpooling_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        android:layout_toLeftOf="@id/btn_carpooling_select"
+        android:layout_below="@id/carpooling_lis_top"
+        app:pstsDividerColor="@android:color/transparent"
+        app:pstsTabPaddingLeftRight="13dp"
+        app:pstsScaleZoomMax="0"
+        app:pstsIndicatorColor="@color/location_tab_item_color"
+        app:pstsIndicatorHeight="3dp"
+        app:pstsShouldExpand="false"
+        app:pstsTextSelectedColor="@color/location_tab_item_color"
+        app:pstsUnderlineColor="@color/divider_color"
+        app:pstsUnderlineHeight="1dp"
+        android:background="@color/bg_main_color"/>
+
+    <View
+        android:id="@+id/carpooling_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/carpooling_tabs"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/carpooling_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/carpooling_line"
+        android:background="@color/bg_main_color"/>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp">
+
+        <com.basulvyou.system.wibget.CircleImageView
+            android:id="@+id/img_carpooling_list_sendinfo"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@mipmap/carpool_add"/>
+    </LinearLayout>
+
+</RelativeLayout>

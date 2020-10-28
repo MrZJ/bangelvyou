@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/register_top"
+        layout="@layout/top_bar" />
+
+    <EditText
+        android:id="@+id/register_phone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/bg_edittext"
+        android:hint="请输入手机号"
+        android:numeric="integer"
+        android:drawableLeft="@mipmap/phone"
+        android:drawablePadding="5dp"
+        android:textColor="#999999"
+        android:textColorHint="#999999"
+        android:maxLength="11"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/input_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/bg_edittext"
+            android:drawableLeft="@mipmap/messgae_code"
+            android:drawablePadding="5dp"
+            android:hint="输入短信验证码"
+            android:numeric="integer"
+            android:singleLine="true"
+            android:textColorHint="#999999"
+            android:textSize="12sp"
+            android:textColor="#999999"/>
+
+        <Button
+            android:id="@+id/btn_get_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button"
+            android:layout_marginLeft="5dp"
+            android:text="获取验证码"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_marginTop="18dp"
+        android:id="@+id/register_password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:background="@drawable/bg_edittext"
+        android:hint="输入数字、字母为登录密码"
+        android:numeric="decimal"
+        android:drawableLeft="@mipmap/login_secret"
+        android:drawablePadding="5dp"
+        android:textColor="#999999"
+        android:textColorHint="#999999"
+        android:textSize="12sp"
+        android:singleLine="true"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:layout_marginTop="18dp"
+        android:id="@+id/edt_register_host"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:background="@drawable/bg_edittext"
+        android:hint="邀请人手机号码(选填)"
+        android:drawableLeft="@mipmap/login_user"
+        android:drawablePadding="5dp"
+        android:numeric="integer"
+        android:maxLength="11"
+        android:singleLine="true"
+        android:textColor="#999999"
+        android:textColorHint="#999999"
+        android:textSize="12sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="18dp"
+        android:layout_gravity="right">
+        <TextView
+            android:id="@+id/tv_register_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="《神买商城注册协议》"
+            android:layout_alignParentRight="true"
+            android:textSize="16sp"
+            android:textColor="@color/top_bar_color"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_register_ty"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="同意"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_toLeftOf="@+id/tv_register_agreement"
+            android:layout_toStartOf="@+id/tv_register_agreement"
+            android:gravity="center"
+            android:layout_marginRight="5dp"/>
+        <CheckBox
+            android:id="@+id/check_agree"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toLeftOf="@+id/tv_register_ty"
+            android:layout_toStartOf="@+id/tv_register_ty"
+            android:background="@drawable/my_check"
+            android:button="@null"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_button"
+        android:text="注册"
+        android:textColor="#FFF9FF"
+        android:textSize="14sp" />
+</LinearLayout>

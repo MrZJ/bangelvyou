@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color_two">
+
+    <include
+        android:id="@+id/top_id"
+        layout="@layout/top_bar" />
+
+    <LinearLayout
+        android:id="@+id/lin_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_button"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="#FFF9FF"
+            android:textSize="14sp" />
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:id="@+id/btn_clear"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_button"
+            android:gravity="center"
+            android:text="清空"
+            android:textColor="#FFF9FF"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_id"
+        android:layout_above="@id/lin_bottom"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/tv_san_pack_code"
+                layout="@layout/text_view_style" />
+
+            <TextView
+                android:id="@+id/tv_san_pack_code_click"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginRight="@dimen/register_left_right_margin"
+                android:layout_marginTop="@dimen/register_top_margin"
+                android:background="@drawable/bg_edittext"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:textColor="#333333"
+                android:text="点击扫描包装码"/>
+
+            <include
+                android:id="@+id/tv_san_product_code"
+                layout="@layout/text_view_style" />
+
+            <TextView
+                android:id="@+id/tv_san_product_code_click"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginRight="@dimen/register_left_right_margin"
+                android:layout_marginTop="@dimen/register_top_margin"
+                android:background="@drawable/bg_edittext"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:textColor="#333333"
+                android:text="点击扫描内包装码"/>
+
+            <include
+                android:id="@+id/tv_san_pro_num"
+                layout="@layout/text_view_style" />
+
+            <EditText
+                android:id="@+id/et_san_pro_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginRight="@dimen/register_left_right_margin"
+                android:layout_marginTop="@dimen/register_top_margin"
+                android:background="@drawable/bg_edittext"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:numeric="integer"
+                android:maxLength="2"
+                android:padding="5dp"
+                android:textColor="#333333"
+                android:textColorHint="#666666"
+                android:textSize="@dimen/register_text_size"
+                android:hint="输入内包装数量"/>
+
+            <include
+                android:id="@+id/tv_scan_number"
+                layout="@layout/text_view_style" />
+
+            <com.objectreview.system.wibget.MyListView
+                android:id="@+id/lv_scan_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginRight="@dimen/register_left_right_margin"
+                android:background="@color/bg_main_color"
+                android:divider="@color/bg_main_color_two"
+                android:dividerHeight="1dp"
+                android:listSelector="@android:color/transparent"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

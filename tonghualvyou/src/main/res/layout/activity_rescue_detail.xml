@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color" >
+
+    <include
+        android:id="@+id/rescue_detail_top"
+        layout="@layout/top_bar" />
+
+    <LinearLayout
+        android:layout_below="@id/rescue_detail_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/rel_set_accountsec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white" >
+
+            <ImageView
+                android:id="@+id/img_rescue_detail_icon"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:layout_toRightOf="@id/img_rescue_detail_icon"
+                android:layout_alignTop="@id/img_rescue_detail_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_rescue_detail_name"
+                android:layout_marginLeft="5dp"
+                android:text="警察局"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tv_item_alarm_rescue_ads"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/img_rescue_detail_icon"
+                android:layout_alignBottom="@id/img_rescue_detail_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/alarm_local"
+                android:drawablePadding="3dp"
+                android:text="八宿"
+                android:singleLine="true"
+                android:textColor="#AAAAAA"
+                android:textSize="10sp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/rel_rescue_detail_call"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/white" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/tv_rescue_detail_tel"
+                android:drawableLeft="@mipmap/alarm_tel"
+                android:drawablePadding="5dp"
+                android:layout_marginLeft="10dp"
+                android:text="400-898-6005"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/alarm_right" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/rel_rescue_detail_nav"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/white" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@mipmap/alarm_ads"
+                android:id="@+id/tv_rescue_detail_address"
+                android:text="朝阳区东三环中路"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/alarm_right" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/white" >
+
+            <TextView
+                android:id="@+id/tv_rescue_detail_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/alarm_time"
+                android:drawablePadding="5dp"
+                android:layout_marginLeft="10dp"
+                android:text="00:00-24:00"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_rescue_detail_call"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@mipmap/send_info_bg"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:text="拨打"/>
+</RelativeLayout>

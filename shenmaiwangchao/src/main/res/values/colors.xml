@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ED7103</color>
+    <color name="colorPrimaryDark">#ED7103</color>
+    <color name="colorAccent">#FF4081</color>
+   //app主色
+    <color name="bg_main_color">#FCFCFC</color>
+    <color name="bg_main_color_two">#F0F0F0</color>
+    <color name="divider_color">#E4E4E4</color>
+    <color name="top_bar_color">#ED7103</color>
+    //底部按钮颜色
+    <color name="main_color">#ED7103</color>
+    <color name="gray">#FFF0F0F0</color>
+    <color name="light_gray">#000000</color>
+
+</resources>

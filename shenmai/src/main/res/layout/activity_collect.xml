@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main_color_two">
+    <include
+        layout="@layout/top_bar"
+        android:id="@+id/collect_top" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/collect_list_refer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrMode="pullFromEnd"
+        ptr:ptrHeaderTextColor="@color/main_text_color_select"
+        ptr:ptrHeaderSubTextColor="@color/main_text_color_select"
+        ptr:ptrDrawableEnd="@mipmap/icon_refresh"
+        ptr:ptrScrollingWhileRefreshingEnabled="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.shenmai.system.widget.MyListView
+                android:id="@+id/list_goods_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@android:color/transparent"
+                android:listSelector="@android:color/transparent"
+                android:divider="#d2d3d3"
+                android:dividerHeight="1dp"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</LinearLayout>
+

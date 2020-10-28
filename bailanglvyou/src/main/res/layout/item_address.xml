@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:paddingTop="20dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tv_address_consignee_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"
+        android:text="张三丰"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/tv_address_consignee_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_address_consignee_name"
+        android:singleLine="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="20dp"
+        android:text="13888888888"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/tv_address_consignee_ads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/tv_address_consignee_name"
+        android:text="安徽合肥"
+        android:textSize="14sp"
+        android:textColor="#333333" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/tv_address_consignee_ads"
+        android:background="@color/divider_color"/>
+
+    <CheckBox
+        android:id="@+id/check_address_default"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="11dp"
+        android:layout_below="@id/line"
+        android:text="设为默认"
+        android:textSize="14sp"
+        android:textColor="#999999"
+        style="@style/MyCheckBox"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/rel_address_delete"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/line">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="删除"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_address_edit"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_toLeftOf="@id/rel_address_delete"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/line">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="编辑"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

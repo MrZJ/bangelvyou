@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color" >
+
+    <include
+        android:id="@+id/comment_order_top"
+        layout="@layout/top_bar" />
+
+    <ListView
+        android:id="@+id/order_comment_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottom"
+        android:layout_below="@id/comment_order_top"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="#d2d3d3"
+        android:dividerHeight="1dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#333333"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/check_login"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="匿名提交"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            style="@style/MyCheckBox"/>
+
+        <TextView
+            android:id="@+id/sure_comment"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@mipmap/login_bg"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

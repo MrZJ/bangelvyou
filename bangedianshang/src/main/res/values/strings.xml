@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">班戈电商</string>
+    <string name="netError">网络请求失败</string>
+    <string name="Error_404">未找到网络请求地址...</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

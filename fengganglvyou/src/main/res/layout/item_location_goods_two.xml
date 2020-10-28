@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dash="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_main_color"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rel_item_location_goods_img_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_item_location_goods_name_two"
+                style="@style/LocationItemText_18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="商品名称" />
+
+            <TextView
+                android:id="@+id/tv_item_location_goods_price_two"
+                style="@style/LocationItemText_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="商品价格" />
+
+            <TextView
+                android:id="@+id/tv_item_location_goods_des_two"
+                style="@style/LocationItemText_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tv_item_location_goods_price_two"
+                android:layout_below="@id/tv_item_location_goods_name_two"
+                android:ellipsize="end"
+                android:maxLines="6"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp"
+                android:text="商品简介" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_item_location_goods_image_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@mipmap/loadfailed" />
+
+    </LinearLayout>
+
+    <com.basulvyou.system.wibget.DashedLine
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        dash:lineColor="@color/dash_line_color" />
+
+</LinearLayout>

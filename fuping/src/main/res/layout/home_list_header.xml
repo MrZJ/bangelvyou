@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_main_color_two">
+
+    <com.stx.xhb.xbanner.XBanner
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/home_banner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:pointsPosition="RIGHT"
+        app:AutoPlayTime="3000"
+        app:pointsContainerBackground="#aaaaaa"
+        app:pointNormal="@mipmap/shape_normal"
+        app:pointSelect="@mipmap/shape_selected"
+        app:tipTextSize="12sp"
+        app:tipTextColor="#FFFFFF"/>
+
+    <LinearLayout
+        android:layout_below="@id/home_banner"
+        android:id="@+id/lin_home_btn"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:background="@color/bg_main_color">
+
+        <include
+            android:id="@+id/home_item_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            layout="@layout/home_button_item"/>
+
+        <include
+            android:id="@+id/home_item_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            layout="@layout/home_button_item"/>
+
+        <include
+            android:id="@+id/home_item_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            layout="@layout/home_button_item"/>
+
+        <include
+            android:id="@+id/home_item_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            layout="@layout/home_button_item"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lin_home_line"
+        android:layout_below="@id/lin_home_btn"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"
+        android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+
+android {
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOL_VERSION
+    signingConfigs {
+
+        config {
+            keyAlias 'yingjinglvyou'
+            keyPassword 'yingjinglvyou'
+            storeFile file('yingjinglvyou.jks')
+            storePassword 'yingjinglvyou'
+        }
+    }
+    defaultConfig {
+        applicationId "com.easybiz.yingjinglvyou"
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode 6
+        versionName "1.6"
+        signingConfig signingConfigs.config
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            res.srcDirs = ['src/main/res', 'src/main/res/anim']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':Android-PullToRefresh')
+    implementation files('libs/umeng-analytics-v5.5.3.jar')
+    implementation files('libs/okhttp-2.5.0.jar')
+    implementation files('libs/fastjson-1.1.33.jar')
+    implementation files('libs/universal-image-loader-1.9.0-snapshot-with-sources.jar')
+    implementation files('libs/MobCommons.jar')
+    implementation files('libs/BDAutoUpdateSDK_20150605_V1.2.0.jar')
+    implementation files('libs/need_lib.jar')
+    implementation files('libs/com.umeng.message.lib_v2.3.0.jar')
+    implementation files('libs/libammsdk.jar')
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/patchupdate.jar')
+    implementation files('libs/photoview-library-1.2.2.jar')
+    implementation files('libs/xUtils-3.1.22.jar')
+    implementation files('libs/pgyer_sdk_2.4.2.jar')
+    implementation "com.android.support:appcompat-v7:${SUPORT_VERSION}"
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation "com.android.support:recyclerview-v7:${SUPORT_VERSION}"
+    implementation 'pub.devrel:easypermissions:2.0.1'
+}

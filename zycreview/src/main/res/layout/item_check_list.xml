@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sl_item_plant_task"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:background="@color/bg_main_color">
+
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ItemTextBlack"
+            android:singleLine="true"
+            android:text="药材名称:"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ItemTextBlack"
+            android:singleLine="true"
+            android:text="采收计量:"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_base"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ItemTextBlack"
+            android:singleLine="true"
+            android:text="基地名称:"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ItemTextBlack"
+            android:singleLine="true"
+            android:text="采收时间:"/>
+
+        <TextView
+            android:id="@+id/tv_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ItemTextBlack"
+            android:singleLine="true"
+            android:text="检验人:"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/bt_check"
+        android:layout_width="0dp"
+        android:layout_weight="0.2"
+        android:layout_height="match_parent"
+        android:background="@color/top_bar_color"
+        android:text="检查"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

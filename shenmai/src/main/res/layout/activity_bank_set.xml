@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color_two"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/top_bar" />
+
+    <EditText
+        android:id="@+id/edt_bank_set_user"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_edittext"
+        android:hint="开户人姓名"
+        android:singleLine="true"
+        android:textColorHint="#999999"
+        android:textSize="12sp"
+        android:textColor="#999999"
+        android:maxLength="15"/>
+
+    <TextView
+        android:layout_marginTop="18dp"
+        android:id="@+id/tv_bank_set_bankname"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:background="@drawable/bg_edittext"
+        android:textColor="#999999"
+        android:textColorHint="#999999"
+        android:textSize="12sp"
+        android:text="选择开户银行"
+        android:gravity="center_vertical"/>
+
+    <com.example.library.BandCardEditText
+        android:layout_marginTop="18dp"
+        android:id="@+id/edt_bank_set_cardnum"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:hint="请输入银行卡号"
+        android:numeric="integer"
+        android:background="@drawable/bg_edittext"
+        android:gravity="center_vertical"
+        android:textColorHint="#999999"
+        android:textColor="#999999"
+        android:singleLine="true"
+        android:textSize="12sp"
+        android:maxLength="23"/>
+
+</LinearLayout>

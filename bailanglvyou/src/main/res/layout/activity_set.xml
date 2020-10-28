@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color" >
+
+    <include
+        android:id="@+id/set_top"
+        layout="@layout/top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/set_top"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color" />
+
+            <RelativeLayout
+                android:id="@+id/rel_set_accountsec"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/white" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="账户与安全"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/right" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color" />
+
+            <RelativeLayout
+                android:id="@+id/rel_set_wipecache"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/white" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="清除本地缓存"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color" />
+
+            <RelativeLayout
+                android:id="@+id/rel_set_checkupdate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/white" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="检测更新"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_set_appversion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:text="当前版本1.0.1"
+                    android:textColor="#666666"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color" />
+
+            <RelativeLayout
+                android:id="@+id/rel_set_loginout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/white" >
+
+                <TextView
+                    android:id="@+id/tv_set_login_or_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="退出"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color" />
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

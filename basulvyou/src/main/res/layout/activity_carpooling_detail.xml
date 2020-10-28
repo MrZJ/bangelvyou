@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color">
+
+    <include
+        android:id="@+id/carpooling_detail_top"
+        layout="@layout/top_bar" />
+    <!--订单状态-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/carpooling_detail_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/ll_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/carpooling_detail_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="订单状态:"
+                    android:textColor="#D9DFE1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_carpooling_detail_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/carpooling_detail_status"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/carpooling_detail_status"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="已取消"
+                    android:textColor="#5F696C"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/carpooling_detail_statusline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/carpooling_detail_status"
+                    android:background="@color/divider_color" />
+                <!--订单状态-->
+
+                <!--服务时间-->
+                <TextView
+                    android:id="@+id/carpooling_detail_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/carpooling_detail_statusline"
+                    android:layout_marginLeft="15dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="服务时间:"
+                    android:textColor="#D9DFE1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_carpooling_detail_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/carpooling_detail_date"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/carpooling_detail_date"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="2015-12-20 08:20:10"
+                    android:textColor="#5F696C"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/carpooling_detail_dateline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/carpooling_detail_date"
+                    android:background="@color/divider_color" />
+                <!--服务时间-->
+
+                <!--出发地-->
+                <TextView
+                    android:id="@+id/carpooling_detail_startads"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/carpooling_detail_date"
+                    android:layout_below="@id/carpooling_detail_dateline"
+                    android:layout_marginLeft="15dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="出发地:"
+                    android:textColor="#D9DFE1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_carpooling_detail_startads"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/carpooling_detail_startads"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/carpooling_detail_startads"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="桃花镇桃花村桃花坞桃花庵桃花镇桃花村桃花坞桃花庵桃花镇桃花村桃花坞桃花庵"
+                    android:textColor="#5F696C"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/carpooling_detail_startadsline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_carpooling_detail_startads"
+                    android:background="@color/divider_color" />
+                <!--出发地-->
+
+                <!--目的地-->
+                <TextView
+                    android:id="@+id/carpooling_detail_endads"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/carpooling_detail_date"
+                    android:layout_below="@id/carpooling_detail_startadsline"
+                    android:layout_marginLeft="15dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="目的地:"
+                    android:textColor="#D9DFE1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_carpooling_detail_endads"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/carpooling_detail_endads"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/carpooling_detail_endads"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="桃花镇桃花村桃花坞桃花庵桃花镇桃花村桃花坞桃花庵桃花镇桃花村桃花坞桃花庵"
+                    android:textColor="#5F696C"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/carpooling_detail_endadsline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_carpooling_detail_endads"
+                    android:background="@color/divider_color" />
+                <!--目的地-->
+            </RelativeLayout>
+
+            <!--<LinearLayout
+                android:id="@+id/rel_carpooling_detail_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/carpooling_detail_endadsline"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <com.basulvyou.system.wibget.CircleImageView
+                    android:id="@+id/img_carpooling_detail_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/owner_icon" />
+
+                <TextView
+                    android:id="@+id/tv_rescue_detail_tel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/img_carpooling_detail_icon"
+                    android:layout_weight="1"
+                    android:text="赵冰冰"
+                    android:textColor="#5F696C"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:background="@mipmap/car_call" />
+            </LinearLayout>-->
+            <include
+                android:id="@+id/rel_carpooling_detail_info"
+                layout="@layout/item_carpooling_detail_info"/>
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/lin_carpooling_detail_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_carpooling_detail_cancel"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@mipmap/car_cancel"
+            android:text="取消订单"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_carpooling_detail_sure"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@mipmap/send_info_bg"
+            android:text="交易完成"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</RelativeLayout>

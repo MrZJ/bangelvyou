@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color">
+
+    <include
+        android:id="@+id/collect_top"
+        layout="@layout/top_bar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/collect_top">
+
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/collect_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none"
+            ptr:ptrAnimationStyle="rotate"
+            ptr:ptrDrawableEnd="@mipmap/icon_refresh"
+            ptr:ptrDrawableStart="@mipmap/icon_refresh_start"
+            ptr:ptrHeaderSubTextColor="@color/btn_green"
+            ptr:ptrHeaderTextColor="@color/btn_green"
+            ptr:ptrMode="both"
+            ptr:ptrScrollingWhileRefreshingEnabled="false" />
+
+        <TextView
+            android:id="@+id/empty_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="没有内容"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </FrameLayout>
+</RelativeLayout>

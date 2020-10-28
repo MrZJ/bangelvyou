@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include
+        android:id="@+id/my_comment_top"
+        layout="@layout/top_bar"/>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/my_comment_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:listSelector="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp"
+        android:scrollbars="none"
+        android:layout_below="@id/my_comment_top"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrDrawable="@mipmap/icon_refresh"
+        ptr:ptrHeaderSubTextColor="@color/btn_green"
+        ptr:ptrHeaderTextColor="@color/btn_green"
+        ptr:ptrMode="pullFromEnd"
+        ptr:ptrScrollingWhileRefreshingEnabled="false"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"/>
+
+</RelativeLayout>

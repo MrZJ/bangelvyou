@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_carpooling_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/carpooling_detail_endadsline"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp">
+
+        <com.basulvyou.system.wibget.CircleImageView
+            android:id="@+id/img_carpooling_detail_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@mipmap/owner_icon" />
+
+        <TextView
+            android:id="@+id/tv_rescue_detail_tel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/img_carpooling_detail_icon"
+            android:layout_weight="1"
+            android:text="赵冰冰"
+            android:textColor="#5F696C"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/car_call" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ll_carpooling_detail"
+        android:background="@color/divider_color" />
+</RelativeLayout>

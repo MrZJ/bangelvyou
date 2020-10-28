@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:background="@color/bg_main_color_two">
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="药材批次号:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right"/>
+
+
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="药材类型:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="药材名称:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="药材生长方式:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="入库时间:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="待分包总重量(Kg):"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="待分包重量(Kg):"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="待分包规格(Kg/包):"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="包数:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="分包人:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="分包时间:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="有效期:"
+                    style="@style/ItemTextGrayWithLine"
+                    android:singleLine="true"
+                    android:gravity="right"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_sub_package_num"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left"/>
+
+                <TextView
+                    android:id="@+id/tv_sub_package_type"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left"/>
+
+                <TextView
+                    android:id="@+id/tv_sub_package_name"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left"/>
+
+                <TextView
+                    android:id="@+id/tv_sub_package_grow"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left"/>
+
+                <TextView
+                    android:id="@+id/tv_sub_package_instockdate"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left"/>
+
+                <TextView
+                    android:id="@+id/tv_sub_package_totalweight"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left"/>
+
+                <EditText
+                    android:id="@+id/edt_sub_package_weight"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    style="@style/ItemTextGray"
+                    android:hint="请输入重量"
+                    android:numeric="decimal"/>
+
+                <EditText
+                    android:id="@+id/edt_sub_package_rule"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    style="@style/ItemTextGray"
+                    android:hint="请输入规格"
+                    android:numeric="decimal"/>
+
+                <TextView
+                    android:id="@+id/tv_sub_package_packagenum"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left"/>
+
+                <EditText
+                    android:id="@+id/edt_sub_package_suber"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    style="@style/ItemTextGray"
+                    android:hint="请输入分包人"/>
+
+                <TextView
+                    android:id="@+id/tv_sub_package_subdate"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="点击选择时间"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left"/>
+
+                <TextView
+                    android:id="@+id/tv_sub_package_enddate"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="点击选择时间"
+                    style="@style/ItemTextGray"
+                    android:singleLine="true"
+                    android:gravity="left"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

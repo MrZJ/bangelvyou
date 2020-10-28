@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color_two">
+
+    <include
+        android:id="@+id/notice_top"
+        layout="@layout/top_bar"/>
+
+    <LinearLayout
+        android:id="@+id/lin_notice_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/tv_notice_open"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="我要开店"
+            android:gravity="center"
+            android:textColor="@color/bg_main_color"
+            android:background="@color/rebackColor"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_notice_view"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="继续选购"
+            android:gravity="center"
+            android:textColor="@color/bg_main_color"
+            android:background="@color/top_bar_color"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <WebView
+        android:layout_below="@id/notice_top"
+        android:layout_above="@id/lin_notice_bottom"
+        android:id="@+id/notice_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"/>
+
+    <include
+        layout="@layout/net_error"
+        android:id="@+id/rel_net_error" />
+
+</RelativeLayout>

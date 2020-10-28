@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_setting">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/top_bar"/>
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/tv_order"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_button"
+        android:gravity="center"
+        android:text="新增收货地址"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/collect_list_refer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_order"
+        android:layout_below="@id/top"
+        android:scrollbars="none"
+        android:visibility="visible"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrMode="pullFromEnd"
+        ptr:ptrHeaderTextColor="@color/main_text_color_select"
+        ptr:ptrHeaderSubTextColor="@color/main_text_color_select"
+        ptr:ptrDrawableEnd="@mipmap/icon_refresh"
+        ptr:ptrScrollingWhileRefreshingEnabled="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.shenmai.system.widget.MyListView
+                android:id="@+id/address_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@android:color/transparent"
+                android:listSelector="@android:color/transparent"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="5dp"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_no_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom"
+        android:layout_below="@id/top"
+        android:layout_marginTop="90dp"
+        >
+
+        <ImageView
+            android:id="@+id/img_no_address"
+	        android:layout_width="160dp"
+	        android:layout_height="160dp"
+	        android:layout_centerHorizontal="true"
+	        android:background="@mipmap/dzgl"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_no_address"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="您还没有收货地址哦!"
+            android:textColor="#999999"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

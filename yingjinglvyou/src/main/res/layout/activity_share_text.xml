@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color">
+
+    <include
+        android:id="@+id/change_state_top"
+        layout="@layout/top_bar" />
+
+    <LinearLayout
+        android:layout_below="@id/change_state_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:id="@+id/et_share_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="写下你这一刻的想法..."
+            android:padding="5dp"
+            android:textColor="#333333"
+            android:scrollbars="none" />
+
+        <!--<LinearLayout
+            android:id="@+id/line_share_text_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+        </LinearLayout>-->
+
+        <!--<RelativeLayout
+            android:id="@+id/rel_change_task_state_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_share_text_state"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+        </RelativeLayout>-->
+
+
+        <GridView
+            android:layout_marginTop="10dp"
+            android:id="@+id/gri_share_text_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="3dp"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:verticalSpacing="5dp"
+            android:visibility="visible"
+            android:focusable="true"/>
+
+        <FrameLayout
+            android:id="@+id/fl_location"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_share_text_location"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/gri_share_text_img"
+                android:layout_alignStart="@+id/gri_share_text_img"
+                android:layout_below="@+id/gri_share_text_img"
+                android:gravity="center_vertical"
+                android:text="当前地理位置"
+                android:textColor="#333333" />
+
+            <ProgressBar
+                android:id="@+id/tv_share_text_state_pro"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_below="@id/change_state_top"
+        android:id="@+id/empty_view_mini"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#33222222"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/loading_layout_mini"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/loading_img_mini"
+                android:layout_width="56dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/icon_loading"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tip_text_mini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="loading"
+                android:textColor="@color/location_tag_nomal"
+                android:textSize="20sp"></TextView>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/loading_layout_mini" />
+    </RelativeLayout>
+</RelativeLayout>

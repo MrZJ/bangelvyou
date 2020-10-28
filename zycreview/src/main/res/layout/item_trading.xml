@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_main_color"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_item_trading_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ItemTextBlack"
+        android:singleLine="true"
+        android:text="药材名称:"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/tv_item_trading_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ItemTextBlack"
+        android:singleLine="true"
+        android:text="药材总量:"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/tv_item_trading_surplusweight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ItemTextBlack"
+        android:singleLine="true"
+        android:text="剩余总量:"/>
+
+    <EditText
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/edt_item_outweight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:textColor="#333333"
+        android:textColorHint="#707070"
+        android:maxLength="12"
+        android:hint="请输入出库重量"
+        android:numeric="decimal"
+        android:singleLine="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:id="@+id/linear_check"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <CheckBox
+                android:id="@+id/check_item_trading_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/my_check"
+                android:button="@null" />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加"
+                android:textColor="@color/top_bar_color"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <EditText
+            android:layout_toLeftOf="@id/linear_check"
+            android:layout_marginRight="10dp"
+            android:id="@+id/edt_item_trading_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColor="#333333"
+            android:textColorHint="#707070"
+            android:hint="请输入单价"
+            android:maxLength="12"
+            android:numeric="decimal"
+            android:singleLine="true"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shenmai.system.widget.SquareLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@android:color/white" >
+
+        <ImageView
+            android:id="@+id/item_grida_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:layout_centerInParent="true">
+        </ImageView>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/item_grida_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="办公"
+            android:layout_below="@id/item_grida_image"
+            android:textColor="@color/back_color"/>
+
+</com.shenmai.system.widget.SquareLayout>

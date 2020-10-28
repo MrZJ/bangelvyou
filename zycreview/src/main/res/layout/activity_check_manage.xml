@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color_two"
+    android:orientation="vertical"
+    tools:context="com.zycreview.system.ui.activity.PlantTaskAddActivity">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/top_bar" />
+
+    <Button
+        android:id="@+id/bt_commit"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/bg_button"
+        android:padding="8dp"
+        android:text="提交"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/register_text_size"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top"
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_main_color_two"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/check_margin_top"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginRight="@dimen/register_left_right_margin"
+                android:layout_marginTop="@dimen/check_margin_top"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:text="药材采收信息"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/medicinal_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/register_left_right_margin"
+                    android:layout_marginTop="@dimen/check_margin_top"
+                    android:text="药材名称:无"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/register_text_size" />
+
+                <TextView
+                    android:id="@+id/recovery_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/register_left_right_margin"
+                    android:layout_marginTop="@dimen/check_margin_top"
+                    android:text="实际采收量:无"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/register_text_size" />
+
+                <TextView
+                    android:id="@+id/recovery_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/register_left_right_margin"
+                    android:layout_marginTop="@dimen/check_margin_top"
+                    android:text="采收时间:无"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/register_text_size" />
+
+                <TextView
+                    android:id="@+id/recovery_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/check_margin_top"
+                    android:layout_marginLeft="@dimen/register_left_right_margin"
+                    android:layout_marginTop="@dimen/check_margin_top"
+                    android:text="采收负责人:无"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/register_text_size" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginRight="@dimen/register_left_right_margin"
+                android:layout_marginTop="@dimen/check_margin_top"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:text="药材检查信息"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/check_margin_top">
+
+                <EditText
+                    android:id="@+id/et_check_name"
+                    style="@style/check_manage"
+                    android:hint="检验名称" />
+
+                <TextView
+                    android:id="@+id/et_executive_standard"
+                    style="@style/check_manage"
+                    android:drawableRight="@mipmap/down_icon"
+                    android:text="执行标准"
+                    android:textColor="#000000"
+                    android:focusableInTouchMode="false"/>
+
+                <TextView
+                    android:id="@+id/et_check_stockpile"
+                    style="@style/check_manage"
+                    android:drawableRight="@mipmap/down_icon"
+                    android:text="贮藏条件"
+                    android:textColor="#000000"
+                    android:focusableInTouchMode="false"/>
+
+
+                <TextView
+                    android:id="@+id/et_check_time"
+                    style="@style/check_manage"
+                    android:drawableRight="@mipmap/down_icon"
+                    android:text="检验时间"
+                    android:textColor="#000000"
+                    android:focusableInTouchMode="false"/>
+
+                <TextView
+                    android:id="@+id/et_check_person"
+                    style="@style/check_manage"
+                    android:drawableRight="@mipmap/down_icon"
+                    android:text="检验人员"
+                    android:textColor="#000000"
+                    android:focusableInTouchMode="false" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/check_margin_top"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginRight="@dimen/register_left_right_margin"
+                android:layout_marginTop="@dimen/check_margin_top"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:text="检验项目"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/check_margin_top"
+                android:id="@+id/lin_check_manage">
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/register_left_right_margin"
+                    android:layout_marginRight="@dimen/register_left_right_margin"
+                    android:layout_marginTop="@dimen/check_margin_top"
+                    android:orientation="horizontal"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="净选:"
+                        android:textColor="#000000" />
+
+                    <com.zhy.view.flowlayout.TagFlowLayout
+                        android:id="@+id/flowlayout_state"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        zhy:max_select="-1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/register_left_right_margin"
+                    android:layout_marginRight="@dimen/register_left_right_margin"
+                    android:layout_marginTop="@dimen/check_margin_top"
+                    android:orientation="horizontal"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="切制:"
+                        android:textColor="#000000" />
+
+                    <com.zhy.view.flowlayout.TagFlowLayout
+                        android:id="@+id/flowlayout_state2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        zhy:max_select="-1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/register_left_right_margin"
+                    android:layout_marginRight="@dimen/register_left_right_margin"
+                    android:layout_marginTop="@dimen/check_margin_top"
+                    android:orientation="horizontal"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="干燥:"
+                        android:textColor="#000000" />
+
+                    <com.zhy.view.flowlayout.TagFlowLayout
+                        android:id="@+id/flowlayout_state3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        zhy:max_select="-1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/register_left_right_margin"
+                    android:layout_marginRight="@dimen/register_left_right_margin"
+                    android:layout_marginTop="@dimen/check_margin_top"
+                    android:orientation="horizontal"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="其他:"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/et_check_other"
+                        style="@style/check_manage"
+                        android:background="@drawable/bg_register_edittext_gray"/>
+
+                </LinearLayout>-->
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">丹寨脱贫攻坚督查指挥系统</string>
+    <string name="netError">网络请求失败</string>
+    <string name="Error_404">未找到网络请求地址...</string>
+    <string name="ducha_format">(%s)</string>
+</resources>

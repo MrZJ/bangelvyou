@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/lin_item_alarm_rescue_alp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"/>
+
+        <TextView
+            android:id="@+id/tv_item_alarm_rescue_alp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:textSize="20sp"
+            android:textColor="#333333"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_item_alarm_rescue"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_item_alarm_rescue_icon"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/tv_item_alarm_rescue_name"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/img_item_alarm_rescue_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="警察局"
+            android:singleLine="true"
+            android:textColor="#333333"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_item_alarm_rescue_ads"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/img_item_alarm_rescue_icon"
+            android:layout_alignBottom="@id/img_item_alarm_rescue_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/alarm_local"
+            android:drawablePadding="3dp"
+            android:text="八宿"
+            android:singleLine="true"
+            android:textColor="#666666"
+            android:textSize="10sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/alarm_right" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"/>
+
+</LinearLayout>

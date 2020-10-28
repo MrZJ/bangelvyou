@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">班戈物流</string>
+    <string name="file_provider">com.pgyersdk.provider</string>
+</resources>

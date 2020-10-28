@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color_two"
+    android:orientation="vertical"
+    tools:context="com.zycreview.system.ui.activity.HarvestManageActivity">
+
+    <include layout="@layout/top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main_color_two"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_main_color_two"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/tv_plant_task_name"
+                layout="@layout/harvest_text_item" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginRight="@dimen/register_left_right_margin"
+                android:layout_marginTop="@dimen/register_top_margin"
+                android:background="@color/divider_color" />
+
+            <include
+                android:id="@+id/tv_plant_name"
+                layout="@layout/harvest_text_item" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginRight="@dimen/register_left_right_margin"
+                android:layout_marginTop="@dimen/register_top_margin"
+                android:background="@color/divider_color" />
+
+            <include
+                android:id="@+id/tv_plant_base_address"
+                layout="@layout/harvest_text_item" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginRight="@dimen/register_left_right_margin"
+                android:layout_marginTop="@dimen/register_top_margin"
+                android:background="@color/divider_color" />
+
+            <include
+                android:id="@+id/tv_plant_address_code"
+                layout="@layout/harvest_text_item" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginRight="@dimen/register_left_right_margin"
+                android:layout_marginTop="@dimen/register_top_margin"
+                android:background="@color/divider_color" />
+
+            <include
+                android:id="@+id/tv_plant_time"
+                layout="@layout/harvest_text_item" />
+
+            <View
+                android:id="@+id/plant_detail_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginRight="@dimen/register_left_right_margin"
+                android:layout_marginTop="@dimen/register_top_margin"
+                android:background="@color/divider_color" />
+
+            <TextView
+                android:id="@+id/plant_detail_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginTop="@dimen/register_top_margin"
+                android:text="提示红色边框为必填项"
+                android:textColor="#ff0000"
+                android:textSize="@dimen/register_text_size" />
+
+            <TextView
+                android:id="@+id/tv_harvest_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginRight="@dimen/register_left_right_margin"
+                android:layout_marginTop="@dimen/register_top_margin"
+                android:background="@drawable/bg_register_edittext"
+                android:drawableRight="@mipmap/down_icon"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="5dp"
+                android:text="采收人"
+                android:textColor="#000000" />
+
+            <!--<include
+                android:id="@+id/et_harvest_person"
+                layout="@layout/register_edit_text" />-->
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_harvest_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginRight="@dimen/register_left_right_margin"
+                android:background="@drawable/bg_register_edittext"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="5dp"
+                android:text="采收时间"
+                android:textColor="#000000"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginTop="@dimen/register_top_margin"
+                android:text="药材产出信息:单位(千克)"
+                android:textColor="#000000"
+                android:textSize="@dimen/register_text_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginRight="@dimen/register_left_right_margin"
+                android:layout_marginTop="@dimen/register_top_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="药材名称"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/register_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="预产量"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/register_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="实际产量"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/register_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/ll_medicine">
+
+                <!--<TextView
+                    android:id="@+id/tv_medicine_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="黄芪"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/register_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_before_weight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="100"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/register_text_size" />
+
+                <EditText
+                    android:id="@+id/et_reality_weight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_register_edittext_gray"
+                    android:hint="100"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="5dp"
+                    android:textColor="#999999"
+                    android:textColorHint="#999999"
+                    android:textSize="@dimen/register_text_size" />-->
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_commit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="@dimen/register_top_margin"
+                android:layout_marginLeft="@dimen/register_left_right_margin"
+                android:layout_marginRight="@dimen/register_left_right_margin"
+                android:layout_marginTop="@dimen/register_top_margin"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="提交"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/register_text_size" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

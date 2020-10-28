@@ -1,0 +1,255 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="AnimationActivity" mce_bogus="1" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/translate_activity_open_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/translate_activity_open_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/translate_activity_close_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/translate_activity_close_exit</item>
+    </style>
+
+    <style name="Theme.Activity" mce_bogus="1" parent="@android:style/Theme">
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@mipmap/bg_welcome</item>
+    </style>
+
+    <style name="SearchResultText_12">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="LocationItemText_18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+
+    <style name="LocationItemTextBlack_18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="LocationItemText_14">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+
+    <style name="LocationItemTextBlack_10">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+
+    <style name="LocationItemTextGreen_14">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/location_tab_item_color</item>
+    </style>
+
+    <style name="LocationItemTextGoodsPrice">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/location_tab_item_color</item>
+    </style>
+
+    <style name="homeitem_11">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+
+    <style name="homeitem_13">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+
+    <style name="homeitem_12">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+
+    <style name="pop_text_style">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/location_tag_nomal_1</item>
+    </style>
+
+    <style name="homeitem_text">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#45B5FB</item>
+    </style>
+
+    <style name="mine_list_text">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="SearchResultText_10">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="SearchResultText_9">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="LocationAdvTitleText_15">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="LocationAdvTitleText_10">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <!--当地列表滑动选项-->
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPaddingTopBottom" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <!--该属性表示里面的TAB是否均分整个PagerSlidingTabStrip控件的宽,true是,false不均分,从左到右排列,默认false-->
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+        <attr name="pstsTextSelectedColor" format="color"/>
+        <!--缩放的最大值,0.3表示放大后最大是原来的0.3倍,默认未0.3-->
+        <attr name="pstsScaleZoomMax" format="float"/>
+        <attr name="pstsSmoothScrollWhenClickTab" format="boolean"/>
+    </declare-styleable>
+
+    <!--圆角图片选项-->
+    <declare-styleable name="RoundedImageView">
+        <attr name="riv_corner_radius" format="dimension"/>
+        <attr name="riv_corner_radius_top_left" format="dimension"/>
+        <attr name="riv_corner_radius_top_right" format="dimension"/>
+        <attr name="riv_corner_radius_bottom_left" format="dimension"/>
+        <attr name="riv_corner_radius_bottom_right" format="dimension"/>
+        <attr name="riv_border_width" format="dimension"/>
+        <attr name="riv_border_color" format="color"/>
+        <attr name="riv_mutate_background" format="boolean"/>
+        <attr name="riv_oval" format="boolean"/>
+        <attr name="android:scaleType"/>
+        <attr name="riv_tile_mode">
+            <enum name="clamp" value="0"/>
+            <enum name="repeat" value="1"/>
+            <enum name="mirror" value="2"/>
+        </attr> -<attr name="riv_tile_mode_x">
+            <enum name="clamp" value="0"/>
+            <enum name="repeat" value="1"/>
+            <enum name="mirror" value="2"/>
+        </attr>
+        <attr name="riv_tile_mode_y">
+            <enum name="clamp" value="0"/>
+            <enum name="repeat" value="1"/>
+            <enum name="mirror" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <!--自定义选择框-->
+    <style name="MyCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+
+        <item name="android:button">@drawable/my_checkbox</item>
+
+        <item name="android:paddingLeft">18dp</item>
+
+        <item name="android:maxHeight">15dp</item>
+
+    </style>
+
+    <!--自定义黄色星级-->
+    <style name="commentRatingBar" parent="@android:style/Widget.RatingBar" >
+        <item name="android:progressDrawable">@drawable/comment_rating_bar</item>
+        <item name="android:numStars">5</item>
+        <item name="android:minHeight">10dp</item>
+        <item name="android:maxHeight">10dp</item>
+    </style>
+
+    <!--自定义红色星级-->
+    <style name="commentRedRatingBar" parent="@android:style/Widget.RatingBar" >
+        <item name="android:progressDrawable">@drawable/comment_red_rating_bar</item>
+        <item name="android:numStars">5</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxHeight">20dp</item>
+    </style>
+
+    <!--自定义心型星级-->
+    <style name="heartRatingBar" parent="@android:style/Widget.RatingBar" >
+        <item name="android:progressDrawable">@drawable/heart_rating_bar</item>
+        <item name="android:numStars">5</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxHeight">20dp</item>
+    </style>
+
+    <!--自定义动画样式-->
+    <style name="Animation" />
+    <style name="Animation.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowEnterAnimation">@anim/translucent_zoom_in</item>
+        <item name="android:windowExitAnimation">@anim/translucent_zoom_out</item>
+    </style>
+    <style name="Animation.pop" parent="android:Animation"  mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/pop_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_out</item>
+    </style>
+
+    <!--自定义吐司动画样式-->
+    <style name="myToast" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Dialog</item>
+    </style>
+
+    <!--倒计时样式-->
+    <style name="CountDownTimerViewStyle">
+        <item name="android:layout_width">10dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">0</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--倒计时样式-->
+
+    <!-- 自定义dialog -->
+    <style
+        name="CustomDialog"
+        parent="android:style/Theme.Dialog">
+        <item
+            name="android:windowFrame">@null</item><!--边框 -->
+        <item
+            name="android:windowIsFloating">true</item><!--是否浮现在activity之上 -->
+        <item
+            name="android:windowIsTranslucent">true</item><!--半透明 -->
+        <item
+            name="android:windowNoTitle">true</item><!--无标题 -->
+        <item
+            name="android:windowBackground">@android:color/transparent</item><!--背景透明 -->
+        <item
+            name="android:backgroundDimEnabled">true</item><!--模糊 -->
+    </style>
+    <!-- 自定义dialog -->
+    <!-- Base application theme. -->
+    <style name="MyAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+</resources>

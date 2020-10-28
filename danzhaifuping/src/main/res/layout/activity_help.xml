@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/bg_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/corner_30"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/sousuo" />
+
+
+            <EditText
+                android:id="@+id/search_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="任务进度标识"
+        android:textColor="#199ED8"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/search0_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/type0_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="3dp"
+                android:text="1%~25%"
+                android:textColor="@color/black" />
+
+            <View
+                android:id="@+id/type0_view"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search1_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/type1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="3dp"
+                android:text="26%~50%"
+                android:textColor="@color/black" />
+
+            <View
+                android:id="@+id/type1_view"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/yellow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search2_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/type2_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="3dp"
+                android:text="51%~75%"
+                android:textColor="@color/black" />
+
+            <View
+                android:id="@+id/type2_view"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/light_blue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search3_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/type3_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="3dp"
+                android:text="76%~99%"
+                android:textColor="@color/black" />
+
+            <View
+                android:id="@+id/type3_view"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/light_green" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search4_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/type4_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="3dp"
+                android:text="100%"
+                android:textColor="@color/black" />
+
+            <View
+                android:id="@+id/type4_view"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/deep_blue" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/white"
+            android:dividerHeight="4dp"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none"
+            ptr:ptrAnimationStyle="rotate"
+            ptr:ptrDrawableEnd="@mipmap/icon_refresh"
+            ptr:ptrDrawableStart="@mipmap/icon_refresh"
+            ptr:ptrHeaderSubTextColor="@color/top_bar_color"
+            ptr:ptrHeaderTextColor="@color/top_bar_color"
+            ptr:ptrMode="both"
+            ptr:ptrScrollingWhileRefreshingEnabled="false" />
+
+        <TextView
+            android:id="@+id/submit_task"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/corner_30_blue"
+            android:gravity="center"
+            android:text="发布任务"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </FrameLayout>
+</LinearLayout>

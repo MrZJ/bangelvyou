@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/top_bar_2" />
+
+    <com.shishoureport.system.wibget.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_layout"
+        android:layout_below="@+id/title_layout"
+        android:background="@color/bg_main_color"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="这是本月第二次提交请假单"
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/record_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看记录"
+                    android:textColor="@color/text_blue"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <include layout="@layout/bus_travel_item2" />
+
+            <com.shishoureport.system.wibget.MyListView
+                android:id="@+id/travel_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/white"
+                android:dividerHeight="0dp"
+                android:visibility="gone"></com.shishoureport.system.wibget.MyListView>
+
+            <include
+                layout="@layout/business_travel_footer"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/leave_type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leave_tab_hight"
+                android:background="@color/white">
+
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@color/divider_color" />-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider_color" />
+
+                <TextView
+                    android:id="@+id/money_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/leave_margin"
+                    android:text="暂支差旅费"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/leave_type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toLeftOf="@id/arrow"
+                    android:layout_toRightOf="@+id/money_tip"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/plane_reason_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:minHeight="100dp"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider_color" />
+
+                <TextView
+                    android:id="@+id/plane_reason_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/leave_margin"
+                    android:layout_marginTop="10dp"
+                    android:text="飞机出行\n原因"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/reason_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignBaseline="@+id/plane_reason_tv"
+                    android:layout_alignBottom="@+id/plane_reason_tv"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_toEndOf="@+id/plane_reason_tv"
+                    android:layout_toRightOf="@+id/plane_reason_tv"
+                    android:background="@color/white"
+                    android:hint="如选择飞机出行，请填写原因"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/train_reason_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:minHeight="100dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider_color" />
+
+                <TextView
+                    android:id="@+id/train_reason_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/leave_margin"
+                    android:layout_marginTop="10dp"
+                    android:text="出行备注"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/plane_reason_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignBaseline="@+id/train_reason_tv"
+                    android:layout_alignBottom="@+id/train_reason_tv"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_toEndOf="@+id/train_reason_tv"
+                    android:layout_toRightOf="@+id/train_reason_tv"
+                    android:background="@color/white"
+                    android:hint="如火车选一等座、软座出行，..."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/travel_reason_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leave_tab_hight"
+                android:layout_marginTop="20dp"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider_color" />
+
+                <TextView
+                    android:id="@+id/travel_reason_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/leave_margin"
+                    android:text="出差事由"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/travel_reason_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/travel_reason_tip"
+                    android:background="@color/white"
+                    android:ellipsize="end"
+                    android:hint="请输入（必填）"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pre_income_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leave_tab_hight"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider_color" />
+
+                <TextView
+                    android:id="@+id/pre_income_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/leave_margin"
+                    android:text="预计收入"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/pre_income_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/pre_income_tv"
+                    android:background="@color/white"
+                    android:ellipsize="end"
+                    android:hint="请输入（必填）"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lend_money_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leave_tab_hight"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider_color" />
+
+                <TextView
+                    android:id="@+id/lend_money_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/leave_margin"
+                    android:text="借款金额"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/lend_money_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/lend_money_tv"
+                    android:background="@color/white"
+                    android:ellipsize="end"
+                    android:hint="请输入（必填）"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bill_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:minHeight="100dp"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider_color" />
+
+                <TextView
+                    android:id="@+id/bill_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/leave_margin"
+                    android:layout_marginTop="10dp"
+                    android:text="全称、纳\n税人识别\n号"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/bill_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignBaseline="@+id/bill_tv"
+                    android:layout_alignBottom="@+id/bill_tv"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_toEndOf="@+id/bill_tv"
+                    android:layout_toRightOf="@+id/bill_tv"
+                    android:background="@color/white"
+                    android:hint="如火车选一等座、软座出行，..."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider_color" />
+
+                <TextView
+                    android:id="@+id/approve_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/leave_margin"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:text="审批人"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <com.shishoureport.system.wibget.HorizontalListView
+                    android:id="@+id/approve_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"></com.shishoureport.system.wibget.HorizontalListView>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider_color" />
+
+                <TextView
+                    android:id="@+id/copy_people_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/leave_margin"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:text="抄送人"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <com.shishoureport.system.wibget.HorizontalListView
+                    android:id="@+id/copy_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"></com.shishoureport.system.wibget.HorizontalListView>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="审批通过后，通知抄送人"
+                android:textColor="@color/text_gray"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/audit_suggestion_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="请填写审批意见"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </com.shishoureport.system.wibget.MyScrollView>
+
+    <FrameLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_bg"
+                android:text="不批准"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/ok_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_bg"
+                android:text="批准"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

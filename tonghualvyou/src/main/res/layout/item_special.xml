@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:background="@drawable/bg_item_special">
+
+        <com.basulvyou.system.wibget.RoundedImage.RoundedImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_itm_special"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            app:riv_corner_radius_top_left="4dp"
+            app:riv_corner_radius_top_right="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_special_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_itm_special"
+            android:lines="2"
+            android:text="静物 藏族饰品"
+            android:textSize="12sp"
+            android:textColor="@color/title_text_color"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_special_like_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_special_name"
+            android:maxLines="1"
+            android:text="20k"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="10dp"/>
+
+        <View
+            android:id="@+id/img_special_like"
+            android:layout_width="14dp"
+            android:layout_height="12dp"
+            android:background="@mipmap/bg_like"
+            android:layout_marginTop="6dp"
+            android:layout_below="@id/tv_special_name"
+            android:layout_toLeftOf="@id/tv_special_like_num"/>
+
+        <TextView
+            android:id="@+id/tv_special_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_special_name"
+            android:layout_toLeftOf="@id/img_special_like"
+            android:maxLines="1"
+            android:text="¥1468"
+            android:textSize="13sp"
+            android:textColor="@color/location_text_color"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"/>
+
+    </RelativeLayout>
+</RelativeLayout>
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_main_color"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <com.basulvyou.system.wibget.RoundedImage.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img_item_location_view_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/loadfailed"
+        app:riv_corner_radius_bottom_left="4dp"
+        app:riv_corner_radius_bottom_right="4dp"
+        app:riv_corner_radius_top_left="4dp"
+        app:riv_corner_radius_top_right="4dp" />
+
+    <TextView
+        android:id="@+id/tv_item_location_view_grid_name"
+        style="@style/LocationItemText_18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_item_location_view_grid"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:text="藏东风景" />
+</RelativeLayout>
+

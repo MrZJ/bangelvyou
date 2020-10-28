@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main_color">
+
+    <include
+        layout="@layout/top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/bg_main_color"
+                android:id="@+id/btn_settingPassword"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/updata_pws"/>
+
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="修改密码"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/bg_main_color"
+                android:id="@+id/btn_update"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/updata_apk"/>
+
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="系统更新"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/bg_main_color"
+                android:id="@+id/btn_help"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/help"/>
+
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="使用帮助"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/bg_main_color"
+                android:id="@+id/btn_loginout"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/loginout"/>
+
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="退出登录"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+           <!-- <Button
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/btn_settingPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/top_bar_color"
+                android:text="修改密码"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"/>-->
+            <!--<Button
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/btn_update"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/top_bar_color"
+                android:layout_marginTop="15dp"
+                android:text="系统更新"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"/>-->
+            <!--<Button
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/btn_help"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/top_bar_color"
+                android:layout_marginTop="15dp"
+                android:text="使用帮助"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"/>-->
+            <!--<Button
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/btn_loginout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/top_bar_color"
+                android:layout_marginTop="15dp"
+                android:text="退出登录"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"/>-->
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

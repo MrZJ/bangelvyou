@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/register_code_top"
+        layout="@layout/top_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已发送验证码到手机:"
+            android:textSize="12sp"
+            android:textColor="#C7C7C7"/>
+
+        <TextView
+            android:id="@+id/tv_user_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_marginLeft="5dp"
+            android:text="13888888888"
+            android:textSize="12sp"
+            android:textColor="#C7C7C7"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/input_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_yzm_edittext"
+            android:paddingLeft="5dp"
+            android:hint="请输入验证码"
+            android:numeric="decimal"
+            android:textColorHint="#999999"
+            android:textSize="12sp"
+            android:textColor="#999999"/>
+
+        <Button
+            android:id="@+id/btn_get_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/yzm_code_bg"
+            android:layout_marginLeft="5dp"
+            android:text="获取验证码"
+            android:textSize="12sp"
+            android:textColor="#969696"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@mipmap/login_bg"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="18dp"
+        android:text="下一步"
+        android:textSize="14sp"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/tv_input_code_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="17dp"
+        android:text="@string/register_text"
+        android:textColor="#C9C9C9"
+        android:textSize="12sp" />
+
+</LinearLayout>

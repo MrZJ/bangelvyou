@@ -1,0 +1,49 @@
+<com.handmark.pulltorefresh.library.PullToRefreshScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/goods_grid_refer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    ptr:ptrAnimationStyle="rotate"
+    ptr:ptrMode="pullFromEnd"
+    ptr:ptrHeaderTextColor="@color/main_text_color_select"
+    ptr:ptrHeaderSubTextColor="@color/main_text_color_select"
+    ptr:ptrDrawableEnd="@mipmap/icon_refresh"
+    ptr:ptrScrollingWhileRefreshingEnabled="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--<include
+            layout="@layout/grid_goods_head"
+            android:id="@+id/layout_goods_head" />-->
+
+        <LinearLayout
+            android:id="@+id/lin_goods_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <com.shenmai.system.widget.MyGridView
+            android:layout_marginTop="10dp"
+            android:id="@+id/grid_goods_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/divider_color"
+            android:dividerHeight="1dp"
+            android:horizontalSpacing="1dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:verticalSpacing="1dp" />
+
+    </LinearLayout>
+
+</com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+
+
