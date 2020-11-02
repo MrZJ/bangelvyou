@@ -34,4 +34,8 @@ public class AproveOverTimeEntity implements Serializable {
     public List<AttendanceAuditList> attendanceAuditList;// null,
     public List<AttendanceOvertimeDetailList> attendanceOvertimeDetailList;
     public List<AttendanceCcList> attendanceCcList;
+	
+	
+	
+	
 }
