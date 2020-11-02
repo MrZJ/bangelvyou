@@ -131,6 +131,8 @@
             android:screenOrientation="portrait" />
         <activity android:name=".ui.activity.MyWebActivity" />
         <activity android:name=".ui.fragment.PreViewActivity" />
+        <activity android:name=".ui.activity.ApplyWorkerActivity" />
+        <activity android:name=".ui.activity.ApplyPurchaseActivity" />
 
         <service
             android:name="com.baidu.location.f"
