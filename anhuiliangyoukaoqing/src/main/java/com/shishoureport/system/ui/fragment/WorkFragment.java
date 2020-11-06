@@ -8,6 +8,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.shishoureport.system.R;
 import com.shishoureport.system.entity.HomeCountData;
 import com.shishoureport.system.request.HomeCountRequest;
+import com.shishoureport.system.ui.activity.ApplyPurchaseActivity;
+import com.shishoureport.system.ui.activity.ApplyWorkerActivity;
 import com.shishoureport.system.ui.activity.ApproveActivity;
 import com.shishoureport.system.ui.activity.AttendanceActivity;
 import com.shishoureport.system.ui.activity.BusinessTravelActivity;
@@ -111,6 +113,15 @@ public class WorkFragment extends BaseFragment implements View.OnClickListener, 
                 CarManageActivity.startActivity(getContext());
                 break;
             case 7:
+                ScanActivity.startActivity(getActivity());
+                break;
+            case 8:
+                ApplyWorkerActivity.startActivity(getContext());
+                break;
+            case 9:
+                ApplyPurchaseActivity.startActivity(getContext());
+                break;
+            case 10:
                 ScanActivity.startActivity(getActivity());
                 break;
         }

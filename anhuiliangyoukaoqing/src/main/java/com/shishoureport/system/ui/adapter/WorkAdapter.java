@@ -102,6 +102,18 @@ public class WorkAdapter extends BaseAdapter {
                     holder.imageView.setImageResource(R.mipmap.san);
                     holder.textView.setText("扫码管理");
                     break;
+                case 8:
+                    holder.imageView.setImageResource(R.mipmap.personal_work_over_time);
+                    holder.textView.setText("临时借用人员");
+                    break;
+                case 9:
+                    holder.imageView.setImageResource(R.mipmap.send_car);
+                    holder.textView.setText("采购申请");
+                    break;
+                case 10:
+                    holder.imageView.setImageResource(R.mipmap.san);
+                    holder.textView.setText("申请领用");
+                    break;
             }
         }
     }

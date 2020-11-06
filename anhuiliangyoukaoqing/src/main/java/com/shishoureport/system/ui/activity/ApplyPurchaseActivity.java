@@ -34,6 +34,7 @@ import java.util.List;
 
 public class ApplyPurchaseActivity extends BaseActivity implements View.OnClickListener, AdapterView.OnItemClickListener, MyDataPickerDialog.OnButtonClick, MyBaseEntityListDialog.OnListItemClick {
     public static int CONTACTS_REQUEST = 1001;
+    //Test
     public static int COPY_CONTACTS_REQUEST = 1201;
     private HorizontalListView mApproveListView, copy_listview;
     private View leave_type_layout, start_time_layout, end_time_layout, record_tv, commit_btn;

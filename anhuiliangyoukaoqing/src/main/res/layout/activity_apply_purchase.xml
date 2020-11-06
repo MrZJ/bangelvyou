@@ -44,139 +44,6 @@
                     android:textSize="14sp" />
             </LinearLayout>
 
-            <RelativeLayout
-                android:id="@+id/leave_type_layout"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/leave_tab_hight"
-                android:background="@color/white">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/divider_color" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/divider_color" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="@dimen/leave_margin"
-                    android:text="借用部门"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <ImageView
-                    android:id="@+id/arrow"
-                    android:layout_width="@dimen/arrow_right"
-                    android:layout_height="@dimen/arrow_right"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@mipmap/arrow_right" />
-
-                <TextView
-                    android:id="@+id/applyDepartmentTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toLeftOf="@id/arrow"
-                    android:singleLine="true"
-                    android:text="请选择（必填）"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/start_time_layout"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/leave_tab_hight"
-                android:layout_marginTop="20dp"
-                android:background="@color/white">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/divider_color" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/divider_color" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="@dimen/leave_margin"
-                    android:text="借用开始时间"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <ImageView
-                    android:id="@+id/start_time_arrow"
-                    android:layout_width="@dimen/arrow_right"
-                    android:layout_height="@dimen/arrow_right"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@mipmap/arrow_right" />
-
-                <TextView
-                    android:id="@+id/start_time_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toLeftOf="@id/start_time_arrow"
-                    android:singleLine="true"
-                    android:text="请选择（必填）"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/end_time_layout"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/leave_tab_hight"
-                android:background="@color/white">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/divider_color" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="@dimen/leave_margin"
-                    android:text="借用结束时间"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <ImageView
-                    android:id="@+id/end_time_arrow"
-                    android:layout_width="@dimen/arrow_right"
-                    android:layout_height="@dimen/arrow_right"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@mipmap/arrow_right" />
-
-                <TextView
-                    android:id="@+id/end_time_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toLeftOf="@id/end_time_arrow"
-                    android:singleLine="true"
-                    android:text="请选择（必填）"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -195,25 +62,25 @@
                     android:background="@color/divider_color" />
 
                 <TextView
-                    android:id="@+id/reasonTipsTv"
+                    android:id="@+id/medName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/leave_margin"
-                    android:text="是由"
+                    android:text="试剂名称"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/reasonTv"
+                    android:id="@+id/medNameTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/reasonTipsTv"
-                    android:layout_alignBottom="@+id/reasonTipsTv"
+                    android:layout_alignBaseline="@+id/medName"
+                    android:layout_alignBottom="@+id/medName"
                     android:layout_marginStart="11dp"
                     android:layout_marginLeft="11dp"
-                    android:layout_toEndOf="@+id/reasonTipsTv"
-                    android:layout_toRightOf="@+id/reasonTipsTv"
+                    android:layout_toEndOf="@+id/medName"
+                    android:layout_toRightOf="@+id/medName"
                     android:background="@color/white"
                     android:ellipsize="end"
                     android:hint="请输入（必填）"
@@ -240,25 +107,25 @@
                     android:background="@color/divider_color" />
 
                 <TextView
-                    android:id="@+id/day_num_tip"
+                    android:id="@+id/apply"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/leave_margin"
-                    android:text="预计人数"
+                    android:text="采购数量"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/personNumTv"
+                    android:id="@+id/applyNumberTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/day_num_tip"
-                    android:layout_alignBottom="@+id/day_num_tip"
+                    android:layout_alignBaseline="@+id/apply"
+                    android:layout_alignBottom="@+id/apply"
                     android:layout_marginStart="11dp"
                     android:layout_marginLeft="11dp"
-                    android:layout_toEndOf="@+id/day_num_tip"
-                    android:layout_toRightOf="@+id/day_num_tip"
+                    android:layout_toEndOf="@+id/apply"
+                    android:layout_toRightOf="@+id/apply"
                     android:background="@color/white"
                     android:ellipsize="end"
                     android:hint="请输入（必填）"
@@ -269,6 +136,96 @@
                     android:textSize="16sp" />
             </RelativeLayout>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leave_tab_hight"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider_color" />
+
+                <TextView
+                    android:id="@+id/person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/leave_margin"
+                    android:text="申请人"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/personTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/person"
+                    android:layout_alignBottom="@+id/person"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginLeft="11dp"
+                    android:layout_toEndOf="@+id/person"
+                    android:layout_toRightOf="@+id/person"
+                    android:background="@color/white"
+                    android:ellipsize="end"
+                    android:hint="请输入（必填）"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leave_tab_hight"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider_color" />
+
+                <TextView
+                    android:id="@+id/reciever"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/leave_margin"
+                    android:text="申请人"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/recieverTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/reciever"
+                    android:layout_alignBottom="@+id/reciever"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginLeft="11dp"
+                    android:layout_toEndOf="@+id/reciever"
+                    android:layout_toRightOf="@+id/reciever"
+                    android:background="@color/white"
+                    android:ellipsize="end"
+                    android:hint="请输入（必填）"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

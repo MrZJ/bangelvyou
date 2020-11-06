@@ -4,7 +4,9 @@ android {
     useLibrary 'org.apache.http.legacy'
     compileSdkVersion 28
     buildToolsVersion BUILD_TOOL_VERSION
-
+    viewBinding {
+        enabled = true
+    }
     defaultConfig {
         applicationId "com.yishangshuma.anhuiliangyoukaoqing"
         minSdkVersion 24
