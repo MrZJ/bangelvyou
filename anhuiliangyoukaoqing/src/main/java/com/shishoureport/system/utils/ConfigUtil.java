@@ -10,7 +10,8 @@ import com.shishoureport.system.entity.ConfigEntity;
  * 网络地址，缓存数据工具类
  */
 public class ConfigUtil {
-            public static final String HTTP = "http://220.178.52.206:8666";//外网地址
+            public static final String HTTP = " http://220.178.14.5:8447/";//外网地址
+//    public static final String HTTP = "http://192.168.3.80:8084";//zjq地址
     //    public static final String HTTP = "http://192.168.3.5:8495";//内网测试地址
     //    public static final String HTTP = "http://192.168.3.26:8084";//杜彪测试地址
 //        public static final String HTTP = "http://192.168.3.5:8447";//王亚丽测试地址

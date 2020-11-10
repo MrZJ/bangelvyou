@@ -2,6 +2,7 @@ package com.shishoureport.system.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -9,16 +10,17 @@ import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONArray;
 import com.shishoureport.system.R;
+import com.shishoureport.system.databinding.ActivityApplyWorkerBinding;
+import com.shishoureport.system.entity.ApplyWorkerEntity;
 import com.shishoureport.system.entity.BaseDataEntity;
 import com.shishoureport.system.entity.FieldErrors;
-import com.shishoureport.system.entity.LeaveAppEntity;
 import com.shishoureport.system.entity.User;
+import com.shishoureport.system.request.SaveApplyWorkerRequest;
 import com.shishoureport.system.request.SaveLeaveAppRequest;
 import com.shishoureport.system.ui.adapter.AddPeopleAdapter;
 import com.shishoureport.system.ui.fragment.ContactsFragment;
 import com.shishoureport.system.ui.fragment.LeaveListFragment;
 import com.shishoureport.system.utils.MySharepreference;
-import com.shishoureport.system.utils.StringUtil;
 import com.shishoureport.system.wibget.HorizontalListView;
 import com.shishoureport.system.wibget.MyBaseEntityListDialog;
 import com.shishoureport.system.wibget.MyDataPickerDialog;
@@ -36,12 +38,11 @@ public class ApplyWorkerActivity extends BaseActivity implements View.OnClickLis
     public static int CONTACTS_REQUEST = 1001;
     public static int COPY_CONTACTS_REQUEST = 1201;
     private HorizontalListView mApproveListView, copy_listview;
-    private View leave_type_layout, start_time_layout, end_time_layout, record_tv, commit_btn;
-    private EditText reasonTv, personNumTv, personInfoTv, workDetailTv,remark_et;
-    private TextView applyDepartmentTv, start_time_tv, end_time_tv;
+    private View start_time_layout, end_time_layout, leave_type_layout, commit_btn;
+    private TextView start_time_tv, end_time_tv;
     private AddPeopleAdapter addPeopleAdapter, copyPeopleAdapter;
-    private LeaveAppEntity mLeaveAppEntity = new LeaveAppEntity();
-    private BaseDataEntity mBaseDataEntity;
+    private ApplyWorkerEntity mApplyWorkerEntity = new ApplyWorkerEntity();
+    private ActivityApplyWorkerBinding mBinding;
 
     public static void startActivity(Context context) {
         Intent intent = new Intent(context, ApplyWorkerActivity.class);
@@ -51,14 +52,16 @@ public class ApplyWorkerActivity extends BaseActivity implements View.OnClickLis
 
     @Override
     public int getLayoutId() {
-        return R.layout.activity_apply_worker;
+        return -1;
     }
 
     public void initView() {
-        mApproveListView = (HorizontalListView) findViewById(R.id.approve_listview);
+        mBinding = ActivityApplyWorkerBinding.inflate(getLayoutInflater());
+        setContentView(mBinding.getRoot());
+        mApproveListView = findViewById(R.id.approve_listview);
         addPeopleAdapter = new AddPeopleAdapter(this, getData());
         mApproveListView.setAdapter(addPeopleAdapter);
-        copy_listview = (HorizontalListView) findViewById(R.id.copy_listview);
+        copy_listview = findViewById(R.id.copy_listview);
         copyPeopleAdapter = new AddPeopleAdapter(this, getmCopyUsers());
         copy_listview.setAdapter(copyPeopleAdapter);
         copy_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -81,8 +84,6 @@ public class ApplyWorkerActivity extends BaseActivity implements View.OnClickLis
         end_time_layout = findViewById(R.id.end_time_layout);
         start_time_tv = (TextView) findViewById(R.id.start_time_tv);
         end_time_tv = (TextView) findViewById(R.id.end_time_tv);
-        record_tv = findViewById(R.id.record_tv);
-        record_tv.setOnClickListener(this);
         leave_type_layout.setOnClickListener(this);
         start_time_layout.setOnClickListener(this);
         end_time_layout.setOnClickListener(this);
@@ -113,18 +114,15 @@ public class ApplyWorkerActivity extends BaseActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.leave_type_layout:
-                showListDialog();
-                break;
             case R.id.start_time_layout:
                 showDataDialog("开始时间", MyDataPickerDialog.TYPE_START_TIME);
                 break;
             case R.id.end_time_layout:
                 showDataDialog("结束时间", MyDataPickerDialog.TYPE_END_TIME);
                 break;
-            case R.id.record_tv:
-                MyListActivity.startActivity(this, LeaveListFragment.TYPE_LEAVE_APP_LIST);
-                break;
+//            case R.id.record_tv:
+//                MyListActivity.startActivity(this, LeaveListFragment.TYPE_LEAVE_APP_LIST);
+//                break;
             case R.id.commit_btn:
                 commitData();
                 break;
@@ -147,12 +145,6 @@ public class ApplyWorkerActivity extends BaseActivity implements View.OnClickLis
         }
     }
 
-    private void showListDialog() {
-        List<BaseDataEntity> list = JSONArray.parseArray(MySharepreference.getInstance(this).getString(MySharepreference.ENTITY90LIST), BaseDataEntity.class);
-        MyBaseEntityListDialog dialog = new MyBaseEntityListDialog(this, list, this);
-        dialog.show();
-    }
-
     private void showDataDialog(String title, int type) {
         MyDataPickerDialog dataPickerDialog = new MyDataPickerDialog(MyDataPickerDialog.YEAR_MONTH, this, title, this, type);
         dataPickerDialog.show();
@@ -161,10 +153,10 @@ public class ApplyWorkerActivity extends BaseActivity implements View.OnClickLis
     @Override
     public void onOkClick(String date, int type, int pos) {
         if (type == MyDataPickerDialog.TYPE_START_TIME) {
-            mLeaveAppEntity.start_time = date;
+            mApplyWorkerEntity.start_time = date;
             start_time_tv.setText(date);
         } else if (type == MyDataPickerDialog.TYPE_END_TIME) {
-            mLeaveAppEntity.end_time = date;
+            mApplyWorkerEntity.end_time = date;
             end_time_tv.setText(date);
         }
     }
@@ -176,8 +168,6 @@ public class ApplyWorkerActivity extends BaseActivity implements View.OnClickLis
 
     @Override
     public void onItemclick(BaseDataEntity entity) {
-        mBaseDataEntity = entity;
-//        leave_type_tv.setText(mBaseDataEntity.type_name);
     }
 
     @Override
@@ -213,22 +203,38 @@ public class ApplyWorkerActivity extends BaseActivity implements View.OnClickLis
     }
 
     private void commitData() {
-        if (mBaseDataEntity == null || StringUtil.isEmpty(mBaseDataEntity.id)) {
-            showToast("请选择请假类型");
-            return;
-        }
-        if (mLeaveAppEntity.start_time == null) {
+        if (TextUtils.isEmpty(start_time_tv.getText().toString())) {
             showToast("请选择开始时间");
             return;
         }
-        if (mLeaveAppEntity.end_time == null) {
+        mApplyWorkerEntity.start_time = start_time_tv.getText().toString() +
+                " 00:00:00";
+        if (TextUtils.isEmpty(end_time_tv.getText().toString())) {
             showToast("请选择结束时间");
             return;
         }
-        /*if (StringUtil.isEmpty(time_lengh_et.getText().toString())) {
-            showToast("请输入时长");
+        mApplyWorkerEntity.end_time = end_time_tv.getText().toString() + " 00:00:00";
+        if (TextUtils.isEmpty(mBinding.reasonTv.getText().toString())) {
+            showToast("请输入事由");
             return;
-        }*/
+        }
+        mApplyWorkerEntity.reason = mBinding.reasonTv.getText().toString();
+        if (TextUtils.isEmpty(mBinding.personNumTv.getText().toString())) {
+            showToast("请输入预计人数");
+            return;
+        }
+        mApplyWorkerEntity.num = mBinding.personNumTv.getText().toString();
+        if (TextUtils.isEmpty(mBinding.personInfoTv.getText().toString())) {
+            showToast("请输入借用人员具体情况");
+            return;
+        }
+        mApplyWorkerEntity.detail = mBinding.personInfoTv.getText().toString();
+        if (TextUtils.isEmpty(mBinding.workDetailTv.getText().toString())) {
+            showToast("请输入工作内容");
+            return;
+        }
+
+        mApplyWorkerEntity.content = mBinding.workDetailTv.getText().toString();
         if (mData.size() == 1) {
             showToast("请选择审批人");
             return;
@@ -245,8 +251,9 @@ public class ApplyWorkerActivity extends BaseActivity implements View.OnClickLis
                 ids.append(user.id + ",");
             }
         }
-        mLeaveAppEntity.user_names = names.toString();
-        mLeaveAppEntity.user_ids = ids.toString();
+        mApplyWorkerEntity.audit_name = names.toString();
+        mApplyWorkerEntity.audit_uid = ids.toString();
+
         if (mCopyUsers.size() > 1) {
             StringBuilder cc_user_names = new StringBuilder();
             StringBuilder cc_user_ids = new StringBuilder();
@@ -260,20 +267,18 @@ public class ApplyWorkerActivity extends BaseActivity implements View.OnClickLis
                     cc_user_ids.append(user.id + ",");
                 }
             }
-            mLeaveAppEntity.cc_user_names = cc_user_names.toString();
-            mLeaveAppEntity.cc_user_ids = cc_user_ids.toString();
+            mApplyWorkerEntity.cc_user_names = cc_user_names.toString();
+            mApplyWorkerEntity.cc_user_ids = cc_user_ids.toString();
         }
-        mLeaveAppEntity.leave_type = mBaseDataEntity.id;
-        mLeaveAppEntity.leave_type_name = mBaseDataEntity.type_name;
-        SaveLeaveAppRequest request = new SaveLeaveAppRequest(mLeaveAppEntity, this);
-        httpPostRequest(request.getRequestUrl(), request.getRequestParams(), SaveLeaveAppRequest.SAVA_LEAVE_REQUEST);
+        SaveApplyWorkerRequest request = new SaveApplyWorkerRequest(mApplyWorkerEntity, this);
+        httpPostRequest(request.getRequestUrl(), request.getRequestParams(), SaveApplyWorkerRequest.SAVE_APPLY_WORKER_REQUEST);
     }
 
     @Override
     protected void httpResponse(String json, int action) {
         super.httpResponse(json, action);
         switch (action) {
-            case SaveLeaveAppRequest.SAVA_LEAVE_REQUEST:
+            case SaveApplyWorkerRequest.SAVE_APPLY_WORKER_REQUEST:
                 handleRequest(json);
                 break;
         }

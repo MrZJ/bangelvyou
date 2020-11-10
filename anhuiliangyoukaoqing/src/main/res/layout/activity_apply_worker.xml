@@ -19,36 +19,13 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="这是本月第二次提交请假单"
-                    android:textColor="@color/text_gray"
-                    android:textSize="14sp"
-                    android:visibility="gone" />
-
-                <TextView
-                    android:id="@+id/record_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="查看记录"
-                    android:textColor="@color/text_blue"
-                    android:textSize="14sp" />
-            </LinearLayout>
 
             <RelativeLayout
                 android:id="@+id/leave_type_layout"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/leave_tab_hight"
-                android:background="@color/white">
+                android:background="@color/white"
+                android:visibility="gone">
 
                 <View
                     android:layout_width="match_parent"
@@ -94,7 +71,6 @@
                 android:id="@+id/start_time_layout"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/leave_tab_hight"
-                android:layout_marginTop="20dp"
                 android:background="@color/white">
 
                 <View
@@ -132,7 +108,7 @@
                     android:layout_centerVertical="true"
                     android:layout_toLeftOf="@id/start_time_arrow"
                     android:singleLine="true"
-                    android:text="请选择（必填）"
+                    android:hint="请选择（必填）"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </RelativeLayout>
@@ -173,7 +149,7 @@
                     android:layout_centerVertical="true"
                     android:layout_toLeftOf="@id/end_time_arrow"
                     android:singleLine="true"
-                    android:text="请选择（必填）"
+                    android:hint="请选择（必填）"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </RelativeLayout>
@@ -182,11 +158,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/leave_tab_hight"
                 android:background="@color/white">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/divider_color" />
 
                 <View
                     android:layout_width="match_parent"
@@ -200,7 +171,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/leave_margin"
-                    android:text="是由"
+                    android:text="事由"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -217,7 +188,6 @@
                     android:background="@color/white"
                     android:ellipsize="end"
                     android:hint="请输入（必填）"
-                    android:inputType="numberDecimal"
                     android:singleLine="true"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
@@ -228,10 +198,6 @@
                 android:layout_height="@dimen/leave_tab_hight"
                 android:background="@color/white">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/divider_color" />
 
                 <View
                     android:layout_width="match_parent"
@@ -272,14 +238,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:background="@color/white"
                 android:minHeight="@dimen/leave_tab_hight">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/divider_color" />
 
                 <View
                     android:layout_width="match_parent"
@@ -306,7 +266,6 @@
                     android:layout_toRightOf="@+id/personInfoLayout"
                     android:background="@color/white"
                     android:hint="请输入姓名、身份证号、银行收款信息等..."
-                    android:text=""
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </RelativeLayout>
@@ -316,10 +275,6 @@
                 android:layout_height="@dimen/leave_tab_hight"
                 android:background="@color/white">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/divider_color" />
 
                 <View
                     android:layout_width="match_parent"
@@ -350,8 +305,6 @@
                     android:background="@color/white"
                     android:ellipsize="end"
                     android:hint="请输入（必填）"
-                    android:inputType="number"
-                    android:maxLength="8"
                     android:singleLine="true"
                     android:textColor="@color/black"
                     android:textSize="16sp" />

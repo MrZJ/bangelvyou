@@ -133,6 +133,8 @@
         <activity android:name=".ui.fragment.PreViewActivity" />
         <activity android:name=".ui.activity.ApplyWorkerActivity" />
         <activity android:name=".ui.activity.ApplyPurchaseActivity" />
+        <activity android:name=".ui.activity.ApplyUseActivity" />
+        <activity android:name=".entity.MedicalListActivity" />
 
         <service
             android:name="com.baidu.location.f"

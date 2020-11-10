@@ -31,7 +31,7 @@ public class WorkAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 8;
+        return 11;
     }
 
     @Override

@@ -36,7 +36,6 @@ public class PersonalSaveOverTimeRequest extends BaseRequest {
         HashMap<String, String> hashMap = new HashMap<>();
         hashMap.put("overtime_start", overtime_start);
         hashMap.put("overtime_end", overtime_end);
-        hashMap.put("overtime_end", overtime_end);
         hashMap.put("user_ids", user_ids);
         hashMap.put("user_names", user_names);
         hashMap.put("overtime_hours", overtime_hours);

@@ -29,7 +29,7 @@
                 android:textColor="#333333"
                 android:textSize="12sp" />
 
-            <com.basulvyou.system.wibget.CircleImageView
+            <ImageView
                 android:id="@+id/img_account_usericon"
                 android:layout_width="30dp"
                 android:layout_height="30dp"

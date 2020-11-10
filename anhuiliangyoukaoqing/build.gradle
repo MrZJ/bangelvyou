@@ -51,25 +51,24 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile files('libs/okhttp-2.5.0.jar')
-    compile files('libs/fastjson-1.1.33.jar')
-    compile files('libs/volley.jar')
-    compile files('libs/xUtils-3.1.22.jar')
-    compile project(':Android-PullToRefresh')
-    compile 'com.android.support:appcompat-v7:23.4.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/okhttp-2.5.0.jar')
+    implementation files('libs/fastjson-1.1.33.jar')
+    implementation files('libs/volley.jar')
+    implementation files('libs/xUtils-3.1.22.jar')
+    implementation project(':Android-PullToRefresh')
+    implementation 'com.android.support:appcompat-v7:23.4.0'
     //友盟统计
-    compile 'com.umeng.analytics:analytics:latest.integration'
+    implementation 'com.umeng.analytics:analytics:latest.integration'
     //菜单栏
-    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.8@aar'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.8@aar'
     //提示框
-    compile 'com.github.hss01248:NotifyUtil:1.0.0'
+    implementation 'com.github.hss01248:NotifyUtil:1.0.0'
     //图片加载器
-    compile 'com.facebook.fresco:fresco:0.12.0'
-    compile project(':PushFuyishenghuoSDK')
-    compile files('libs/pgyer_sdk_2.4.2.jar')
-    compile 'cn.bingoogolapple:bga-qrcodecore:1.1.3@aar'
-    compile 'cn.bingoogolapple:bga-zbar:1.1.3@aar'
-    compile 'com.ycjiang:imgepreviewlibrary:1.1.3'
+    implementation 'com.facebook.fresco:fresco:0.12.0'
+    implementation project(':PushFuyishenghuoSDK')
+    implementation files('libs/pgyer_sdk_2.4.2.jar')
+    implementation 'cn.bingoogolapple:bga-qrcodecore:1.1.3@aar'
+    implementation 'cn.bingoogolapple:bga-zbar:1.1.3@aar'
+    implementation 'com.ycjiang:imgepreviewlibrary:1.1.3'
 }

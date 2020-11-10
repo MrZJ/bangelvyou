@@ -2,23 +2,28 @@ package com.shishoureport.system.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONArray;
 import com.shishoureport.system.R;
+import com.shishoureport.system.databinding.ActivityApplyPurchaseBinding;
+import com.shishoureport.system.entity.ApplyPurchaseEntity;
 import com.shishoureport.system.entity.BaseDataEntity;
 import com.shishoureport.system.entity.FieldErrors;
-import com.shishoureport.system.entity.LeaveAppEntity;
+import com.shishoureport.system.entity.MedicalEntity;
+import com.shishoureport.system.entity.MedicalListActivity;
 import com.shishoureport.system.entity.User;
-import com.shishoureport.system.request.SaveLeaveAppRequest;
+import com.shishoureport.system.request.SaveApplyPurchaseRequest;
 import com.shishoureport.system.ui.adapter.AddPeopleAdapter;
+import com.shishoureport.system.ui.adapter.ProductAdapter;
 import com.shishoureport.system.ui.fragment.ContactsFragment;
 import com.shishoureport.system.ui.fragment.LeaveListFragment;
+import com.shishoureport.system.ui.fragment.MedicalListFragment;
 import com.shishoureport.system.utils.MySharepreference;
-import com.shishoureport.system.utils.StringUtil;
 import com.shishoureport.system.wibget.HorizontalListView;
 import com.shishoureport.system.wibget.MyBaseEntityListDialog;
 import com.shishoureport.system.wibget.MyDataPickerDialog;
@@ -26,23 +31,24 @@ import com.shishoureport.system.wibget.MyDataPickerDialog;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.shishoureport.system.ui.activity.ApplyUseActivity.MEDICAL_REQUEST;
+
 /**
  * Created by jianzhang.
  * on 2017/9/4.
  * copyright easybiz.
+ * 采购申请
  */
 
 public class ApplyPurchaseActivity extends BaseActivity implements View.OnClickListener, AdapterView.OnItemClickListener, MyDataPickerDialog.OnButtonClick, MyBaseEntityListDialog.OnListItemClick {
     public static int CONTACTS_REQUEST = 1001;
-    //Test
-    public static int COPY_CONTACTS_REQUEST = 1201;
-    private HorizontalListView mApproveListView, copy_listview;
-    private View leave_type_layout, start_time_layout, end_time_layout, record_tv, commit_btn;
-    private EditText reasonTv, personNumTv, personInfoTv, workDetailTv, remark_et;
-    private TextView applyDepartmentTv, start_time_tv, end_time_tv;
-    private AddPeopleAdapter addPeopleAdapter, copyPeopleAdapter;
-    private LeaveAppEntity mLeaveAppEntity = new LeaveAppEntity();
-    private BaseDataEntity mBaseDataEntity;
+    public static int CONTACTS_COPY_REQUEST = 1201;
+    private ApplyPurchaseEntity mApplyPurchaseEntity = new ApplyPurchaseEntity();
+    private HorizontalListView mApproveListView;
+    private TextView receiverName;
+    private AddPeopleAdapter addPeopleAdapter;
+    private ActivityApplyPurchaseBinding mBinding;
+    private ProductAdapter mProductAdapter;
 
     public static void startActivity(Context context) {
         Intent intent = new Intent(context, ApplyPurchaseActivity.class);
@@ -52,46 +58,28 @@ public class ApplyPurchaseActivity extends BaseActivity implements View.OnClickL
 
     @Override
     public int getLayoutId() {
-        return R.layout.activity_apply_purchase;
+        return -1;
     }
 
+    @Override
     public void initView() {
-        mApproveListView = (HorizontalListView) findViewById(R.id.approve_listview);
+        mBinding = ActivityApplyPurchaseBinding.inflate(getLayoutInflater());
+        setContentView(mBinding.getRoot());
+        User user = MySharepreference.getInstance(this).getUser();
+        mBinding.personTv.setText(user.real_name);
+        mProductAdapter = new ProductAdapter(this, false);
+        mBinding.myProductList.setAdapter(mProductAdapter);
+        mApproveListView = findViewById(R.id.approve_listview);
         addPeopleAdapter = new AddPeopleAdapter(this, getData());
         mApproveListView.setAdapter(addPeopleAdapter);
-        copy_listview = (HorizontalListView) findViewById(R.id.copy_listview);
-        copyPeopleAdapter = new AddPeopleAdapter(this, getmCopyUsers());
-        copy_listview.setAdapter(copyPeopleAdapter);
-        copy_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                try {
-                    if (position == (mCopyUsers.size() - 1)) {
-                        MyListActivity.startActivityForResult(ApplyPurchaseActivity.this, MyListActivity.TYPE_CONTACTS_LIST, copyPeopleAdapter.getIds(), COPY_CONTACTS_REQUEST);
-                    } else {
-                        mCopyUsers.remove(position);
-                        copyPeopleAdapter.notifyDataSetChanged();
-                    }
-                } catch (Exception e) {
-                }
-            }
-        });
+        receiverName = findViewById(R.id.receiverName);
         mApproveListView.setOnItemClickListener(this);
-        leave_type_layout = findViewById(R.id.leave_type_layout);
-        start_time_layout = findViewById(R.id.start_time_layout);
-        end_time_layout = findViewById(R.id.end_time_layout);
-        start_time_tv = (TextView) findViewById(R.id.start_time_tv);
-        end_time_tv = (TextView) findViewById(R.id.end_time_tv);
-        record_tv = findViewById(R.id.record_tv);
-        record_tv.setOnClickListener(this);
-        leave_type_layout.setOnClickListener(this);
-        start_time_layout.setOnClickListener(this);
-        end_time_layout.setOnClickListener(this);
-        commit_btn = findViewById(R.id.commit_btn);
-        commit_btn.setOnClickListener(this);
-        TextView title_tv = (TextView) findViewById(R.id.title_tv);
-        title_tv.setText("采购申请");
+        mBinding.receiveTimeLayout.setOnClickListener(this);
+        findViewById(R.id.receiverLayout).setOnClickListener(this);
+        findViewById(R.id.commit_btn).setOnClickListener(this);
+        mBinding.addProductTv.setOnClickListener(this);
     }
+
 
     List<User> mData = new ArrayList<>();
 
@@ -102,35 +90,26 @@ public class ApplyPurchaseActivity extends BaseActivity implements View.OnClickL
         return mData;
     }
 
-    List<User> mCopyUsers = new ArrayList<>();
-
-    private List<User> getmCopyUsers() {
-        mCopyUsers = new ArrayList<>();
-        User p = new User();
-        mCopyUsers.add(p);
-        return mCopyUsers;
-    }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.leave_type_layout:
-                showListDialog();
+            case R.id.receiveTimeLayout:
+                showDataDialog("接收时间", MyDataPickerDialog.TYPE_START_TIME);
                 break;
-            case R.id.start_time_layout:
-                showDataDialog("开始时间", MyDataPickerDialog.TYPE_START_TIME);
-                break;
-            case R.id.end_time_layout:
-                showDataDialog("结束时间", MyDataPickerDialog.TYPE_END_TIME);
-                break;
-            case R.id.record_tv:
-                MyListActivity.startActivity(this, LeaveListFragment.TYPE_LEAVE_APP_LIST);
-                break;
+//            case R.id.record_tv:
+//                MyListActivity.startActivity(this, LeaveListFragment.TYPE_LEAVE_APP_LIST);
+//                break;
             case R.id.commit_btn:
                 commitData();
                 break;
+            case R.id.receiverLayout:
+                MyListActivity.startActivityForResult(this, MyListActivity.TYPE_CONTACTS_LIST, addPeopleAdapter.getIds(), CONTACTS_COPY_REQUEST);
+                break;
+            case R.id.addProductTv:
+                MedicalListActivity.start(this, false, MEDICAL_REQUEST);
+                break;
         }
-
     }
 
 
@@ -148,11 +127,6 @@ public class ApplyPurchaseActivity extends BaseActivity implements View.OnClickL
         }
     }
 
-    private void showListDialog() {
-        List<BaseDataEntity> list = JSONArray.parseArray(MySharepreference.getInstance(this).getString(MySharepreference.ENTITY90LIST), BaseDataEntity.class);
-        MyBaseEntityListDialog dialog = new MyBaseEntityListDialog(this, list, this);
-        dialog.show();
-    }
 
     private void showDataDialog(String title, int type) {
         MyDataPickerDialog dataPickerDialog = new MyDataPickerDialog(MyDataPickerDialog.YEAR_MONTH, this, title, this, type);
@@ -162,11 +136,8 @@ public class ApplyPurchaseActivity extends BaseActivity implements View.OnClickL
     @Override
     public void onOkClick(String date, int type, int pos) {
         if (type == MyDataPickerDialog.TYPE_START_TIME) {
-            mLeaveAppEntity.start_time = date;
-            start_time_tv.setText(date);
-        } else if (type == MyDataPickerDialog.TYPE_END_TIME) {
-            mLeaveAppEntity.end_time = date;
-            end_time_tv.setText(date);
+            mApplyPurchaseEntity.reciveDate = date;
+            mBinding.receiveTimeTv.setText(date);
         }
     }
 
@@ -177,8 +148,6 @@ public class ApplyPurchaseActivity extends BaseActivity implements View.OnClickL
 
     @Override
     public void onItemclick(BaseDataEntity entity) {
-        mBaseDataEntity = entity;
-//        leave_type_tv.setText(mBaseDataEntity.type_name);
     }
 
     @Override
@@ -197,39 +166,41 @@ public class ApplyPurchaseActivity extends BaseActivity implements View.OnClickL
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            } else if (requestCode == COPY_CONTACTS_REQUEST) {
+            } else if (requestCode == CONTACTS_COPY_REQUEST) {
                 try {
                     User user = (User) data.getSerializableExtra(ContactsFragment.KEY_CONTACTS);
-                    if (mCopyUsers.size() >= 1) {
-                        mCopyUsers.add(mCopyUsers.size() - 1, user);
-                    } else {
-                        mCopyUsers.add(user);
-                    }
-                    copyPeopleAdapter.notifyDataSetChanged();
+                    receiverName.setText(user.real_name);
+                    mApplyPurchaseEntity.reciveId = user.id;
+                    mApplyPurchaseEntity.reciveName = user.real_name;
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            } else if (requestCode == MEDICAL_REQUEST) {
+                MedicalEntity entity = (MedicalEntity) data.getSerializableExtra(MedicalListFragment.KEY_MEDICAL);
+                mProductAdapter.add(entity);
             }
         }
     }
 
     private void commitData() {
-        if (mBaseDataEntity == null || StringUtil.isEmpty(mBaseDataEntity.id)) {
-            showToast("请选择请假类型");
+        if (TextUtils.isEmpty(mBinding.batchEt.getText().toString())) {
+            showToast("请输入批次");
             return;
         }
-        if (mLeaveAppEntity.start_time == null) {
-            showToast("请选择开始时间");
+        mApplyPurchaseEntity.batch = mBinding.batchEt.getText().toString();
+        if (TextUtils.isEmpty(mBinding.applyPlaceTv.getText().toString())) {
+            showToast("请输入采购地点");
             return;
         }
-        if (mLeaveAppEntity.end_time == null) {
-            showToast("请选择结束时间");
+        mApplyPurchaseEntity.place = mBinding.applyPlaceTv.getText().toString();
+        if (TextUtils.isEmpty(mBinding.receiverName.getText().toString())) {
+            showToast("请选择接收人");
             return;
         }
-        /*if (StringUtil.isEmpty(time_lengh_et.getText().toString())) {
-            showToast("请输入时长");
+        if (TextUtils.isEmpty(mBinding.receiveTimeTv.getText().toString())) {
+            showToast("请选接收时间");
             return;
-        }*/
+        }
         if (mData.size() == 1) {
             showToast("请选择审批人");
             return;
@@ -246,35 +217,55 @@ public class ApplyPurchaseActivity extends BaseActivity implements View.OnClickL
                 ids.append(user.id + ",");
             }
         }
-        mLeaveAppEntity.user_names = names.toString();
-        mLeaveAppEntity.user_ids = ids.toString();
-        if (mCopyUsers.size() > 1) {
-            StringBuilder cc_user_names = new StringBuilder();
-            StringBuilder cc_user_ids = new StringBuilder();
-            for (int i = 0; i < mCopyUsers.size() - 1; i++) {
-                User user = mCopyUsers.get(i);
-                if (mCopyUsers.size() - 2 == i) {
-                    cc_user_names.append(user.user_name);
-                    cc_user_ids.append(user.id);
-                } else {
-                    cc_user_names.append(user.user_name + ",");
-                    cc_user_ids.append(user.id + ",");
-                }
-            }
-            mLeaveAppEntity.cc_user_names = cc_user_names.toString();
-            mLeaveAppEntity.cc_user_ids = cc_user_ids.toString();
+        mApplyPurchaseEntity.audit_name = names.toString();
+        mApplyPurchaseEntity.audit_uid = ids.toString();
+        if (mProductAdapter.isEmpty()) {
+            showToast("请添加要申请的物品");
+            return;
         }
-        mLeaveAppEntity.leave_type = mBaseDataEntity.id;
-        mLeaveAppEntity.leave_type_name = mBaseDataEntity.type_name;
-        SaveLeaveAppRequest request = new SaveLeaveAppRequest(mLeaveAppEntity, this);
-        httpPostRequest(request.getRequestUrl(), request.getRequestParams(), SaveLeaveAppRequest.SAVA_LEAVE_REQUEST);
+        List<MedicalEntity> entities = mProductAdapter.getData();
+        StringBuilder reagentIds = new StringBuilder();
+        StringBuilder quantitys = new StringBuilder();
+        StringBuilder remarks = new StringBuilder();
+        for (int i = 0; i < entities.size(); i++) {
+            MedicalEntity entity = entities.get(i);
+            if (entities.size() - 1 == i) {
+                reagentIds.append(entity.id);
+                if (TextUtils.isEmpty(entity.inputQuantity)) {
+                    showToast("请输入采购数量");
+                    return;
+                }
+                quantitys.append(entity.inputQuantity);
+                if (TextUtils.isEmpty(entity.inputRemark)) {
+                    entity.inputRemark = "无";
+                }
+                remarks.append(entity.inputRemark);
+            } else {
+                reagentIds.append(entity.id + ",");
+                if (TextUtils.isEmpty(entity.inputQuantity)) {
+                    showToast("请输入采购数量");
+                    return;
+                }
+                quantitys.append(entity.inputQuantity + ",");
+                if (TextUtils.isEmpty(entity.inputRemark)) {
+                    entity.inputRemark = "无";
+                }
+                remarks.append(entity.inputRemark + ",");
+            }
+        }
+        mApplyPurchaseEntity.reagentIds = reagentIds.toString();
+        mApplyPurchaseEntity.quantitys = quantitys.toString();
+        mApplyPurchaseEntity.remarks = remarks.toString();
+        mApplyPurchaseEntity.remark = mBinding.remarkEt.getText().toString();
+        SaveApplyPurchaseRequest request = new SaveApplyPurchaseRequest(mApplyPurchaseEntity, this);
+        httpPostRequest(request.getRequestUrl(), request.getRequestParams(), SaveApplyPurchaseRequest.SAVE_APPLY_PURCHASE_REQUEST);
     }
 
     @Override
     protected void httpResponse(String json, int action) {
         super.httpResponse(json, action);
         switch (action) {
-            case SaveLeaveAppRequest.SAVA_LEAVE_REQUEST:
+            case SaveApplyPurchaseRequest.SAVE_APPLY_PURCHASE_REQUEST:
                 handleRequest(json);
                 break;
         }

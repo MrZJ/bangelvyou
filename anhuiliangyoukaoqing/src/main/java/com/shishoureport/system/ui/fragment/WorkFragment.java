@@ -9,6 +9,7 @@ import com.shishoureport.system.R;
 import com.shishoureport.system.entity.HomeCountData;
 import com.shishoureport.system.request.HomeCountRequest;
 import com.shishoureport.system.ui.activity.ApplyPurchaseActivity;
+import com.shishoureport.system.ui.activity.ApplyUseActivity;
 import com.shishoureport.system.ui.activity.ApplyWorkerActivity;
 import com.shishoureport.system.ui.activity.ApproveActivity;
 import com.shishoureport.system.ui.activity.AttendanceActivity;
@@ -122,7 +123,7 @@ public class WorkFragment extends BaseFragment implements View.OnClickListener, 
                 ApplyPurchaseActivity.startActivity(getContext());
                 break;
             case 10:
-                ScanActivity.startActivity(getActivity());
+                ApplyUseActivity.startActivity(getActivity());
                 break;
         }
     }

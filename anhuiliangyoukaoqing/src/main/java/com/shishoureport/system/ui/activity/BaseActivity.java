@@ -85,12 +85,14 @@ public abstract class BaseActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(getLayoutId());
+        if (getLayoutId() != -1) {
+            setContentView(getLayoutId());
+        }
+        initView();
         application = (UIApplication) getApplication();
         appManager = AppManager.getInstance();
         appManager.PushActivity(this);
         initBackButton();
-        initView();
     }
 
     //获取布局文件
@@ -149,6 +151,7 @@ public abstract class BaseActivity extends FragmentActivity {
                     }
                 }, new Response.ErrorListener() {
             public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
                 errorResponseHandler(error.networkResponse == null ? 0
                                 : error.networkResponse.statusCode, error,
                         action);

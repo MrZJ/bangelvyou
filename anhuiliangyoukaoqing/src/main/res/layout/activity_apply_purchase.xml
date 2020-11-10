@@ -19,31 +19,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="这是本月第二次提交请假单"
-                    android:textColor="@color/text_gray"
-                    android:textSize="14sp"
-                    android:visibility="gone" />
-
-                <TextView
-                    android:id="@+id/record_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="查看记录"
-                    android:textColor="@color/text_blue"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -55,36 +30,30 @@
                     android:layout_height="1dp"
                     android:background="@color/divider_color" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/divider_color" />
 
                 <TextView
-                    android:id="@+id/medName"
+                    android:id="@+id/batch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/leave_margin"
-                    android:text="试剂名称"
+                    android:text="批次"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/medNameTv"
+                    android:id="@+id/batchEt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/medName"
-                    android:layout_alignBottom="@+id/medName"
+                    android:layout_alignBaseline="@+id/batch"
+                    android:layout_alignBottom="@+id/batch"
                     android:layout_marginStart="11dp"
                     android:layout_marginLeft="11dp"
-                    android:layout_toEndOf="@+id/medName"
-                    android:layout_toRightOf="@+id/medName"
+                    android:layout_toEndOf="@+id/batch"
+                    android:layout_toRightOf="@+id/batch"
                     android:background="@color/white"
                     android:ellipsize="end"
                     android:hint="请输入（必填）"
-                    android:inputType="numberDecimal"
                     android:singleLine="true"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
@@ -100,11 +69,6 @@
                     android:layout_height="1dp"
                     android:background="@color/divider_color" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/divider_color" />
 
                 <TextView
                     android:id="@+id/apply"
@@ -112,12 +76,12 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/leave_margin"
-                    android:text="采购数量"
+                    android:text="采购地点"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/applyNumberTv"
+                    android:id="@+id/applyPlaceTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@+id/apply"
@@ -146,11 +110,6 @@
                     android:layout_height="1dp"
                     android:background="@color/divider_color" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/divider_color" />
 
                 <TextView
                     android:id="@+id/person"
@@ -162,7 +121,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/personTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -181,7 +140,9 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </RelativeLayout>
+
             <RelativeLayout
+                android:id="@+id/receiverLayout"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/leave_tab_hight"
                 android:background="@color/white">
@@ -191,45 +152,41 @@
                     android:layout_height="1dp"
                     android:background="@color/divider_color" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/divider_color" />
 
                 <TextView
-                    android:id="@+id/reciever"
+                    android:id="@+id/receiver"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/leave_margin"
-                    android:text="申请人"
+                    android:text="接收人"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <EditText
-                    android:id="@+id/recieverTv"
+                <TextView
+                    android:id="@+id/receiverName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/reciever"
-                    android:layout_alignBottom="@+id/reciever"
+                    android:layout_alignBaseline="@+id/receiver"
+                    android:layout_alignBottom="@+id/receiver"
                     android:layout_marginStart="11dp"
                     android:layout_marginLeft="11dp"
-                    android:layout_toEndOf="@+id/reciever"
-                    android:layout_toRightOf="@+id/reciever"
+                    android:layout_toEndOf="@+id/receiver"
+                    android:layout_toRightOf="@+id/receiver"
                     android:background="@color/white"
                     android:ellipsize="end"
-                    android:hint="请输入（必填）"
+                    android:hint="请选择（必选）"
                     android:inputType="number"
                     android:maxLength="8"
                     android:singleLine="true"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </RelativeLayout>
+
             <RelativeLayout
+                android:id="@+id/receiveTimeLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:background="@color/white"
                 android:minHeight="@dimen/leave_tab_hight">
 
@@ -250,75 +207,48 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/leave_margin"
-                    android:text="借用人员具体情况"
+                    android:text="接收时间"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <EditText
-                    android:id="@+id/personInfoTv"
+                <TextView
+                    android:id="@+id/receiveTimeTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:layout_toRightOf="@+id/personInfoLayout"
                     android:background="@color/white"
-                    android:hint="请输入姓名、身份证号、银行收款信息等..."
+                    android:hint="请选择（必选）"
                     android:text=""
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </RelativeLayout>
 
-            <RelativeLayout
+            <TextView
+                android:id="@+id/addProductTv"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/leave_tab_hight"
-                android:background="@color/white">
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="end"
+                android:padding="10dp"
+                android:text="新增"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/divider_color" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/divider_color" />
-
-                <TextView
-                    android:id="@+id/workDetailTips"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="@dimen/leave_margin"
-                    android:text="工作内容"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <EditText
-                    android:id="@+id/workDetailTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/workDetailTips"
-                    android:layout_alignBottom="@+id/workDetailTips"
-                    android:layout_marginStart="11dp"
-                    android:layout_marginLeft="11dp"
-                    android:layout_toEndOf="@+id/workDetailTips"
-                    android:layout_toRightOf="@+id/workDetailTips"
-                    android:background="@color/white"
-                    android:ellipsize="end"
-                    android:hint="请输入（必填）"
-                    android:inputType="number"
-                    android:maxLength="8"
-                    android:singleLine="true"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-            </RelativeLayout>
+            <com.shishoureport.system.wibget.MyListView
+                android:id="@+id/myProductList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@color/divider_color"
+                android:dividerHeight="1dp" />
 
             <RelativeLayout
                 android:id="@+id/leave_reason_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:background="@color/white"
                 android:minHeight="100dp">
 
@@ -403,53 +333,6 @@
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:text="点击头像可删除"
-                android:textColor="@color/text_gray"
-                android:textSize="12sp" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="115dp"
-                android:background="@color/white"
-                android:visibility="visible">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/divider_color" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/divider_color" />
-
-                <TextView
-                    android:id="@+id/copy_people_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/leave_margin"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center_vertical"
-                    android:text="抄送人"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <com.shishoureport.system.wibget.HorizontalListView
-                    android:id="@+id/copy_listview"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="5dp"
-                    android:background="@color/white" />
-            </RelativeLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:text="审批通过后，通知抄送人"
                 android:textColor="@color/text_gray"
                 android:textSize="12sp" />
         </LinearLayout>

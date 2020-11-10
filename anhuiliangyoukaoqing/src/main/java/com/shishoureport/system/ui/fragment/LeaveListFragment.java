@@ -77,7 +77,6 @@ public class LeaveListFragment extends AbsLoadMoreFragment implements AdapterVie
 //            LeaveAppDetailActivity.startActivity(getActivity());
         } else if (TYPE_LEAVE_APP_WAITE_APPROVE == type) {
             AttendanceLeave leave = (AttendanceLeave) mData.get(position - 1);
-            Log.e("jianzhang", leave.audit_name + "pos =" + position);
             LeaveAppApproveActivity.startActivityForResult(getActivity(), APPROVE_LEAVE_REQUEST_CODE, leave);
         }
     }
