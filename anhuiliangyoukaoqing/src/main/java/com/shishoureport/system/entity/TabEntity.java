@@ -7,6 +7,11 @@ public class TabEntity implements CustomTabEntity {
     public int selectedIcon;
     public int unSelectedIcon;
 
+    public TabEntity(String title) {
+        this.title = title;
+        this.selectedIcon = -1;
+        this.unSelectedIcon = -1;
+    }
     public TabEntity(String title, int selectedIcon, int unSelectedIcon) {
         this.title = title;
         this.selectedIcon = selectedIcon;

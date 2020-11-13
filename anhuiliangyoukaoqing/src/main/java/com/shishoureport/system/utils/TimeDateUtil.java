@@ -150,7 +150,14 @@ public class TimeDateUtil {
             return "";
         }
     }
-
+    public static String dateTime2(String timestamp) {
+        try {
+            long time = Long.valueOf(timestamp);
+            return date(TIME_FORMAT, time);
+        } catch (Exception e) {
+            return "";
+        }
+    }
 
     /**
      * 把时间戳格式化
