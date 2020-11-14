@@ -1,6 +1,7 @@
 package com.shishoureport.system.request;
 
 import android.content.Context;
+import android.text.TextUtils;
 
 import com.shishoureport.system.entity.ApplyWorkerEntity;
 import com.shishoureport.system.entity.LeaveAppEntity;
@@ -33,7 +34,7 @@ public class SaveApplyWorkerRequest extends BaseRequest {
         HashMap<String, String> map = new HashMap<>();
         if (entity != null) {
             map.put("application_dept_id", user.dept_id);
-            map.put("application_dept_name", user.dept_name);
+            map.put("application_dept_name", TextUtils.isEmpty(user.dept_name) ? "" : user.dept_name);
             map.put("application_user_id", user.id);
             map.put("application_user_name", user.real_name);
             map.put("user_id", user.id);

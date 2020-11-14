@@ -108,7 +108,7 @@ public class ContactsExpandAdapter extends BaseExpandableListAdapter {
             holder = (ChildHoder) convertView.getTag();
         }
         User user = mData.get(groupPosition).userInfoList.get(childPosition);
-        holder.name_tv.setText(user.user_name);
+        holder.name_tv.setText(user.real_name);
         return convertView;
     }
 

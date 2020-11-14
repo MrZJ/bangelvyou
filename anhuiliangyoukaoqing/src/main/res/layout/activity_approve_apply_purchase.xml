@@ -41,7 +41,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/batchEt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -53,7 +53,6 @@
                     android:layout_toRightOf="@+id/batch"
                     android:background="@color/white"
                     android:ellipsize="end"
-                    android:hint="请输入（必填）"
                     android:singleLine="true"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
@@ -80,7 +79,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/applyPlaceTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -92,7 +91,6 @@
                     android:layout_toRightOf="@+id/apply"
                     android:background="@color/white"
                     android:ellipsize="end"
-                    android:hint="请输入（必填）"
                     android:singleLine="true"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
@@ -131,7 +129,6 @@
                     android:layout_toRightOf="@+id/person"
                     android:background="@color/white"
                     android:ellipsize="end"
-                    android:hint="请输入（必填）"
                     android:inputType="number"
                     android:maxLength="8"
                     android:singleLine="true"
@@ -173,7 +170,6 @@
                     android:layout_toRightOf="@+id/receiver"
                     android:background="@color/white"
                     android:ellipsize="end"
-                    android:hint="请选择（必选）"
                     android:inputType="number"
                     android:maxLength="8"
                     android:singleLine="true"
@@ -217,23 +213,9 @@
                     android:layout_marginLeft="10dp"
                     android:layout_toRightOf="@+id/personInfoLayout"
                     android:background="@color/white"
-                    android:hint="请选择（必选）"
-                    android:text=""
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </RelativeLayout>
-
-            <TextView
-                android:id="@+id/addProductTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:gravity="end"
-                android:padding="10dp"
-                android:text="新增"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold" />
 
             <com.shishoureport.system.wibget.MyListView
                 android:id="@+id/myProductList"
@@ -271,7 +253,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/remark_et"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -282,12 +264,11 @@
                     android:layout_toEndOf="@+id/leave_reason_tv"
                     android:layout_toRightOf="@+id/leave_reason_tv"
                     android:background="@color/white"
-                    android:hint="请填写备注"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </RelativeLayout>
 
-            <RelativeLayout
+           <!-- <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="115dp"
                 android:layout_marginTop="20dp"
@@ -322,17 +303,18 @@
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="5dp"
                     android:background="@color/white" />
-            </RelativeLayout>
+            </RelativeLayout>-->
 
-            <TextView
-                android:layout_width="wrap_content"
+
+            <EditText
+                android:id="@+id/audit_suggestion_et"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:text="点击头像可删除"
-                android:textColor="@color/text_gray"
-                android:textSize="12sp" />
+                android:background="@color/white"
+                android:hint="请填写审批意见"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
         </LinearLayout>
     </com.shishoureport.system.wibget.MyScrollView>
 
@@ -348,13 +330,30 @@
             android:layout_height="1dp"
             android:background="@color/divider_color" />
 
-        <Button
-            android:id="@+id/commit_btn"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="20dp"
-            android:background="@drawable/blue_bg"
-            android:text="提交"
-            android:textColor="@color/white" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/pass_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_bg"
+                android:text="审批通过"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/reject_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_bg"
+                android:text="审批不通过"
+                android:textColor="@color/white" />
+        </LinearLayout>
     </FrameLayout>
 </RelativeLayout>

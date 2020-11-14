@@ -74,12 +74,13 @@ public class ApplyPurchaseistAdapter extends AbsBaseAdapter<ApplyPurchaseEntity>
         if (holder == null || entity == null) {
             return;
         }
-        holder.people_tv.setText("批次：" + entity.batch);
-        holder.num_tv.setText("采购地点：" + entity.place);
+        holder.people_tv.setText("采购地点：" + entity.place);
+        holder.num_tv.setVisibility(View.GONE);
         holder.start_time_tv.setText("接收人：" + entity.reciveName);
         holder.send_time_tv.setText("接收时间：" + TimeDateUtil.dateTime2(entity.reciveDate));
         holder.start_place_tv.setText("申请人：" + entity.applyName);
-        holder.end_place_tv.setText("内容：" + entity.checkRemark);
+        holder.end_place_tv.setVisibility(View.GONE);
+//        holder.end_place_tv.setText("内容：" + entity.checkRemark);
         if ("0".equals(entity.auditState)) {
             holder.status_tv.setText("审批中");
         } else if ("1".equals(entity.auditState)) {

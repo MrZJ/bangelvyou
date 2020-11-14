@@ -16,6 +16,7 @@ import com.shishoureport.system.entity.FieldErrors;
 import com.shishoureport.system.entity.User;
 import com.shishoureport.system.request.ApproveApplyWorkerListRequest;
 import com.shishoureport.system.request.ApproveCarManageListRequest;
+import com.shishoureport.system.ui.activity.ApproveApplyWorkerActivity;
 import com.shishoureport.system.ui.activity.ApproveCarManageActivity;
 import com.shishoureport.system.ui.adapter.ApplyWorkerListAdapter;
 import com.shishoureport.system.utils.ListUtils;
@@ -59,7 +60,7 @@ public class ApproveApplyWorkerListFragment extends AbsLoadMoreFragment implemen
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         ApplyWorkerEntity entity = (ApplyWorkerEntity) mData.get(position - 1);
-//        ApproveCarManageActivity.startActivity(this, entity.id);
+        ApproveApplyWorkerActivity.startActivity(this, entity);
     }
 
     @Override
@@ -119,11 +120,10 @@ public class ApproveApplyWorkerListFragment extends AbsLoadMoreFragment implemen
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == Activity.RESULT_OK) {
-            if (requestCode == ApproveCarManageActivity.REQUEST_CODE) {
-                clearData();
-                mListView.setRefreshing();
-            }
+        if (resultCode == Activity.RESULT_OK
+                && !mListView.isRefreshing()) {
+            clearData();
+            mListView.setRefreshing();
         }
     }
 }

@@ -20,5 +20,7 @@ public class ApplyWorkerEntity implements Serializable {
     public String application_user_name;
     public String application_dept_name;
     public String audit_state;
+    public String rmark;
+    public String id;
 }
 

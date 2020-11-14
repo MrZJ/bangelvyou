@@ -74,12 +74,14 @@ public class ApplyUseListAdapter extends AbsBaseAdapter<ApplyUseEntity> {
         if (holder == null || entity == null) {
             return;
         }
-        holder.people_tv.setText("批次：" + entity.batch);
-        holder.num_tv.setText("审核人：" + entity.auditName);
-        holder.start_time_tv.setText("出库人：" + entity.outName);
+        holder.people_tv.setText("审核人：" + entity.auditName);
+        holder.num_tv.setVisibility(View.GONE);
+//        holder.start_time_tv.setText("出库人：" + entity.outName);
+        holder.start_time_tv.setVisibility(View.GONE);
         holder.send_time_tv.setText("出库状态：" + (entity.outState.equalsIgnoreCase("0") ? "待出库" : "已出库"));
         holder.start_place_tv.setText("申请人：" + entity.applyName);
-        holder.end_place_tv.setText("内容：" + entity.remark);
+//        holder.end_place_tv.setText("内容：" + entity.remark);
+        holder.end_place_tv.setVisibility(View.GONE);
         if ("0".equals(entity.auditState)) {
             holder.status_tv.setText("审批中");
         } else if ("1".equals(entity.auditState)) {

@@ -22,5 +22,6 @@ public class ApplyPurchaseEntity implements Serializable {
     public String audit_name;
     public String auditState;
     public String checkRemark;
+    public String id;
 }
 //yyyy-MM-dd HH:mm:ss

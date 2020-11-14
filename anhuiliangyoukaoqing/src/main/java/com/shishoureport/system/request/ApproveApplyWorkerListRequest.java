@@ -9,7 +9,7 @@ import java.util.Map;
  */
 
 public class ApproveApplyWorkerListRequest extends BaseRequest {
-    private static final String METHOD = "/mobile/applyOrder/auditList";
+    private static final String METHOD = "/mobile/attendancePerson/auditList";
     public static final int APPROVE_APPLY_WORKER_LISTREQUEST = 1020325;
     private int page, pagecount;
     private String id;

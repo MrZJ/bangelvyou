@@ -135,11 +135,13 @@
         <activity android:name=".ui.activity.ApplyPurchaseActivity" />
         <activity android:name=".ui.activity.ApplyUseActivity" />
         <activity android:name=".entity.MedicalListActivity" />
+        <activity android:name=".ui.activity.ApproveApplyPurchaseActivity" />
+        <activity android:name=".ui.activity.ApproveApplyWorkerActivity" />
 
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote"></service>
+            android:process=":remote"/>
         <!--友盟统计推送 start -->
         <meta-data
             android:name="UMENG_APPKEY"

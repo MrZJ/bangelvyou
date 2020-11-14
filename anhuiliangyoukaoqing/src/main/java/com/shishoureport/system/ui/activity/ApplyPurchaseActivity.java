@@ -78,6 +78,7 @@ public class ApplyPurchaseActivity extends BaseActivity implements View.OnClickL
         findViewById(R.id.receiverLayout).setOnClickListener(this);
         findViewById(R.id.commit_btn).setOnClickListener(this);
         mBinding.addProductTv.setOnClickListener(this);
+        mBinding.titleLayout.titleTv.setText("采购申请");
     }
 
 

@@ -9,7 +9,7 @@ import java.util.Map;
  */
 
 public class ApproveApplyPurchaseListRequest extends BaseRequest {
-    private static final String METHOD = /*"/mobile/purchaseOrder/auditList"*/"/mobile/purchaseOrder";
+    private static final String METHOD = "/mobile/purchaseOrder/auditList"/*"/mobile/purchaseOrder"*/;
     public static final int APPROVE_APPLY_PURCHASE_LISTREQUEST = 1020325;
     private int page, pagecount;
     private String id;
