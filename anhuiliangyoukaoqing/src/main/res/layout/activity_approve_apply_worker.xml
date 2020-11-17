@@ -136,8 +136,6 @@
                     android:layout_toEndOf="@+id/reasonTipsTv"
                     android:layout_toRightOf="@+id/reasonTipsTv"
                     android:background="@color/white"
-                    android:ellipsize="end"
-                    android:singleLine="true"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </RelativeLayout>
@@ -251,8 +249,6 @@
                     android:layout_toEndOf="@+id/workDetailTips"
                     android:layout_toRightOf="@+id/workDetailTips"
                     android:background="@color/white"
-                    android:ellipsize="end"
-                    android:singleLine="true"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </RelativeLayout>

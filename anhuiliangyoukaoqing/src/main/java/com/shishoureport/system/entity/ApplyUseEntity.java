@@ -28,4 +28,5 @@ public class ApplyUseEntity implements Serializable {
     public String outName;
     public String auditName;
     public String outState;
+    public String id;
 }

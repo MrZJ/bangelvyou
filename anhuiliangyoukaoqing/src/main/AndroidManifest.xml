@@ -137,6 +137,7 @@
         <activity android:name=".entity.MedicalListActivity" />
         <activity android:name=".ui.activity.ApproveApplyPurchaseActivity" />
         <activity android:name=".ui.activity.ApproveApplyWorkerActivity" />
+        <activity android:name=".ui.activity.ApproveApplyUseActivity" />
 
         <service
             android:name="com.baidu.location.f"

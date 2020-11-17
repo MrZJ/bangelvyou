@@ -76,7 +76,7 @@ public class ApproveApplyPurchaseActivity extends BaseActivity implements View.O
         mBinding.receiverName.setText(mApplyPurchaseEntity.reciveName);
         mBinding.receiveTimeTv.setText(TimeDateUtil.dateTime2(mApplyPurchaseEntity.reciveDate));
         mBinding.remarkEt.setText(mApplyPurchaseEntity.remark);
-        mBinding.titleLayout.titleTv.setText("采购申请");
+        mBinding.titleLayout.titleTv.setText("采购审核");
         mBinding.passBtn.setOnClickListener(this);
         mBinding.rejectBtn.setOnClickListener(this);
     }

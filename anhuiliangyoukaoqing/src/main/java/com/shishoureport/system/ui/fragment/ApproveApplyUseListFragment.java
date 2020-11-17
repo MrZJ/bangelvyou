@@ -18,6 +18,7 @@ import com.shishoureport.system.entity.FieldErrors;
 import com.shishoureport.system.entity.User;
 import com.shishoureport.system.request.ApproveApplyPurchaseListRequest;
 import com.shishoureport.system.request.ApproveApplyUseListRequest;
+import com.shishoureport.system.ui.activity.ApproveApplyUseActivity;
 import com.shishoureport.system.ui.activity.ApproveCarManageActivity;
 import com.shishoureport.system.ui.adapter.ApplyPurchaseistAdapter;
 import com.shishoureport.system.ui.adapter.ApplyUseListAdapter;
@@ -61,8 +62,8 @@ public class ApproveApplyUseListFragment extends AbsLoadMoreFragment implements 
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        ApplyWorkerEntity entity = (ApplyWorkerEntity) mData.get(position - 1);
-//        ApproveCarManageActivity.startActivity(this, entity.id);
+        ApplyUseEntity entity = (ApplyUseEntity) mData.get(position - 1);
+        ApproveApplyUseActivity.startActivity(this, entity);
     }
 
     @Override
@@ -122,11 +123,11 @@ public class ApproveApplyUseListFragment extends AbsLoadMoreFragment implements 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == Activity.RESULT_OK) {
-            if (requestCode == ApproveCarManageActivity.REQUEST_CODE) {
-                clearData();
-                mListView.setRefreshing();
-            }
+        if (resultCode == Activity.RESULT_OK
+                && !mListView.isRefreshing()) {
+            clearData();
+            mListView.setRefreshing();
         }
     }
 }
+

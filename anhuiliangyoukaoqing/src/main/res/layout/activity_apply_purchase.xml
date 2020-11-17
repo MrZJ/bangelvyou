@@ -91,9 +91,7 @@
                     android:layout_toEndOf="@+id/apply"
                     android:layout_toRightOf="@+id/apply"
                     android:background="@color/white"
-                    android:ellipsize="end"
                     android:hint="请输入（必填）"
-                    android:singleLine="true"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </RelativeLayout>
